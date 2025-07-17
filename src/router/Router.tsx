@@ -3,6 +3,7 @@ import Home from "../pages/Home/Home.tsx";
 import Layout from "../Layout/Layout.tsx";
 import Layoutadmin from "../Layout/admin/Layout.tsx";
 import List from "../pages/list/List.tsx";
+import Newdoctor from "../pages/creating/Newdoctor.tsx";
 
 export const myRouter = createBrowserRouter([
     {
@@ -16,6 +17,10 @@ export const myRouter = createBrowserRouter([
          {
          path:'list',
          element: <List/>
+        },
+          {
+         path:'newdoctor',
+         element: <Newdoctor/>
         },
     ]
     },
