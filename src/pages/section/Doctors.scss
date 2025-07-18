@@ -1,0 +1,142 @@
+.doctors {
+    width: 972px;
+    height: 712px;
+    border-radius: 10px;
+    background: rgb(255, 255, 255);
+    margin: 0 auto;
+
+    .section {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 31px;
+
+        h3 {
+            color: rgb(38, 9, 68);
+            font-family: sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24.64px;
+            letter-spacing: 0.15px;
+        }
+
+        button {
+            cursor: pointer;
+            width: 134px;
+            height: 45px;
+            border-radius: 7.61px;
+            background: rgb(83, 168, 187);
+            border: none;
+            display: flex;
+            gap: 11px;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 11.42px;
+                height: 11.42px;
+            }
+
+            p {
+                color: rgb(255, 255, 255);
+                font-family: sans-serif;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 17px;
+                letter-spacing: 0px;
+                text-align: left;
+                text-transform: capitalize;
+            }
+        }
+    }
+
+    .table {
+        padding: 26px 50px 0 110px;
+
+        div {
+            display: grid;
+            grid-template-columns: 228px 193px 93px 100px 60px;
+            align-items: center;
+            justify-content: space-between;
+
+            span {
+                color: rgb(0, 0, 0);
+                font-family: sans-serif;
+                font-size: 15px;
+                font-weight: 400;
+                line-height: 18.78px;
+                letter-spacing: 0.13px;
+            }
+        }
+    }
+
+    .pagination-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 10px 60px 0 50px;
+        font-family: sans-serif;
+
+        .pagination {
+            display: grid;
+            grid-template-columns: 220px 250px 190px 100px 170px;
+            align-items: center;
+            text-align: center;
+            padding: 3px 0;
+
+            h4 {
+                margin: 0;
+                font-size: 14px;
+                font-weight: 400;
+                color: rgb(91, 91, 152);
+            }
+
+            .circle {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 10px;
+
+                img {
+                    width: 36px;
+                    height: 36px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+
+                .text {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2px;
+                    align-items: flex-start;
+
+                    h6 {
+                        margin: 0;
+                        font-size: 15px;
+                        font-weight: 500;
+                        color: rgb(38, 9, 68);
+                    }
+
+                    p {
+                        margin: 0;
+                        font-size: 11px;
+                        color: rgb(169, 169, 200);
+                    }
+                }
+            }
+
+            .imgs {
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+
+                img {
+                    width: 14px;
+                    height: 14px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
