@@ -4,6 +4,7 @@ import Layout from "../Layout/Layout.tsx";
 import Layoutadmin from "../Layout/admin/Layout.tsx";
 import List from "../pages/list/List.tsx";
 import Newdoctor from "../pages/creating/Newdoctor.tsx";
+import PatientsList from "../components/PatientsList/PatientsList.tsx";
 
 export const myRouter = createBrowserRouter([
     {
@@ -27,5 +28,9 @@ export const myRouter = createBrowserRouter([
     {
          path: 'admin',
          element: <Layoutadmin/>
+    },
+    {
+         path: 'patientsList',
+         element: <PatientsList/>
     }
-])
+]) 
