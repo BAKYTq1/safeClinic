@@ -5,6 +5,7 @@ import Layoutadmin from "../Layout/admin/Layout.tsx";
 import List from "../pages/list/List.tsx";
 import Newdoctor from "../pages/creating/Newdoctor.tsx";
 import Branches from "../pages/branches/Branches.tsx";
+import PatientInfoPage from "../pages/patientinformation/PatientInfoPage.tsx";
 
 export const myRouter = createBrowserRouter([
     {
@@ -32,5 +33,9 @@ export const myRouter = createBrowserRouter([
     {
         path: 'branches',
         element: <Branches/>
+    },
+    {
+        path: 'PatientInfoPage',
+        element: <PatientInfoPage/>
     }
 ])
