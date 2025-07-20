@@ -1,0 +1,219 @@
+    .newdoctor {
+        margin: 0 auto;
+        width: 710px;
+        height: 633px;
+        border-radius: 10px;
+        background: rgb(255, 255, 255);
+
+        .title {
+            width: 710px;
+            height: 83px;
+            border-radius: 10px;
+            background: rgb(212, 239, 243);
+            display: flex;
+            align-items: center;
+
+            h2 {
+                color: rgb(0, 0, 0);
+                font-family: sans-serif;
+                font-size: 24px;
+                font-weight: 400;
+                line-height: 29px;
+                letter-spacing: 0%;
+                padding-left: 35px;
+            }
+        }
+
+        .img {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding-left: 35px;
+            padding-top: 20px;
+
+            img {
+                width: 70px;
+                height: 70px;
+            }
+
+            p {
+                color: rgb(0, 0, 0);
+                font-family: sans-serif;
+                font-size: 11px;
+                font-weight: 400;
+                line-height: 13px;
+                letter-spacing: 0%;
+                width: 50px;
+                text-align: center;
+            }
+        }
+
+        .doctor-form {
+            display: flex;
+            flex-direction: column;
+            padding-left: 35px;
+            width: 640px;
+            gap: 30px;
+            padding-top: 25px;
+
+            .inputs {
+                display: flex;
+                gap: 66px;
+
+                .tags {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    width: 287px;
+
+                    select {
+                        height: 35px;
+                        padding-left: 10px;
+                        box-sizing: border-box;
+                        border: 1px solid rgba(0, 0, 0, 0.43);
+                        border-radius: 4px;
+                        width: 287px;
+                        font-family: sans-serif;
+                        font-size: 14px;
+                        outline: none;
+                    }
+
+                    label {
+                        color: rgb(0, 0, 0);
+                        font-family: sans-serif;
+                        font-size: 15px;
+                        font-weight: 400;
+                        line-height: 18px;
+                        letter-spacing: 0%;
+                    }
+                }
+
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+
+                    .date {
+                        color: rgb(142, 140, 140);
+                        font-family: sans-serif;
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 17px;
+                        letter-spacing: 0%;
+                        padding-left: 10px;
+                    }
+
+                    label {
+                        color: rgb(0, 0, 0);
+                        font-family: sans-serif;
+                        font-size: 15px;
+                        font-weight: 400;
+                        line-height: 18px;
+                        letter-spacing: 0%;
+                        text-align: left;
+                    }
+
+                    input {
+                        padding-left: 10px;
+                        box-sizing: border-box;
+                        border: 1px solid rgba(0, 0, 0, 0.43);
+                        border-radius: 4px;
+                        width: 287px;
+                        height: 35px;
+                        outline: none;
+                    }
+                }
+            }
+
+            .gender {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                width: 287px;
+
+                select {
+                    cursor: pointer;
+                    height: 35px;
+                    padding-left: 10px;
+                    box-sizing: border-box;
+                    border: 1px solid rgba(0, 0, 0, 0.43);
+                    border-radius: 4px;
+                    width: 287px;
+                    font-family: sans-serif;
+                    font-size: 14px;
+                    outline: none;
+                }
+
+                label {
+                    color: rgb(0, 0, 0);
+                    font-family: sans-serif;
+                    font-size: 15px;
+                    font-weight: 400;
+                    line-height: 18px;
+                    letter-spacing: 0%;
+                }
+            }
+        }
+
+        .buttons {
+            display: flex;
+            padding-top: 35px;
+            gap: 30px;
+            justify-content: end;
+            padding-right: 35px;
+
+            .cancel {
+                width: 112px;
+                height: 43px;
+                border-radius: 7.3px;
+                background: rgb(131, 131, 131);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 5px;
+                border: none;
+
+                P {
+                    color: rgb(255, 255, 255);
+                    font-family: sans-serif;
+                    font-size: 12px;
+                    font-weight: 500;
+                    line-height: 20.76px;
+                    letter-spacing: 0.34px;
+                    text-transform: capitalize;
+                }
+
+                img {
+                    width: 10.75px;
+                    height: 11.32px;
+                }
+            }
+
+            .save {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 5px;
+                width: 130px;
+                height: 43px;
+                border-radius: 7.3px;
+                background: rgb(83, 168, 187);
+                border: none;
+
+                p {
+                    color: rgb(255, 255, 255);
+                    font-family: sans-serif;
+                    font-size: 12px;
+                    font-weight: 500;
+                    line-height: 20.76px;
+                    letter-spacing: 0.34px;
+                    text-transform: capitalize;
+                }
+
+                img {
+                    width: 10.95px;
+                    height: 10.95px;
+                }
+            }
+        }
+    }
