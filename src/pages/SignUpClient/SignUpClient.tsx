@@ -28,4 +28,8 @@ const SignUpClient = () => {
   );
 };
 
+<<<<<<< HEAD
 export default SignUpClient;
+=======
+export default SignUpClient; 
+>>>>>>> d6e6ebd418f71aab33e53e693b17597e5248393d
