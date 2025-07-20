@@ -5,6 +5,7 @@ import Layoutadmin from "../Layout/admin/Layout.tsx";
 import LoginForm from "../components/LoginForm/LoginForm.tsx";
 import List from "../pages/list/List.tsx";
 import Newdoctor from "../pages/creating/Newdoctor.tsx";
+import SignUpClient from "../pages/SignUpClient/SignUpClient.tsx";
 import PatientsList from "../components/PatientsList/PatientsList.tsx";
 import Doctors from "../pages/section/Doctors.tsx";
 import Branches from "../pages/branches/Branches.tsx";
@@ -38,12 +39,12 @@ export const myRouter = createBrowserRouter([
          element: <Layoutadmin/>
     },
     {
+         path: 'signupUser',
+         element: <SignUpClient/>
+    },
+    { 
          path: 'loginForm',
          element: <LoginForm/>
-    },
-
-      {   path: 'admin',
-        element: <Layoutadmin />
     },
     {
          path: 'patientsList',
