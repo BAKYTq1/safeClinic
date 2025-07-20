@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom"
 import Home from "../pages/Home/Home.tsx";
 import Layout from "../Layout/Layout.tsx";
 import Layoutadmin from "../Layout/admin/Layout.tsx";
+import LoginForm from "../components/LoginForm/LoginForm.tsx";
 import List from "../pages/list/List.tsx";
 import Newdoctor from "../pages/creating/Newdoctor.tsx";
 import PatientsList from "../components/PatientsList/PatientsList.tsx";
@@ -33,7 +34,15 @@ export const myRouter = createBrowserRouter([
         ]
     },
     {
-        path: 'admin',
+         path: 'admin',
+         element: <Layoutadmin/>
+    },
+    {
+         path: 'loginForm',
+         element: <LoginForm/>
+    },
+
+      {   path: 'admin',
         element: <Layoutadmin />
     },
     {
@@ -49,4 +58,4 @@ export const myRouter = createBrowserRouter([
         element: <PatientCalendar/>
     } 
 
-]) 
+ ])
