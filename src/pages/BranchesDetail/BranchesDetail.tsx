@@ -16,7 +16,9 @@ const BranchesDetail: React.FC<Props> = ({ branch, onClose }) => {
   return (
     <div className="overlay">
       <div className="modal">
-        <div className="header">Информация о филиале</div>
+        <div className="header">  
+          <h1 className='title'>Информация о филиале</h1>
+        </div>
         <div className="content">
           <div>
             <p><strong>Название филиала:</strong> {branch.name}</p>
