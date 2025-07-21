@@ -1,5 +1,17 @@
 .container {
+  width: 972px;
+  background: white;
+  position: absolute;
+  top: 113px;
+  left: 388px;
   padding: 20px;
+  overflow-x: auto;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.tableWrapper {
+  width: 100%;
   overflow-x: auto;
 }
 
@@ -7,7 +19,7 @@
   width: 100%;
   border-collapse: collapse;
   font-family: 'Arial', sans-serif;
-  font-size: 14px; 
+  font-size: 14px;
 
   th {
     text-align: left;
@@ -15,8 +27,7 @@
     color: #333;
     font-weight: 600;
     border-bottom: 1px solid #ddd;
-    white-space: nowrap;
-     vertical-align: middle;
+    white-space: nowrap; 
   }
 
   td {
@@ -24,40 +35,43 @@
     color: #4a4a4a;
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis; 
-    max-width: 150px; 
+    text-overflow: ellipsis;
+    max-width: 150px;
     vertical-align: middle;
   }
+}
 
- 
+.nameBtn {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: left;
+  padding: 0;
 
-  
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .actions {
   display: flex;
   gap: 8px;
 
-  button {
+  .delete {
+    color: #e91e63;
     background: none;
     border: none;
     cursor: pointer;
     font-size: 16px;
+  }
 
-    &.delete {
-      color: #e91e63;
-
-      &:hover {
-        opacity: 0.8;
-      }
-    }
-
-    &.edit {
-      color: #3f51b5;
-
-      &:hover {
-        opacity: 0.8;
-      }
-    }
+  .edit {
+    color: #3f51b5;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
   }
 }

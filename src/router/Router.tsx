@@ -9,11 +9,13 @@ import SignUpClient from "../pages/SignUpClient/SignUpClient.tsx";
 import PatientsList from "../components/PatientsList/PatientsList.tsx";
 import Doctors from "../pages/section/Doctors.tsx";
 import Branches from "../pages/branches/Branches.tsx";
+import PatientInfoPage from "../pages/patientinformation/PatientInfoPage.tsx";
+import PatientCalendar from "../pages/PatientCalendar/PatientCalendar.tsx";
+import DoctorInfoPage from "../pages/aboutdoctor/DoctorInfoPage.tsx";
 import Patient from "../pages/create/Patient.tsx";
 import PatientInfoPage from "../pages/patientinformation/PatientInfoPage.tsx";
 import PatientCalendar from "../pages/PatientCalendar/PatientCalendar.tsx";
 import ServiceList from "../pages/ServiceList/ServiceList.tsx";
-
 
 export const myRouter = createBrowserRouter([
     {
@@ -45,7 +47,7 @@ export const myRouter = createBrowserRouter([
                 element: <ServiceList />
             },
              
-        ]
+      
     },
     {
         path: 'admin',
@@ -73,9 +75,13 @@ export const myRouter = createBrowserRouter([
         element: <PatientInfoPage/>
     
     }, 
-      {    
+    {    
         path: 'patientCalendar',
         element: <PatientCalendar/>
+    },
+    {
+        path: 'doctorInfoPage',
+        element: <DoctorInfoPage/>
     } 
 
  ])
