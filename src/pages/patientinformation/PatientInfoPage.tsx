@@ -9,12 +9,13 @@ const PatientInfoPage: React.FC = () => {
       <h1>Пациент тууралуу маалымат</h1>
 
       <button onClick={() => setShowModal(true)}>
+        
         Пациент жөнүндө маалымат
       </button>
-
       {showModal && (
         <PatientInformation onClose={() => setShowModal(false)} />
       )}
+
     </div>
   );
 };
