@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './Branches.module.scss';
-import { FaTrash, FaPen } from 'react-icons/fa';
+import BranchesDetail from '../BranchesDetail/BranchesDetail.tsx';
+import { FaTrash, FaPen } from 'react-icons/fa'; 
 
 interface Branch {
   name: string;
@@ -22,31 +23,43 @@ const branches: Branch[] = [
 ];
 
 const Branches: React.FC = () => {
+  const [selectedBranch, setSelectedBranch] = useState<Branch | null>(null);
+
   return (
     <div className={styles.container}>
-      <table className={styles.table}>
-        <thead>
-          <tr>
-            <th>Имя</th>
-            <th>Адрес</th>
-            <th>Директор</th>
-            <th>Действии</th>
-          </tr>
-        </thead>
-        <tbody>
-          {branches.map((branch, index) => (
-            <tr key={index}>
-              <td>{branch.name}</td>
-              <td>{branch.address}</td>
-              <td>{branch.director}</td>
-              <td className={styles.actions}>
-                <button className={styles.delete}><FaTrash /></button>
-                <button className={styles.edit}><FaPen /></button>
-              </td>
+      <div className={styles.tableWrapper}>
+        <table className={styles.table}>
+          <thead>
+            <tr>
+              <th>Имя</th>
+              <th>Адрес</th>
+              <th>Директор</th>
+              <th>Действии</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {branches.map((branch, index) => (
+              <tr key={index}>
+                <td>
+                  <button className={styles.nameBtn} onClick={() => setSelectedBranch(branch)}>
+                    {branch.name}
+                  </button>
+                </td>
+                <td>{branch.address}</td>
+                <td>{branch.director}</td>
+                <td className={styles.actions}>
+                  <button className={styles.delete}><FaTrash /></button>
+                  <button className={styles.edit}><FaPen /></button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      {selectedBranch && (
+        <BranchesDetail branch={selectedBranch} onClose={() => setSelectedBranch(null)} />
+      )}
     </div>
   );
 };

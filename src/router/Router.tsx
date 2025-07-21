@@ -12,6 +12,10 @@ import Branches from "../pages/branches/Branches.tsx";
 import PatientInfoPage from "../pages/patientinformation/PatientInfoPage.tsx";
 import PatientCalendar from "../pages/PatientCalendar/PatientCalendar.tsx";
 import DoctorInfoPage from "../pages/aboutdoctor/DoctorInfoPage.tsx";
+import Patient from "../pages/create/Patient.tsx";
+import PatientInfoPage from "../pages/patientinformation/PatientInfoPage.tsx";
+import PatientCalendar from "../pages/PatientCalendar/PatientCalendar.tsx";
+import ServiceList from "../pages/ServiceList/ServiceList.tsx";
 
 export const myRouter = createBrowserRouter([
     {
@@ -34,11 +38,18 @@ export const myRouter = createBrowserRouter([
                 path: 'doctors',
                 element: <Doctors />
             },
-        ]
+            {
+                path: 'patient',
+                element: <Patient />
+            },{ 
+                path: 'serviceList',
+                element: <ServiceList />
+            },
+         ]
     },
     {
-         path: 'admin',
-         element: <Layoutadmin/>
+        path: 'admin',
+        element: <Layoutadmin />
     },
     {
          path: 'signupUser',
@@ -55,10 +66,12 @@ export const myRouter = createBrowserRouter([
       {    
         path: 'branches',
         element: <Branches/>
+
     },
     {
         path: 'PatientInfoPage',
         element: <PatientInfoPage/>
+    
     }, 
     {    
         path: 'patientCalendar',
@@ -70,3 +83,4 @@ export const myRouter = createBrowserRouter([
     } 
 
  ])
+
