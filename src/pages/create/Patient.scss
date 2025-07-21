@@ -1,0 +1,167 @@
+.patient {
+    width: 710px;
+    height: auto;
+    margin: 0 auto;
+    background: rgb(255, 255, 255);
+
+    &__header {
+        width: 710px;
+        height: 83px;
+        border-radius: 10px;
+        background: rgb(212, 239, 243);
+        margin-bottom: 30px;
+
+        h2 {
+            padding: 26px 35px;
+            color: rgb(0, 0, 0);
+            font-family: sans-serif;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 29px;
+            letter-spacing: 0%;
+            text-align: left;
+        }
+    }
+
+    .patient-form {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        padding: 0 35px;
+
+        &__row {
+            display: flex;
+            gap: 60px;
+            flex-wrap: wrap;
+        }
+
+        &__group {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+
+            label {
+                color: rgb(0, 0, 0);
+                font-family: sans-serif;
+                font-size: 15px;
+                font-weight: 400;
+                line-height: 18px;
+                letter-spacing: 0%;
+                text-align: left;
+            }
+
+            option {
+                color: rgb(0, 0, 0);
+                font-family: sans-serif;
+                font-size: 15px;
+                font-weight: 400;
+                line-height: 18px;
+                letter-spacing: 0%;
+                text-align: left;
+            }
+
+            input,
+            select,
+            textarea {
+                padding: 10px 12px;
+                font-size: 15px;
+                border: 1.8px solid #ccc;
+                border-radius: 6px;
+                outline: none;
+                transition: border-color 0.25s ease;
+
+                &:focus {
+                    border-color: #007bff;
+                }
+            }
+
+            textarea {
+                min-height: 80px;
+                resize: vertical;
+            }
+        }
+    }
+
+    .time-selection {
+
+        &__list {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            padding-top: 10px;
+        }
+
+        &__btn {
+            width: 103px;
+            height: 35px;
+            border-radius: 4px;
+            background: rgb(194, 242, 252);
+            border: none;
+            cursor: pointer;
+        }
+    }
+
+    .form-actions {
+        display: flex;
+        justify-content: flex-end;
+        gap: 30px;
+
+        .btn_cancel {
+            width: 114px;
+            height: 43px;
+            border-radius: 7.3px;
+            border: none;
+            background: rgb(131, 131, 131);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+
+            p {
+                color: rgb(255, 255, 255);
+                font-family: sans-serif;
+                font-size: 12px;
+                font-weight: 500;
+                line-height: 20.76px;
+                letter-spacing: 0.34px;
+                text-align: left;
+                text-transform: capitalize;
+            }
+
+            img {
+                width: 10.75px;
+                height: 11.32px;
+            }
+        }
+
+        .btn_save {
+            width: 130px;
+            height: 43px;
+            border-radius: 7.3px;
+            border: none;
+            background: rgb(118, 181, 223);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+
+            p {
+                color: rgb(255, 255, 255);
+                font-family: sans-serif;
+                font-size: 12px;
+                font-weight: 500;
+                line-height: 20.76px;
+                letter-spacing: 0.34px;
+                text-align: left;
+                text-transform: capitalize;
+            }
+
+            img {
+                width: 10.75px;
+                height: 11.32px;
+            }
+        }
+    }
+}
