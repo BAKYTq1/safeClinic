@@ -10,6 +10,7 @@ import PatientsList from "../components/PatientsList/PatientsList.tsx";
 import Doctors from "../pages/section/Doctors.tsx";
 import Branches from "../pages/branches/Branches.tsx";
 import PatientCalendar from "../pages/PatientCalendar/PatientCalendar.tsx";
+import ServiceList from "../pages/ServiceList/ServiceList.tsx";
 
 export const myRouter = createBrowserRouter([
     {
@@ -31,6 +32,10 @@ export const myRouter = createBrowserRouter([
             {
                 path: 'doctors',
                 element: <Doctors />
+            },
+            {
+                path: 'serviceList',
+                element: <ServiceList />
             },
         ]
     },
