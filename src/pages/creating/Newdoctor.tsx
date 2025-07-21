@@ -4,14 +4,14 @@ import img9 from "../../assets/svg/9.svg";
 import img10 from "../../assets/svg/10.svg";
 import img11 from "../../assets/svg/11.svg";
 
-const Newdoctor: React.FC = () => {
+const Newdoctor: React.FC = () => { 
   const [phone, setPhone] = useState<string>("");
 
   const handlePhoneChange = (e: ChangeEvent<HTMLInputElement>) => {
     const onlyNumbers = e.target.value.replace(/[^\d+]/g, "");
     setPhone(onlyNumbers);
   };
-
+  
   return (
     <div className='newdoctor'>
       <div className='title'>
