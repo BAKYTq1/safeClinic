@@ -39,18 +39,15 @@ export const myRouter = createBrowserRouter([
             {
                 path: 'patient',
                 element: <Patient />
-            },
+            },{ 
                 path: 'serviceList',
                 element: <ServiceList />
             },
-        ]
+         ]
     },
     {
         path: 'admin',
         element: <Layoutadmin />
-
-         path: 'admin',
-         element: <Layoutadmin/>
     },
     {
          path: 'signupUser',
