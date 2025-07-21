@@ -26,6 +26,5 @@ const SignUpClient = () => {
       </div>
     </div>
   );
-};
-
+}; 
 export default SignUpClient; 

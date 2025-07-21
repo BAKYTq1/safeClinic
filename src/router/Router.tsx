@@ -2,12 +2,15 @@ import { createBrowserRouter } from "react-router-dom"
 import Home from "../pages/Home/Home.tsx";
 import Layout from "../Layout/Layout.tsx";
 import Layoutadmin from "../Layout/admin/Layout.tsx";
+import LoginForm from "../components/LoginForm/LoginForm.tsx";
 import List from "../pages/list/List.tsx";
 import Newdoctor from "../pages/creating/Newdoctor.tsx";
+import SignUpClient from "../pages/SignUpClient/SignUpClient.tsx";
 import PatientsList from "../components/PatientsList/PatientsList.tsx";
 import Doctors from "../pages/section/Doctors.tsx";
 import Branches from "../pages/branches/Branches.tsx";
 import Patient from "../pages/create/Patient.tsx";
+import PatientCalendar from "../pages/PatientCalendar/PatientCalendar.tsx";
 
 export const myRouter = createBrowserRouter([
     {
@@ -40,6 +43,16 @@ export const myRouter = createBrowserRouter([
         path: 'admin',
         element: <Layoutadmin />
 
+         path: 'admin',
+         element: <Layoutadmin/>
+    },
+    {
+         path: 'signupUser',
+         element: <SignUpClient/>
+    },
+    { 
+         path: 'loginForm',
+         element: <LoginForm/>
     },
     {
          path: 'patientsList',
@@ -48,5 +61,10 @@ export const myRouter = createBrowserRouter([
       {    
         path: 'branches',
         element: <Branches/>
-    }
-]) 
+    }, 
+      {    
+        path: 'patientCalendar',
+        element: <PatientCalendar/>
+    } 
+
+ ])
