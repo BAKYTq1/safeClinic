@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import PatientInformation from '../patientinformation/PatientInformation'; 
+import PatientInformation from '../patientinformation/Patientinformation'; 
 
 
 const PatientInfoPage: React.FC = () => {
@@ -12,9 +12,9 @@ const PatientInfoPage: React.FC = () => {
       <button onClick={() => setShowModal(true)}>
         Пациент жөнүндө маалымат
       </button>
-      {/* {showModal && (
+      {showModal && (
         <PatientInformation onClose={() => setShowModal(false)} />
-      )} */}
+      )}
 
     </div>
   );

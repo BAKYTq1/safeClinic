@@ -12,10 +12,7 @@ import Branches from "../pages/branches/Branches.tsx";
 import PatientInfoPage from "../pages/patientinformation/PatientInfoPage.tsx";
 import PatientCalendar from "../pages/PatientCalendar/PatientCalendar.tsx";
 import DoctorInfoPage from "../pages/aboutdoctor/DoctorInfoPage.tsx";
-import Patient from "../pages/create/Patient.tsx";
-import PatientInfoPage from "../pages/patientinformation/PatientInfoPage.tsx";
-import PatientCalendar from "../pages/PatientCalendar/PatientCalendar.tsx";
-import ServiceList from "../pages/ServiceList/ServiceList.tsx";
+import Top from "../pages/top/Top.tsx";
 
 export const myRouter = createBrowserRouter([
     {
@@ -38,51 +35,43 @@ export const myRouter = createBrowserRouter([
                 path: 'doctors',
                 element: <Doctors />
             },
-            {
-                path: 'patient',
-                element: <Patient />
-            },
-            {
-                path: 'serviceList',
-                element: <ServiceList />
-            },
-             
-      
+        ]
     },
     {
         path: 'admin',
         element: <Layoutadmin />
     },
     {
-         path: 'signupUser',
-         element: <SignUpClient/>
+        path: 'signupUser',
+        element: <SignUpClient />
     },
     // { 
     //      path: 'loginForm',
     //      element: <LoginForm/>
     // },
     {
-         path: 'patientsList',
-         element: <PatientsList/> 
-         },  
-      {    
+        path: 'patientsList',
+        element: <PatientsList />
+    },
+    {
         path: 'branches',
-        element: <Branches/>
-
+        element: <Branches />
     },
     {
         path: 'PatientInfoPage',
-        element: <PatientInfoPage/>
-    
-    }, 
-    {    
+        element: <PatientInfoPage />
+    },
+    {
         path: 'patientCalendar',
-        element: <PatientCalendar/>
+        element: <PatientCalendar />
     },
     {
         path: 'doctorInfoPage',
-        element: <DoctorInfoPage/>
-    } 
+        element: <DoctorInfoPage />
+    },
+    {
+        path: 'top',
+        element: <Top/>
+    }
 
- ])
-
+])
