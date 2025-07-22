@@ -76,6 +76,7 @@ const Newdoctor: React.FC = () => {
               <option value="стоматолог">Стоматолог</option>
               <option value="рентгенолог">Рентгенолог</option>
               <option value="педиатр">Педиатр</option>
+              <option value="педиатр">Терапевт</option>
               <option value="ортопед">Хирург-ортопед</option>
               <option value="хирург">Хирург</option>
             </select>

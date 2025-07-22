@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import PatientInformation from '../patientinformation/Patientinformation'; 
 import PatientInformation from '../patientinformation/PatientInformation'; 
+
 
 const PatientInfoPage: React.FC = () => {
   const [showModal, setShowModal] = useState(false);
@@ -12,9 +12,9 @@ const PatientInfoPage: React.FC = () => {
       <button onClick={() => setShowModal(true)}>
         Пациент жөнүндө маалымат
       </button>
-      {showModal && (
+      {/* {showModal && (
         <PatientInformation onClose={() => setShowModal(false)} />
-      )}
+      )} */}
 
     </div>
   );

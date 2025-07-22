@@ -1,7 +1,7 @@
 import React from 'react';
 import './PatientsList.scss';
-import { MdDelete } from "react-icons/md"; 
-import { FiEdit3 } from "react-icons/fi";
+// import { MdDelete } from "react-icons/md"; 
+// import { FiEdit3 } from "react-icons/fi";
 
 
 type Patient = {
@@ -43,14 +43,14 @@ const PatientsList: React.FC = () => {
                 <td><a href={`tel:${patient.phone}`}>{patient.phone}</a></td>
                 <td className="patient-address">{patient.address}</td>
                 <td className='patient-date'>{patient.date}</td>
-              <td>
+              {/* <td>
                  <button className="icon-button delete" title="Удалить">
                   <MdDelete size={18} />
                  </button>
                  <button className="icon-button edit" title="Редактировать">
                   <FiEdit3 size={18} />
                  </button>
-              </td>
+              </td> */}
               </tr>
             ))}
           </tbody>
