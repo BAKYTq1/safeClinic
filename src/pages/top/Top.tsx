@@ -5,7 +5,7 @@ import { IoIosNotifications } from 'react-icons/io';
 
 const Top: React.FC = () => {
   return (
-    <div className="top">
+    <div className="top"> 
       <div className="search-box">
         <FaFilter className="icon filter" />
         <input type="text" placeholder="Поиск" />
