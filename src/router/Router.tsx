@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom"
 import Home from "../pages/Home/Home.tsx";
 import Layout from "../Layout/Layout.tsx";
 import Layoutadmin from "../Layout/admin/Layout.tsx";
-// import LoginForm from "../components/LoginForm/LoginForm.tsx";
+import LoginForm from "../components/LoginForm/LoginForm.tsx";
 import List from "../pages/list/List.tsx";
 import Newdoctor from "../pages/creating/Newdoctor.tsx";
 import SignUpClient from "../pages/SignUpClient/SignUpClient.tsx";
@@ -51,6 +51,8 @@ export const myRouter = createBrowserRouter([
             },
              
         ]
+]          
+      
     },
     {
         path: 'admin',
@@ -60,10 +62,10 @@ export const myRouter = createBrowserRouter([
          path: 'signupUser',
          element: <SignUpClient/>
     },
-    // { 
-    //      path: 'loginForm',
-    //      element: <LoginForm/>
-    // },
+    { 
+         path: 'loginForm',
+         element: <LoginForm/>
+    },
     {
          path: 'patientsList',
          element: <PatientsList/> 
