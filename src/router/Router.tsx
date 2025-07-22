@@ -13,9 +13,8 @@ import PatientInfoPage from "../pages/patientinformation/PatientInfoPage.tsx";
 import PatientCalendar from "../pages/PatientCalendar/PatientCalendar.tsx";
 import DoctorInfoPage from "../pages/aboutdoctor/DoctorInfoPage.tsx";
 import Patient from "../pages/create/Patient.tsx";
-import PatientInfoPage from "../pages/patientinformation/PatientInfoPage.tsx";
-import PatientCalendar from "../pages/PatientCalendar/PatientCalendar.tsx";
 import ServiceList from "../pages/ServiceList/ServiceList.tsx";
+import Calendar from "../pages/paneldoctors/Calendar.tsx";
 
 export const myRouter = createBrowserRouter([
     {
@@ -46,8 +45,12 @@ export const myRouter = createBrowserRouter([
                 path: 'serviceList',
                 element: <ServiceList />
             },
+              {
+                path: '\calendar',
+                element: <Calendar />
+            },
              
-      
+        ]
     },
     {
         path: 'admin',
