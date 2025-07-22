@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Doctors.scss';
 import img11 from '../../assets/svg/11.svg';
 import img12 from '../../assets/svg/12.svg';
@@ -13,6 +13,7 @@ import img20 from '../../assets/svg/20.svg';
 import img21 from '../../assets/svg/21.svg';
 import img22 from '../../assets/svg/22.svg';
 import img23 from '../../assets/svg/23.svg';
+import DoctorEditing from '../realize/doctorEditing';
 
 type Doctor = {
     id: number;
@@ -118,6 +119,19 @@ const doctorsData: Doctor[] = [
 ];
 
 const Doctors: React.FC = () => {
+    const [isEditing, setIsEditing] = useState(false);
+    const [selectedDoctor, setSelectedDoctor] = useState<Doctor | null>(null);
+
+    const openEditModal = (doctor: Doctor) => {
+        setSelectedDoctor(doctor);
+        setIsEditing(true);
+    };
+
+    const closeEditModal = () => {
+        setIsEditing(false);
+        setSelectedDoctor(null);
+    };
+
     return (
         <div className='doctors'>
             <div className='section'>
@@ -134,7 +148,7 @@ const Doctors: React.FC = () => {
                     <span>Email</span>
                     <span>Теги</span>
                     <span>Клиенты</span>
-                    <span >Действи</span>
+                    <span>Действи</span>
                 </div>
                 <div style={{ borderBottom: "1px solid rgb(187, 187, 187)", marginTop: "12px" }}></div>
             </div>
@@ -155,12 +169,21 @@ const Doctors: React.FC = () => {
                         <h4>{doctor.clients}</h4>
 
                         <div className='imgs'>
-                            <img src={img13} alt="edit" />
-                            <img src={img14} alt="delete" />
+                            <img src={img13} alt="delete" />
+                            <img
+                                src={img14}
+                                alt="edit"
+                                style={{ cursor: "pointer" }}
+                                onClick={() => openEditModal(doctor)}
+                            />
                         </div>
                     </div>
                 ))}
             </div>
+
+            {isEditing && selectedDoctor && (
+                <DoctorEditing doctor={selectedDoctor} onClose={closeEditModal} />
+            )}
         </div>
     );
 };

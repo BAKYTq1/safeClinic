@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import './SignUpClien.scss';
-import { MdHealthAndSafety } from 'react-icons/md';
+// import { MdHealthAndSafety } from 'react-icons/md';
 
 const SignUpClient = () => {
   return (
     <div className="signup-container">
       <div className="signup-box">
         <div className="signup-logo">
-          <MdHealthAndSafety className="logo-icon" />
+          {/* <MdHealthAndSafety className="logo-icon" /> */}
           <h1 className="logo-text">safe.clinic</h1>
         </div>
 
