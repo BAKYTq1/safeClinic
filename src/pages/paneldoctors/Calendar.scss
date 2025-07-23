@@ -1,0 +1,252 @@
+.calendar {
+    width: 987px;
+    height: 886px;
+    border-radius: 10px;
+    background: rgb(255, 255, 255);
+    margin: 0 auto;
+
+    .calendar-header {
+        display: flex;
+        align-items: center;
+        gap: 23px;
+        padding-left: 15px;
+
+        h2 {
+            color: rgb(38, 9, 68);
+            font-family: sans-serif;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 21px;
+            letter-spacing: 0px;
+        }
+    }
+
+    .calendar-options {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        p {
+            color: rgb(38, 9, 68);
+            font-family: sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 17px;
+            letter-spacing: 0%;
+        }
+
+
+        .menu-icon {
+            cursor: pointer;
+
+            img {
+                display: block;
+                width: 8.53px;
+                height: 13.41px;
+
+            }
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 35px;
+            right: 0;
+            width: 88px;
+            height: 91px;
+            border-radius: 4.47px;
+            box-shadow: 0px 0px 4.47px 4.47px rgba(60, 58, 58, 0.1);
+            background: rgb(255, 255, 255);
+            margin-top: 6px;
+
+            div {
+                padding-left: 10px;
+                padding-top: 8px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .number {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding-left: 44px;
+
+        img {
+            width: 6px;
+            height: 12px;
+        }
+
+        p {
+            color: rgb(46, 45, 45);
+            font-family: sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 11.2px;
+            letter-spacing: 0%;
+        }
+    }
+
+    .week {
+        display: flex;
+        padding-left: 104px;
+        gap: 140px;
+        margin-top: 13px;
+
+        p {
+            margin: 0;
+            color: rgba(0, 0, 0, 0.51);
+            font-family: sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 16px;
+            letter-spacing: 0%;
+        }
+    }
+
+    .calendar-main {
+        display: flex;
+        gap: 3px;
+
+        .time-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding-top: 18px;
+            padding-left: 7px;
+            align-items: center;
+            width: 36px;
+
+
+            .time-row {
+                display: flex;
+                flex-direction: column;
+                gap: 13px;
+
+                p {
+                    color: rgb(0, 0, 0);
+                    font-family: sans-serif;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 17px;
+                    letter-spacing: 0%;
+                    margin: 0;
+                }
+            }
+        }
+
+        .patient-time {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 15px;
+            width: 936px;
+            height: 737px;
+
+            div {
+                display: flex;
+            }
+
+            .empty {
+                box-sizing: border-box;
+                border: 0.85px solid rgb(0, 194, 255);
+                border-radius: 4px;
+                width: 156px;
+                height: 67px;
+            }
+
+            .patient-cards {
+                position: relative;
+                width: 156px;
+                height: 67px;
+                box-sizing: border-box;
+                border: 1px solid rgb(179, 230, 241);
+                border-radius: 4px;
+                background: rgb(179, 230, 241);
+
+                .popup {
+                    position: absolute;
+                    top: 18px;
+                    left: 0;
+                    display: flex;
+                    flex-direction: column;
+                    z-index: 999;
+                    width: 228px;
+                    height: 108px;
+                    border: none;
+                    box-sizing: border-box;
+                    border: 1px solid rgba(0, 0, 0, 0.5);
+                    border-radius: 5px;
+
+                    background: rgb(255, 255, 255);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 20px;
+
+                    button {
+                        background: rgb(255, 255, 255);
+                        border: none;
+                        cursor: pointer;
+                        display: flex;
+                        gap: 16px;
+                        align-items: center;
+                        padding-left: 20px;
+
+                        &:hover {
+                            background-color: #e0e0e0;
+                        }
+                    }
+                }
+
+                .img {
+                    width: 4px;
+                    height: 13px;
+                    position: relative;
+                    left: 149px;
+                    top: 4px;
+                    cursor: pointer;
+                }
+
+                .content {
+                    display: flex;
+                    align-items: center;
+                    padding-left: 8px;
+                    padding-top: 5px;
+
+                    img {
+                        width: 16.95px;
+                        height: 16.95px;
+                    }
+
+                    .text {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 5px;
+
+                        h3 {
+                            text-align: center;
+                            color: rgb(0, 0, 0);
+                            font-family: sans-serif;
+                            font-size: 12px;
+                            font-weight: 500;
+                            line-height: 15px;
+                            letter-spacing: 0%;
+                            margin: 0;
+                        }
+
+                        p {
+                            margin: 0;
+                            color: rgb(0, 0, 0);
+                            font-family: sans-serif;
+                            font-size: 13px;
+                            font-weight: 400;
+                            line-height: 16px;
+                            letter-spacing: 0%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
