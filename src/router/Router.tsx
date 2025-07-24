@@ -14,6 +14,7 @@ import PatientCalendar from "../pages/PatientCalendar/PatientCalendar.tsx";
 import DoctorInfoPage from "../pages/aboutdoctor/DoctorInfoPage.tsx";
 import Patient from "../pages/create/Patient.tsx";
 import ServiceList from "../pages/ServiceList/ServiceList.tsx";
+import DoctorAnalytics from "../pages/DoctorAnalytics/DoctorAnalytics.tsx";
 import Calendar from "../pages/paneldoctors/Calendar.tsx";
 
 export const myRouter = createBrowserRouter([
@@ -37,5 +38,7 @@ export const myRouter = createBrowserRouter([
     { path: 'branches', element: <Branches /> },
     { path: 'PatientInfoPage', element: <PatientInfoPage /> },
     { path: 'patientCalendar', element: <PatientCalendar /> },
-    { path: 'doctorInfoPage', element: <DoctorInfoPage /> },
+    { path: 'doctorInfoPage', element: <DoctorInfoPage /> }, 
+    { path: 'doctorAnalytics', element: <DoctorAnalytics /> }, 
+
 ]);
