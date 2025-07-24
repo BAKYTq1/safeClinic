@@ -13,7 +13,7 @@ import img20 from '../../assets/svg/20.svg';
 import img21 from '../../assets/svg/21.svg';
 import img22 from '../../assets/svg/22.svg';
 import img23 from '../../assets/svg/23.svg';
-import DoctorEditing from '../realize/doctorEditing';
+import DoctorEditing from '../realize/DoctorEditing';
 
 type Doctor = {
     id: number;
