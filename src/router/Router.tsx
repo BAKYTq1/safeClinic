@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom"
+import { createBrowserRouter } from "react-router-dom";
 import Home from "../pages/Home/Home.tsx";
 import Layout from "../Layout/Layout.tsx";
 import Layoutadmin from "../Layout/admin/Layout.tsx";
@@ -21,73 +21,21 @@ export const myRouter = createBrowserRouter([
         path: '/',
         element: <Layout />,
         children: [
-            {
-                path: '/',
-                element: <Home />
-            },
-            {
-                path: 'list',
-                element: <List />
-            },
-            {
-                path: 'newdoctor',
-                element: <Newdoctor />
-            },
-            {
-                path: 'doctors',
-                element: <Doctors />
-            },
-            {
-                path: 'patient',
-                element: <Patient />
-            },
-            {
-                path: 'serviceList',
-                element: <ServiceList />
-            },
-              {
-                path: '\calendar',
-                element: <Calendar />
-            },
-             
+            { path: '/', element: <Home /> },
+            { path: 'list', element: <List /> },
+            { path: 'newdoctor', element: <Newdoctor /> },
+            { path: 'doctors', element: <Doctors /> },
+            { path: 'patient', element: <Patient /> },
+            { path: 'serviceList', element: <ServiceList /> },
+            { path: 'calendar', element: <Calendar /> },
         ]
-]          
-      
     },
-    {
-        path: 'admin',
-        element: <Layoutadmin />
-    },
-    {
-         path: 'signupUser',
-         element: <SignUpClient/>
-    },
-    { 
-         path: 'loginForm',
-         element: <LoginForm/>
-    },
-    {
-         path: 'patientsList',
-         element: <PatientsList/> 
-         },  
-      {    
-        path: 'branches',
-        element: <Branches/>
-
-    },
-    {
-        path: 'PatientInfoPage',
-        element: <PatientInfoPage/>
-    
-    }, 
-    {    
-        path: 'patientCalendar',
-        element: <PatientCalendar/>
-    },
-    {
-        path: 'doctorInfoPage',
-        element: <DoctorInfoPage/>
-    } 
-
- ])
-
+    { path: 'admin', element: <Layoutadmin /> },
+    { path: 'signupUser', element: <SignUpClient /> },
+    { path: 'loginForm', element: <LoginForm /> },
+    { path: 'patientsList', element: <PatientsList /> },
+    { path: 'branches', element: <Branches /> },
+    { path: 'PatientInfoPage', element: <PatientInfoPage /> },
+    { path: 'patientCalendar', element: <PatientCalendar /> },
+    { path: 'doctorInfoPage', element: <DoctorInfoPage /> },
+]);

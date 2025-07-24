@@ -1,0 +1,156 @@
+.month {
+    width: 987px;
+    height: 1025px;
+    border-radius: 10px;
+    background: rgb(255, 255, 255);
+    margin: 0 auto;
+
+    .month-options {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        p {
+            color: rgb(38, 9, 68);
+            font-family: sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 17px;
+            letter-spacing: 0%;
+        }
+
+        .menu-icon {
+            cursor: pointer;
+
+            img {
+                display: block;
+                width: 8.53px;
+                height: 13.41px;
+
+            }
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 35px;
+            right: 0;
+            width: 88px;
+            height: 91px;
+            border-radius: 4.47px;
+            box-shadow: 0px 0px 4.47px 4.47px rgba(60, 58, 58, 0.1);
+            background: rgb(255, 255, 255);
+            margin-top: 6px;
+
+            div {
+                padding-left: 10px;
+                padding-top: 8px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .number {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding-left: 44px;
+
+        img {
+            width: 6px;
+            height: 12px;
+        }
+
+        p {
+            color: rgb(46, 45, 45);
+            font-family: sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 11.2px;
+            letter-spacing: 0%;
+        }
+    }
+
+    .week {
+        display: flex;
+        padding-left: 104px;
+        gap: 134px;
+        margin-top: 13px;
+
+        p {
+            margin: 0;
+            color: rgba(0, 0, 0, 0.51);
+            font-family: sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 16px;
+            letter-spacing: 0%;
+        }
+    }
+}
+
+.time {
+    padding-left: 40px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+
+    .row {
+        display: flex;
+
+        .cell {
+            width: 151px;
+            height: 170px;
+            box-sizing: border-box;
+            border: 0.85px solid rgb(0, 194, 255);
+            border-radius: 4px;
+
+            .times {
+                display: flex;
+                flex-direction: column;
+                gap: 21px;
+                padding-top: 5px;
+                padding-left: 4px;
+
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2px;
+
+                }
+
+                h2 {
+                    width: 141px;
+                    height: 18px;
+                    border-radius: 5px;
+                    background: rgb(179, 230, 241);
+                    color: rgb(0, 0, 0);
+                    font-family: sans-serif;
+                    font-size: 12px;
+                    font-weight: 400;
+                    line-height: 15px;
+                    letter-spacing: 0%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0;
+                }
+            }
+
+            p {
+                color: rgb(0, 0, 0);
+                font-family: sans-serif;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 16px;
+                letter-spacing: 0%;
+                display: flex;
+                justify-content: end;
+                margin: 0;
+                padding-right: 11px;
+                padding-top: 10px;
+            }
+        }
+    }
+}
