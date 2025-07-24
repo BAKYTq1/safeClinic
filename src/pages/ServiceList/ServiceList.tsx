@@ -5,8 +5,8 @@ import ServiceList2 from '../../assets/svg/ServiceList2.svg';
 import ServiceList3 from '../../assets/svg/ServiceList3.svg';
 import ServiceList4 from '../../assets/svg/ServiceList4.svg';
 import ServiceList5 from '../../assets/svg/ServiceList5.svg';
-import { MdDelete } from 'react-icons/md';
-import { FiEdit3 } from 'react-icons/fi'; 
+// import { MdDelete } from 'react-icons/md';
+// import { FiEdit3 } from 'react-icons/fi'; 
 import ServiceModal from '../ServiceModal/ServiseModal.tsx'
 
 interface Service {
@@ -87,8 +87,8 @@ const ServiceList: React.FC = () => {
       <td className="service-description">{service.description}</td>
       <td className="service-price">{service.price}</td>
       <td className="service-actions">
-        <MdDelete className="icon delete" />
-        <FiEdit3 className="icon edit" />
+        {/* <MdDelete className="icon delete" />
+        <FiEdit3 className="icon edit" /> */}
       </td>
     </tr>
   ))}

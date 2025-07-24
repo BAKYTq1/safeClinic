@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './LoginForm.scss'; 
-import { MdHealthAndSafety } from "react-icons/md"; 
-import { MdOutlineBadge, MdEmail, MdLock, MdVisibility, MdVisibilityOff,  MdKeyboardArrowDown,} from "react-icons/md";
+// import { MdHealthAndSafety } from "react-icons/md"; 
+// import { MdOutlineBadge, MdEmail, MdLock, MdVisibility, MdVisibilityOff,  MdKeyboardArrowDown,} from "react-icons/md";
 
 export const LoginForm: React.FC = () => {
   const [showPassword, setShowPassword] = useState<boolean>(false);
@@ -38,7 +38,7 @@ export const LoginForm: React.FC = () => {
       <div className="login-box">
         <div className="login-logo">
           <div className="logo-icon"> 
-            <MdHealthAndSafety />
+            {/* <MdHealthAndSafety /> */}
           </div>
           <h1>safe.clinic</h1>
         </div>
@@ -50,7 +50,7 @@ export const LoginForm: React.FC = () => {
             <label>Теги*</label>
             <div className="input-icon" ref={wrapperRef}>
               <div className="left-icon-wrapper">
-                <MdOutlineBadge className="left-icon" />
+                {/* <MdOutlineBadge className="left-icon" /> */}
               </div>
               <select
                 ref={selectRef}
@@ -66,14 +66,14 @@ export const LoginForm: React.FC = () => {
                 <option>Разработка</option>
                 <option>Маркетинг</option>
               </select>
-              <MdKeyboardArrowDown
+              {/* <MdKeyboardArrowDown
                 className={`right-icon ${isTagOpen ? "rotate" : ""}`}
                 onClick={(e) => {
                   e.stopPropagation();
                   setIsTagOpen((prev) => !prev);
                   selectRef.current?.focus();
                 }}
-              />
+              /> */}
             </div>
           </div>
 
@@ -81,7 +81,7 @@ export const LoginForm: React.FC = () => {
             <label>Логин*</label>
             <div className="input-icon">
               <div className="left-icon-wrapper">
-                <MdEmail className="left-icon" />
+                {/* <MdEmail className="left-icon" /> */}
               </div>
               <input type="text" placeholder="Укажите логин" />
             </div>
@@ -91,13 +91,13 @@ export const LoginForm: React.FC = () => {
             <label>Пароль*</label>
             <div className="input-icon">
               <div className="left-icon-wrapper">
-                <MdLock className="left-icon" />
+                {/* <MdLock className="left-icon" /> */}
               </div>
               <input
                 type={showPassword ? "text" : "password"}
                 placeholder="Пароль"
               />
-              {showPassword ? (
+              {/* {showPassword ? (
                 <MdVisibility
                   className="right-icon"
                   onClick={togglePasswordVisibility}
@@ -107,7 +107,7 @@ export const LoginForm: React.FC = () => {
                   className="right-icon"
                   onClick={togglePasswordVisibility}
                 />
-              )}
+              )} */}
             </div>
           </div>
 
