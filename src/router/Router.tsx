@@ -18,6 +18,7 @@ import DoctorAnalytics from "../pages/DoctorAnalytics/DoctorAnalytics.tsx";
 import Calendar from "../pages/paneldoctors/Calendar.tsx";
 import { ClientBookings } from "../pages/clientBookings/ClientBookings.tsx";
 import { ClientPayments } from "../pages/clientPayments/ClientPayments.tsx";
+import ClientProfile from "../pages/edit/ClientProfile.tsx"
 
 export const myRouter = createBrowserRouter([
     {
@@ -31,6 +32,7 @@ export const myRouter = createBrowserRouter([
             { path: 'patient', element: <Patient /> },
             { path: 'serviceList', element: <ServiceList /> },
             { path: 'calendar', element: <Calendar /> },
+            { path: 'clientprofile', element: <ClientProfile/> },
         ]
     },
     { path: 'admin', element: <Layoutadmin /> },
@@ -40,9 +42,9 @@ export const myRouter = createBrowserRouter([
     { path: 'branches', element: <Branches /> },
     { path: 'PatientInfoPage', element: <PatientInfoPage /> },
     { path: 'patientCalendar', element: <PatientCalendar /> },
-    { path: 'doctorInfoPage', element: <DoctorInfoPage /> }, 
-    { path: 'doctorAnalytics', element: <DoctorAnalytics /> }, 
-    { path: 'clientBookings', element: <ClientBookings /> }, 
-    { path: 'clientPayments', element: <ClientPayments /> }, 
+    { path: 'doctorInfoPage', element: <DoctorInfoPage /> },
+    { path: 'doctorAnalytics', element: <DoctorAnalytics /> },
+    { path: 'clientBookings', element: <ClientBookings /> },
+    { path: 'clientPayments', element: <ClientPayments /> },
 
 ]);

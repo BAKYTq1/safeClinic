@@ -1,7 +1,7 @@
 import React from 'react';
-import { AiOutlineRise } from 'react-icons/ai';
-import { MdOutlineStarRate } from 'react-icons/md'; 
-import Analytics1 from '../../assets/svg/Analytics1.svg';
+// import { AiOutlineRise } from 'react-icons/ai';
+// import { MdOutlineStarRate } from 'react-icons/md'; 
+// import Analytics1 from '../../assets/svg/Analytics1.svg';
 import Analytics2 from '../../assets/svg/Analytics2.svg';
 import Analytics3 from '../../assets/svg/Analytics3.svg';
 import Analytics4 from '../../assets/svg/Analytics4.svg';
@@ -19,11 +19,11 @@ const DoctorAnalytics: React.FC = () => {
         <div className="summary-card">
           <div className="summary-top">
             <div className="summary-title">$205,890</div>
-            <img src={Analytics1} alt="Analytics1" className="summary-img" />
+            {/* <img src={Analytics1} alt="Analytics1" className="summary-img" /> */}
           </div>
           <div className="summary-sub">Общий объем</div>
           <div className="summary-bottom">
-            <div className="icon"><AiOutlineRise /></div>
+            {/* <div className="icon"><AiOutlineRise /></div> */}
             <div className="summary-change up">На 1.3% больше, чем на прошлой неделе</div>
           </div>
         </div>
@@ -35,7 +35,7 @@ const DoctorAnalytics: React.FC = () => {
           </div>
           <div className="summary-sub">Всего клиентов</div>
           <div className="summary-bottom">
-            <div className="icon"><AiOutlineRise /></div>
+            {/* <div className="icon"><AiOutlineRise /></div> */}
             <div className="summary-change up">На 1.3% больше, чем на прошлой неделе</div>
           </div>
         </div>
@@ -51,7 +51,7 @@ const DoctorAnalytics: React.FC = () => {
           </div>
           <div className="summary-sub3">Отзыв</div>
           <div className="summary-bottom">
-            <div className="icon-3"><MdOutlineStarRate /></div>
+            {/* <div className="icon-3"><MdOutlineStarRate /></div> */}
             <div className="summary-change down">4.5+15.6% по сравнению с предыдущим периодом</div>
           </div>
         </div>
