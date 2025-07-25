@@ -12,6 +12,7 @@ import Branches from "../pages/branches/Branches.tsx";
 import PatientInfoPage from "../pages/patientinformation/PatientInfoPage.tsx";
 import PatientCalendar from "../pages/PatientCalendar/PatientCalendar.tsx";
 import DoctorInfoPage from "../pages/aboutdoctor/DoctorInfoPage.tsx";
+import Top from "../pages/top/Top.tsx";
 import Patient from "../pages/create/Patient.tsx";
 import ServiceList from "../pages/ServiceList/ServiceList.tsx";
 import DoctorAnalytics from "../pages/DoctorAnalytics/DoctorAnalytics.tsx";
@@ -44,5 +45,6 @@ export const myRouter = createBrowserRouter([
     { path: 'doctorAnalytics', element: <DoctorAnalytics /> }, 
     { path: 'clientBookings', element: <ClientBookings /> }, 
     { path: 'clientPayments', element: <ClientPayments /> }, 
+    { path: 'top', element: <Top /> },
 
 ]);
