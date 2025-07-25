@@ -13,6 +13,7 @@ import PatientInfoPage from "../pages/patientinformation/PatientInfoPage.tsx";
 import PatientCalendar from "../pages/PatientCalendar/PatientCalendar.tsx";
 import DoctorInfoPage from "../pages/aboutdoctor/DoctorInfoPage.tsx";
 import Top from "../pages/top/Top.tsx";
+import Patient from "../pages/create/Patient.tsx"; 
 import Patient from "../pages/create/Patient.tsx";
 import ServiceList from "../pages/ServiceList/ServiceList.tsx";
 import DoctorAnalytics from "../pages/DoctorAnalytics/DoctorAnalytics.tsx";
@@ -25,6 +26,72 @@ export const myRouter = createBrowserRouter([
         path: '/',
         element: <Layout />,
         children: [
+            {
+                path: '/',
+                element: <Home />
+            },
+            {
+                path: 'list',
+                element: <List />
+            },
+            {
+                path: 'newdoctor',
+                element: <Newdoctor />
+            },
+            {
+                path: 'doctors',
+                element: <Doctors />
+            },
+        
+            {
+                path: 'patient',
+                element: <Patient />
+            },
+            {
+                path: 'serviceList',
+                element: <ServiceList />
+            },
+]          
+      
+    },
+    {
+        path: 'admin',
+        element: <Layoutadmin />
+    },
+    {
+        path: 'signupUser',
+        element: <SignUpClient />
+    },
+    { 
+         path: 'loginForm',
+         element: <LoginForm/>
+    },
+    {
+        path: 'patientsList',
+        element: <PatientsList />
+    },
+    {
+        path: 'branches',
+        element: <Branches />
+    },
+    {
+        path: 'PatientInfoPage',
+        element: <PatientInfoPage />
+    },
+    {
+        path: 'patientCalendar',
+        element: <PatientCalendar />
+    },
+    {
+        path: 'doctorInfoPage',
+        element: <DoctorInfoPage />
+    },
+    {
+        path: 'top',
+        element: <Top/>
+    }
+
+])
             { path: '/', element: <Home /> },
             { path: 'list', element: <List /> },
             { path: 'newdoctor', element: <Newdoctor /> },
