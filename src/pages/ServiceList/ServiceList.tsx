@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './ServiceList.scss';
 import ServiceList1 from '../../assets/svg/ServiceList1.svg';
 import ServiceList2 from '../../assets/svg/ServiceList2.svg';
 import ServiceList3 from '../../assets/svg/ServiceList3.svg';
 import ServiceList4 from '../../assets/svg/ServiceList4.svg';
 import ServiceList5 from '../../assets/svg/ServiceList5.svg';
-// import { MdDelete } from 'react-icons/md';
-// import { FiEdit3 } from 'react-icons/fi';
+import { MdDelete } from 'react-icons/md';
+import { FiEdit3 } from 'react-icons/fi'; 
+import ServiceModal from '../ServiceModal/ServiseModal.tsx'
 
 interface Service {
   id: number;
@@ -55,6 +56,8 @@ const services: Service[] = [
 ];
 
 const ServiceList: React.FC = () => {
+  const [selectedService, setSelectedService] = useState<Service | null>(null);
+
   return (
     <div className="service-list">
       <div className="header">
@@ -71,21 +74,33 @@ const ServiceList: React.FC = () => {
             <th className='action-service'>Действия</th>
           </tr>
         </thead>
-        <tbody>
-          {services.map((service) => (
-            <tr key={service.id}>
-              <td><img src={service.image} alt={service.name} className="service-image" /></td>
-              <td className="service-name"><span className="link-style">{service.name}</span></td>
-              <td className="service-description">{service.description}</td>
-              <td className="service-price">{service.price}</td>
-              <td className="service-actions">
-                {/* <MdDelete className="icon delete" />
-                <FiEdit3 className="icon edit" /> */}
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <tbody>
+  {services.map((service) => (
+    <tr key={service.id}>
+      <td><img src={service.image} alt={service.name} className="service-image" /></td>
+      <td
+        className="service-name"
+        onClick={() => setSelectedService(service)}
+      >
+        <span className="link-style">{service.name}</span>
+      </td>
+      <td className="service-description">{service.description}</td>
+      <td className="service-price">{service.price}</td>
+      <td className="service-actions">
+        <MdDelete className="icon delete" />
+        <FiEdit3 className="icon edit" />
+      </td>
+    </tr>
+  ))}
+</tbody>
+
+      </table> 
+        {selectedService && (
+        <ServiceModal
+          service={selectedService}
+          onClose={() => setSelectedService(null)}
+        />
+      )}
     </div>
   );
 };
