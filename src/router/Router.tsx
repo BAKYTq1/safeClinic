@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom"
+import { createBrowserRouter } from "react-router-dom";
 import Home from "../pages/Home/Home.tsx";
 import Layout from "../Layout/Layout.tsx";
 import Layoutadmin from "../Layout/admin/Layout.tsx";
@@ -15,84 +15,36 @@ import DoctorInfoPage from "../pages/aboutdoctor/DoctorInfoPage.tsx";
 import Top from "../pages/top/Top.tsx";
 import Patient from "../pages/create/Patient.tsx";
 import ServiceList from "../pages/ServiceList/ServiceList.tsx";
+import DoctorAnalytics from "../pages/DoctorAnalytics/DoctorAnalytics.tsx";
 import Calendar from "../pages/paneldoctors/Calendar.tsx";
-import Doctorsprofile from "../pages/Doctor'sprofile/Doctorsprofile.tsx";
+import { ClientBookings } from "../pages/clientBookings/ClientBookings.tsx";
+import { ClientPayments } from "../pages/clientPayments/ClientPayments.tsx";
 
 export const myRouter = createBrowserRouter([
     {
         path: '/',
         element: <Layout />,
         children: [
-            {
-                path: '/',
-                element: <Home />
-            },
-            {
-                path: 'list',
-                element: <List />
-            },
-            {
-                path: 'newdoctor',
-                element: <Newdoctor />
-            },
-            {
-                path: 'doctors',
-                element: <Doctors />
-            },
-            {
-                path: 'patient',
-                element: <Patient />
-            },
-            {
-                path: 'serviceList',
-                element: <ServiceList />
-            },
-            {
-                path: 'calendar',
-                element: <Calendar />
-            },
-             
-        ],
+            { path: '/', element: <Home /> },
+            { path: 'list', element: <List /> },
+            { path: 'newdoctor', element: <Newdoctor /> },
+            { path: 'doctors', element: <Doctors /> },
+            { path: 'patient', element: <Patient /> },
+            { path: 'serviceList', element: <ServiceList /> },
+            { path: 'calendar', element: <Calendar /> },
+        ]
     },
-    {
-        path: 'admin',
-        element: <Layoutadmin />
-    },
-    {
-        path: 'signupUser',
-        element: <SignUpClient />
-    },
-    { 
-         path: 'loginForm',
-         element: <LoginForm/>
-    },
-    {
-        path: 'patientsList',
-        element: <PatientsList />
-    },
-    {
-        path: 'branches',
-        element: <Branches />
-    },
-    {
-        path: 'PatientInfoPage',
-        element: <PatientInfoPage />
-    },
-    {
-        path: 'patientCalendar',
-        element: <PatientCalendar />
-    },
-    {
-        path: 'doctorInfoPage',
-        element: <DoctorInfoPage />
-    },
-    {
-        path: 'top',
-        element: <Top/>
-    },
-    {
-        path: 'Doctorsprofile',
-        element: <Doctorsprofile/>
-    }
+    { path: 'admin', element: <Layoutadmin /> },
+    { path: 'signupUser', element: <SignUpClient /> },
+    { path: 'loginForm', element: <LoginForm /> },
+    { path: 'patientsList', element: <PatientsList /> },
+    { path: 'branches', element: <Branches /> },
+    { path: 'PatientInfoPage', element: <PatientInfoPage /> },
+    { path: 'patientCalendar', element: <PatientCalendar /> },
+    { path: 'doctorInfoPage', element: <DoctorInfoPage /> }, 
+    { path: 'doctorAnalytics', element: <DoctorAnalytics /> }, 
+    { path: 'clientBookings', element: <ClientBookings /> }, 
+    { path: 'clientPayments', element: <ClientPayments /> }, 
+    { path: 'top', element: <Top /> },
 
-])
+]);
