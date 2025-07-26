@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from './Branches.module.scss';
-import BranchesDetail from '../BranchesDetail/BranchesDetail.tsx';
+import { BranchesDetail } from '../branchesDetail/BranchesDetail.tsx';
 // import { FaTrash, FaPen } from 'react-icons/fa'; 
 
 interface Branch {
