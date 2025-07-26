@@ -1,0 +1,150 @@
+.edit-doctor-profile {
+  width: 710px;
+  height: 735px; 
+  margin-left: 395px; 
+  margin-top: 149px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: sans-serif;
+  box-sizing: border-box;
+
+  .header {
+    background: #D4EFF3; 
+    width: 678px; 
+    margin-left: -25px;
+    padding: 24px 0px 24px 34px;
+    border-radius: 10px;
+    margin-bottom: 20px; 
+    margin-top: -25px;
+
+    h2 {
+      margin: 0;
+      font-size: 24px;  
+      font-weight: 400;
+      color: #000000; 
+      margin-left: -9px;
+    }
+  }
+
+  .profile-photo-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 16px;
+
+    .doctor-photo {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .photo-actions {
+      display: flex;
+      flex-direction: column;
+      font-size: 14px;
+
+      .change-photo {
+        color: #000;
+        cursor: pointer;
+      }
+
+      .delete-photo {
+        color: red;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .profile-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 26px;
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        font-size: 14px;
+        margin-bottom: 4px;
+      }
+
+      input,
+      select,
+      textarea { 
+        padding: 7px ;
+        font-size: 14px;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+      }
+
+      textarea {
+        height: 60px;
+        resize: none;
+      }
+
+      &.full-width {
+        grid-column: span 2;
+      }
+    }
+  }
+
+.form-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+  gap: 26px;
+
+  button {
+    padding: 12px 26px;
+    border-radius: 8px;
+    border: none;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+  }
+
+  .cancel {
+    background: #838383;
+    color: white;
+
+    &:hover {
+      background: #6e6e6e;
+    }
+
+    &:active {
+      transform: scale(0.97);
+    }
+  }
+
+  .save {
+    background: #53A8BB;
+    color: white;
+
+    &:hover {
+      background: #4496a7;
+    }
+
+    &:active {
+      transform: scale(0.97);
+    }
+  }
+}
+
+  .status {
+    margin-top: 16px;
+    font-size: 16px; 
+    font-weight: 400; 
+    margin-left: 10px;
+    &.success {
+      color: green;
+    }
+    &.cancel {
+      color: red;
+    }
+  }
+}
