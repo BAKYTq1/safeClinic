@@ -21,6 +21,7 @@ import { ClientBookings } from "../pages/clientBookings/ClientBookings.tsx";
 import { ClientPayments } from "../pages/clientPayments/ClientPayments.tsx";
 import DoctorsProfile from "../pages/Doctor'sprofile/Doctorsprofile.tsx";
 import { EditDoctorProfile } from "../pages/editDoctorProfile/EditDoctorProfile.tsx";
+import InfoPage from "../pages/Information/InfoPage.tsx";
 
 export const myRouter = createBrowserRouter([
     {
@@ -51,5 +52,7 @@ export const myRouter = createBrowserRouter([
     { path: 'editDoctorProfile', element: <EditDoctorProfile /> }, 
     { path: 'top', element: <Top /> },
     { path: 'DoctorsProfile', element: <DoctorsProfile /> },
+    // { path: 'Information', element: <Information /> },
+    { path: 'InfoPage', element: <InfoPage /> },
 
 ]);
