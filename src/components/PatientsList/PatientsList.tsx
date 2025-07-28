@@ -1,8 +1,7 @@
 import React from 'react';
-import './PatientsList.scss';
+import styles from './PatientsList.module.scss';
 // import { MdDelete } from "react-icons/md"; 
-// import { FiEdit3 } from "react-icons/fi";
-
+// import { FiEdit3 } from "react-icons/fi"; 
 
 type Patient = {
   name: string;
@@ -20,37 +19,39 @@ const patients: Patient[] = Array(10).fill({
 
 const PatientsList: React.FC = () => {
   return (
-    <div className="patients-list-wrapper">
-      <div className="patients-list-container">
+    <div className={styles['patients-list-wrapper']}>
+      <div className={styles['patients-list-container']}>
         <h2>Список пациентов</h2>
-        <div className="button-wrapper">
-  <button className="add-button">+ Добавить</button>
-</div>
+        <div className={styles['button-wrapper']}>
+          <button className={styles['add-button']}>+ Добавить</button>
+        </div>
         <table>
           <thead>
             <tr>
               <th>Имя</th>
-              <th className='patient-number'>Телефон</th>
-              <th className='p-addres'>Адрес</th>
-              <th className='p-date'>Дата посещения</th>
-              <th className='p-icon'>Действия</th>
+              <th className={styles['patient-number']}>Телефон</th>
+              <th className={styles['p-addres']}>Адрес</th>
+              <th className={styles['p-date']}>Дата посещения</th>
+              <th className={styles['p-icon']}>Действия</th>
             </tr>
           </thead>
           <tbody>
             {patients.map((patient, index) => (
               <tr key={index}>
                 <td>{patient.name}</td>
-                <td><a href={`tel:${patient.phone}`}>{patient.phone}</a></td>
-                <td className="patient-address">{patient.address}</td>
-                <td className='patient-date'>{patient.date}</td>
-              {/* <td>
-                 <button className="icon-button delete" title="Удалить">
-                  <MdDelete size={18} />
-                 </button>
-                 <button className="icon-button edit" title="Редактировать">
-                  <FiEdit3 size={18} />
-                 </button>
-              </td> */}
+                <td>
+                  <a href={`tel:${patient.phone}`}>{patient.phone}</a>
+                </td>
+                <td className={styles['patient-address']}>{patient.address}</td>
+                <td className={styles['patient-date']}>{patient.date}</td>
+                {/* <td>
+                  <button className={`${styles['icon-button']} ${styles['delete']}`} title="Удалить">
+                    <MdDelete size={18} />
+                  </button>
+                  <button className={`${styles['icon-button']} ${styles['edit']}`} title="Редактировать">
+                    <FiEdit3 size={18} />
+                  </button>
+                </td> */}
               </tr>
             ))}
           </tbody>
