@@ -6,7 +6,7 @@ import Analytics2 from '../../assets/svg/Analytics2.svg';
 import Analytics3 from '../../assets/svg/Analytics3.svg';
 import Analytics4 from '../../assets/svg/Analytics4.svg';
 import Analytics5 from '../../assets/svg/Analytics5.svg';
-import './DoctorAnalytics.scss';
+import styles from './DoctorAnalytics.module.scss';
 
 const days: string[] = ['ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ', 'ВС'];
 const visits: number[] = [90, 60, 75, 70, 50, 85, 20];
@@ -28,10 +28,10 @@ const DoctorAnalytics: React.FC = () => {
           </div>
         </div>
 
-        <div className="summary-card">
-          <div className="summary-top">
-            <div className="summary-title">183098</div>
-            <img src={Analytics2} alt="Analytics2" className="summary-img" />
+        <div className={styles["summary-card"]}>
+          <div className={styles["summary-top"]}>
+            <div className={styles["summary-title"]}>183098</div>
+            <img src={Analytics2} alt="Analytics2" className={styles["summary-img"]} />
           </div>
           <div className="summary-sub">Всего клиентов</div>
           <div className="summary-bottom">
@@ -40,14 +40,18 @@ const DoctorAnalytics: React.FC = () => {
           </div>
         </div>
 
-        <div className="summary-card">
-          <div className="summary-top">
-            <div className="summary-top-left">
-              <h3 className="card3-title">Рейтинги</h3>
-              <p className="card3-year">2024 год</p>
-              <div className="summary-title">8.14k</div>
+        <div className={styles["summary-card"]}>
+          <div className={styles["summary-top"]}>
+            <div className={styles["summary-top-left"]}>
+              <h3 className={styles["card3-title"]}>Рейтинги</h3>
+              <p className={styles["card3-year"]}>2024 год</p>
+              <div className={styles["summary-title"]}>8.14k</div>
             </div>
-            <img src={Analytics3} alt="Analytics3" className="summary-img summary-3" />
+            <img
+              src={Analytics3}
+              alt="Analytics3"
+              className={`${styles["summary-img"]} ${styles["summary-3"]}`}
+            />
           </div>
           <div className="summary-sub3">Отзыв</div>
           <div className="summary-bottom">
@@ -57,45 +61,51 @@ const DoctorAnalytics: React.FC = () => {
         </div>
       </div>
 
-      <div className="chart-card">
-        <div className="chart-header">
-          <div className="chart-icon blue"> 
-            <img src={Analytics4} alt="Analytics4" className='chart-icon1' />
+      <div className={styles["chart-card"]}>
+        <div className={styles["chart-header"]}>
+          <div className={`${styles["chart-icon"]} ${styles["blue"]}`}>
+            <img src={Analytics4} alt="Analytics4" className={styles["chart-icon1"]} />
           </div>
-          <div className="chart-info">
-            <div className="chart-title">Посещения по дням</div>
-            <div className="chart-value">1,992</div>
+          <div className={styles["chart-info"]}>
+            <div className={styles["chart-title"]}>Посещения по дням</div>
+            <div className={styles["chart-value"]}>1,992</div>
           </div>
         </div>
-        <div className="chart-bars">
-          {visits.map((value: number, index: number) => (
-            <div className="chart-bar" key={index}>
-              <div className="bar-bg">
-                <div className="bar-fill blue" style={{ height: `${value}%` }} />
+        <div className={styles["chart-bars"]}>
+          {visits.map((value, index) => (
+            <div className={styles["chart-bar"]} key={index}>
+              <div className={styles["bar-bg"]}>
+                <div
+                  className={`${styles["bar-fill"]} ${styles["blue"]}`}
+                  style={{ height: `${value}%` }}
+                />
               </div>
-              <div className="bar-day">{days[index]}</div>
+              <div className={styles["bar-day"]}>{days[index]}</div>
             </div>
           ))}
         </div>
       </div>
 
-      <div className="chart-card">
-        <div className="chart-header">
-          <div className="chart-icon pink"> 
-            <img src={Analytics5} alt="Analytics5" className='chart-icon2' />
+      <div className={styles["chart-card"]}>
+        <div className={styles["chart-header"]}>
+          <div className={`${styles["chart-icon"]} ${styles["pink"]}`}>
+            <img src={Analytics5} alt="Analytics5" className={styles["chart-icon2"]} />
           </div>
-          <div className="chart-info">
-            <div className="chart-title1">Прибыль</div>
-            <div className="chart-value">$638.9k</div>
+          <div className={styles["chart-info"]}>
+            <div className={styles["chart-title1"]}>Прибыль</div>
+            <div className={styles["chart-value"]}>$638.9k</div>
           </div>
         </div>
-        <div className="chart-bars">
-          {revenue.map((value: number, index: number) => (
-            <div className="chart-bar" key={index}>
-              <div className="bar-bg">
-                <div className="bar-fill pink" style={{ height: `${value}%` }} />
+        <div className={styles["chart-bars"]}>
+          {revenue.map((value, index) => (
+            <div className={styles["chart-bar"]} key={index}>
+              <div className={styles["bar-bg"]}>
+                <div
+                  className={`${styles["bar-fill"]} ${styles["pink"]}`}
+                  style={{ height: `${value}%` }}
+                />
               </div>
-              <div className="bar-day">{days[index]}</div>
+              <div className={styles["bar-day"]}>{days[index]}</div>
             </div>
           ))}
         </div>
