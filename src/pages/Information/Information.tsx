@@ -1,11 +1,27 @@
 import React from 'react';
 import styles from './InformationModal.module.scss';
+import SuccessModal from '../../pages/SuccessModal/SuccessModal.tsx';
+import { useState } from 'react';
+ 
 
 interface Props {
   onClose: () => void;
 }
-
 const InformationModal: React.FC<Props> = ({ onClose }) => {
+    const [showSuccess, setShowSuccess] = useState(false);
+
+     const handleDone = () => {
+        console.log('Готово басылды');
+    setShowSuccess(true);
+  };
+
+       const handleSuccessClose = () => {
+    setShowSuccess(false);
+    onClose(); // негизги модалканы жабуу
+  };
+
+
+
   return (
     <div className={styles.overlay}>
       <div className={styles.modal}>
@@ -25,10 +41,17 @@ const InformationModal: React.FC<Props> = ({ onClose }) => {
         </div>
         <div className={styles.buttons}>
           <button className={styles.edit}>Изменить</button>
-          <button className={styles.done} onClick={onClose}>Готово</button>
+          <button className={styles.done} onClick={handleDone}>Готово</button>
         </div>
       </div>
+      {showSuccess && (
+        <SuccessModal
+          message="Вы успешно записались!"
+          onClose={handleSuccessClose}
+        />
+      )}
     </div>
+    
   );
 };
 
