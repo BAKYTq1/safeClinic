@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
-import './LoginForm.scss'; 
+import styles from './LoginForm.module.scss'; 
 // import { MdHealthAndSafety } from "react-icons/md"; 
-// import { MdOutlineBadge, MdEmail, MdLock, MdVisibility, MdVisibilityOff,  MdKeyboardArrowDown,} from "react-icons/md";
+// import { MdOutlineBadge, MdEmail, MdLock, MdVisibility, MdVisibilityOff, MdKeyboardArrowDown } from "react-icons/md";
 
 export const LoginForm: React.FC = () => {
   const [showPassword, setShowPassword] = useState<boolean>(false);
@@ -34,10 +34,10 @@ export const LoginForm: React.FC = () => {
   }, []);
 
   return (
-    <div className="login-container">
-      <div className="login-box">
-        <div className="login-logo">
-          <div className="logo-icon"> 
+    <div className={styles["login-container"]}>
+      <div className={styles["login-box"]}>
+        <div className={styles["login-logo"]}>
+          <div className={styles["logo-icon"]}> 
             {/* <MdHealthAndSafety /> */}
           </div>
           <h1>safe.clinic</h1>
@@ -45,12 +45,12 @@ export const LoginForm: React.FC = () => {
         <h2>Вход на веб приложение</h2>
         <p>Все условия для вашей безопасности</p>
 
-        <form className="login-form">
-          <div className="form-group">
+        <form className={styles["login-form"]}>
+          <div className={styles["form-group"]}>
             <label>Теги*</label>
-            <div className="input-icon" ref={wrapperRef}>
-              <div className="left-icon-wrapper">
-                {/* <MdOutlineBadge className="left-icon" /> */}
+            <div className={styles["input-icon"]} ref={wrapperRef}>
+              <div className={styles["left-icon-wrapper"]}>
+                {/* <MdOutlineBadge className={styles["left-icon"]} /> */}
               </div>
               <select
                 ref={selectRef}
@@ -67,7 +67,7 @@ export const LoginForm: React.FC = () => {
                 <option>Маркетинг</option>
               </select>
               {/* <MdKeyboardArrowDown
-                className={`right-icon ${isTagOpen ? "rotate" : ""}`}
+                className={`${styles["right-icon"]} ${isTagOpen ? styles["rotate"] : ""}`}
                 onClick={(e) => {
                   e.stopPropagation();
                   setIsTagOpen((prev) => !prev);
@@ -77,21 +77,21 @@ export const LoginForm: React.FC = () => {
             </div>
           </div>
 
-          <div className="form-group">
+          <div className={styles["form-group"]}>
             <label>Логин*</label>
-            <div className="input-icon">
-              <div className="left-icon-wrapper">
-                {/* <MdEmail className="left-icon" /> */}
+            <div className={styles["input-icon"]}>
+              <div className={styles["left-icon-wrapper"]}>
+                {/* <MdEmail className={styles["left-icon"]} /> */}
               </div>
               <input type="text" placeholder="Укажите логин" />
             </div>
           </div>
 
-          <div className="form-group">
+          <div className={styles["form-group"]}>
             <label>Пароль*</label>
-            <div className="input-icon">
-              <div className="left-icon-wrapper">
-                {/* <MdLock className="left-icon" /> */}
+            <div className={styles["input-icon"]}>
+              <div className={styles["left-icon-wrapper"]}>
+                {/* <MdLock className={styles["left-icon"]} /> */}
               </div>
               <input
                 type={showPassword ? "text" : "password"}
@@ -99,19 +99,21 @@ export const LoginForm: React.FC = () => {
               />
               {/* {showPassword ? (
                 <MdVisibility
-                  className="right-icon"
+                  className={styles["right-icon"]}
                   onClick={togglePasswordVisibility}
                 />
               ) : (
                 <MdVisibilityOff
-                  className="right-icon"
+                  className={styles["right-icon"]}
                   onClick={togglePasswordVisibility}
                 />
               )} */}
             </div>
           </div>
 
-          <button type="submit">ВОЙТИ НА САЙТ</button>
+          <button type="submit" className={styles["button"]}>
+            ВОЙТИ НА САЙТ
+          </button>
         </form>
       </div>
     </div>
