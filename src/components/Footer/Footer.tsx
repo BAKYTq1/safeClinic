@@ -1,4 +1,4 @@
-import styles from './Foote.module.scss';
+import styles from './Footer.module.scss';
 import Logo from '../../assets/svg/LOGO.svg'; 
 import {FaPhoneAlt, FaWhatsapp, FaEnvelope, FaFacebookF,} from 'react-icons/fa';
 import { IoLogoVk } from "react-icons/io5"; 
