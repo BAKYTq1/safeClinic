@@ -75,7 +75,7 @@ export const AboutUs: React.FC = () => {
               ))}
             </h3>
             {isMobile ? (
-              <div style={{ marginTop: '16px', fontSize: '16px', lineHeight: 1.4 }}>
+              <div style={{fontSize: '14px', fontWeight: '400', width: '200px', lineHeight: 1.4 }}>
                 {card.description}
               </div>
             ) : (
