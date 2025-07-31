@@ -1,0 +1,148 @@
+.newsSection {
+  width: 100%;
+  background-color: #d2f1f6;
+  padding: 60px 0;
+}
+
+.container {
+  width: 1110px;
+  margin: 0 auto;
+}
+
+.title {
+  display: flex;
+  justify-content: start;
+  font-size: 32px;
+  font-weight: bold;
+  color: #002244;
+  margin-bottom: 50px;
+  margin-left: -30px;
+}
+
+.newsRow {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.newsItemMain img {
+  width: 556px;
+  height: 507px;
+  margin-top: -150px;
+  margin-left: -40px;
+}
+
+.newsItemSmall img {
+  width: 370px;
+  height: auto;
+  padding: 10px;
+}
+
+.imageWrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.imageWrapper img {
+  display: block;
+}
+
+.overlayText {
+  position: absolute;
+  top: 20px;
+  left: 50px;
+  z-index: 10;
+  color: #002244;
+  max-width: 85%;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.7);
+}
+
+.heading {
+  font-weight: 600;
+  font-size: 20px;
+  color: #011738;
+  margin-left: 50px;
+  margin-top: 20px;
+}
+
+.date {
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 80px;
+  margin-top: -10px;
+}
+
+.desc {
+  width: 200px;
+  margin-left: 40px;
+  font-weight: 500;
+  font-size: 17px;
+  color: #011738;
+  line-height: 1.4;
+}
+
+.hideOnMobile {
+  display: block;
+
+  @media (max-width: 320px) {
+    display: none;
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .title {
+    font-size: 24px;
+    justify-content: center;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .newsRow {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 10px 0;
+  }
+
+  .newsItemMain img {
+    width: 300px;
+    height: auto;
+    margin: 0;
+  }
+
+  .newsItemSmall img {
+    width: 280px;
+    padding: 0;
+  }
+
+  .overlayText {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    z-index: 10;
+    max-width: 90%;
+  }
+
+  .heading {
+    font-size: 16px;
+    margin: 0;
+  }
+
+  .date {
+    font-size: 14px;
+    margin: 4px 0;
+  }
+
+  .desc {
+    font-size: 14px;
+    width: 100%;
+    margin: 5px 0 0 0;
+  }
+}

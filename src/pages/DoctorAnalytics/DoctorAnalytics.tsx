@@ -1,6 +1,6 @@
 import React from 'react';
-import { AiOutlineRise } from 'react-icons/ai';
-import { MdOutlineStarRate } from 'react-icons/md'; 
+// import { AiOutlineRise } from 'react-icons/ai';
+// import { MdOutlineStarRate } from 'react-icons/md'; 
 import Analytics1 from '../../assets/svg/Analytics1.svg';
 import Analytics2 from '../../assets/svg/Analytics2.svg';
 import Analytics3 from '../../assets/svg/Analytics3.svg';
@@ -14,19 +14,17 @@ const revenue: number[] = [85, 60, 70, 75, 65, 80, 25];
 
 const DoctorAnalytics: React.FC = () => {
   return (
-    <div className={styles["doctor-analytics"]}>
-      <div className={styles["summary-section"]}>
-        <div className={styles["summary-card"]}>
-          <div className={styles["summary-top"]}>
-            <div className={styles["summary-title"]}>$205,890</div>
-            <img src={Analytics1} alt="Analytics1" className={styles["summary-img"]} />
+    <div className="doctor-analytics">
+      <div className="summary-section">
+        <div className="summary-card">
+          <div className="summary-top">
+            <div className="summary-title">$205,890</div>
+            {/* <img src={Analytics1} alt="Analytics1" className="summary-img" /> */}
           </div>
-          <div className={styles["summary-sub"]}>Общий объем</div>
-          <div className={styles["summary-bottom"]}>
-            <div className={styles["icon"]}><AiOutlineRise /></div>
-            <div className={`${styles["summary-change"]} ${styles["up"]}`}>
-              На 1.3% больше, чем на прошлой неделе
-            </div>
+          <div className="summary-sub">Общий объем</div>
+          <div className="summary-bottom">
+            {/* <div className="icon"><AiOutlineRise /></div> */}
+            <div className="summary-change up">На 1.3% больше, чем на прошлой неделе</div>
           </div>
         </div>
 
@@ -35,12 +33,10 @@ const DoctorAnalytics: React.FC = () => {
             <div className={styles["summary-title"]}>183098</div>
             <img src={Analytics2} alt="Analytics2" className={styles["summary-img"]} />
           </div>
-          <div className={styles["summary-sub"]}>Всего клиентов</div>
-          <div className={styles["summary-bottom"]}>
-            <div className={styles["icon"]}><AiOutlineRise /></div>
-            <div className={`${styles["summary-change"]} ${styles["up"]}`}>
-              На 1.3% больше, чем на прошлой неделе
-            </div>
+          <div className="summary-sub">Всего клиентов</div>
+          <div className="summary-bottom">
+            {/* <div className="icon"><AiOutlineRise /></div> */}
+            <div className="summary-change up">На 1.3% больше, чем на прошлой неделе</div>
           </div>
         </div>
 
@@ -57,12 +53,10 @@ const DoctorAnalytics: React.FC = () => {
               className={`${styles["summary-img"]} ${styles["summary-3"]}`}
             />
           </div>
-          <div className={styles["summary-sub3"]}>Отзыв</div>
-          <div className={styles["summary-bottom"]}>
-            <div className={styles["icon-3"]}><MdOutlineStarRate /></div>
-            <div className={`${styles["summary-change"]} ${styles["down"]}`}>
-              4.5+15.6% по сравнению с предыдущим периодом
-            </div>
+          <div className="summary-sub3">Отзыв</div>
+          <div className="summary-bottom">
+            {/* <div className="icon-3"><MdOutlineStarRate /></div> */}
+            <div className="summary-change down">4.5+15.6% по сравнению с предыдущим периодом</div>
           </div>
         </div>
       </div>

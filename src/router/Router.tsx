@@ -18,9 +18,13 @@ import { ServiceList }  from "../pages/serviceList/ServiceList.tsx";
 import DoctorAnalytics from "../pages/doctorAnalytics/DoctorAnalytics.tsx";
 import Calendar from "../pages/paneldoctors/Calendar.tsx";
 import Sign from "../pages/clients/Sign.tsx"
+import Client from "../pages/profile/Client.tsx";
 import { ClientBookings } from "../pages/clientBookings/ClientBookings.tsx";
 import { ClientPayments } from "../pages/clientPayments/ClientPayments.tsx";
+import ClientProfile from "../pages/edit/ClientProfile.tsx"
+import DoctorsProfile from "../pages/Doctor'sprofile/Doctorsprofile.tsx";
 import { EditDoctorProfile } from "../pages/editDoctorProfile/EditDoctorProfile.tsx";
+import InfoPage from "../pages/Information/InfoPage.tsx";
 
 export const myRouter = createBrowserRouter([
     {
@@ -35,6 +39,8 @@ export const myRouter = createBrowserRouter([
             { path: 'serviceList', element: <ServiceList /> },
             { path: 'calendar', element: <Calendar /> },
             { path: 'sign', element: <Sign/> },
+            { path: 'client', element: <Client /> },
+            { path: 'clientprofile', element: <ClientProfile/> },
         ]
     },
     { path: 'admin', element: <Layoutadmin /> },
@@ -48,8 +54,10 @@ export const myRouter = createBrowserRouter([
     { path: 'doctorAnalytics', element: <DoctorAnalytics /> }, 
     { path: 'clientBookings', element: <ClientBookings /> }, 
     { path: 'clientPayments', element: <ClientPayments /> }, 
-    { path: 'clientPayments', element: <ClientPayments /> }, 
     { path: 'editDoctorProfile', element: <EditDoctorProfile /> }, 
     { path: 'top', element: <Top /> },
+    { path: 'DoctorsProfile', element: <DoctorsProfile /> },
+    // { path: 'Information', element: <Information /> },
+    { path: 'InfoPage', element: <InfoPage /> },
 
 ]);
