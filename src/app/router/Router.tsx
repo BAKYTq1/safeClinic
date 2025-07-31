@@ -16,6 +16,8 @@ import Doctorss from "../../pages/Admin/Doctors/Doctorss.tsx";
 import Patients from "../../pages/Admin/Patients/Patients.tsx";
 import Servisecc from "../../pages/Admin/Servisec/Servicess.tsx";
 import Fillials from "../../pages/Admin/Filials/Fillials.tsx";
+import DoctorsLayout from "../../widgets/Layout/Doctors/DoctorsLayout.tsx";
+import Calendar from "../../pages/Doctors/Calendar/Calendar.tsx";
 
 
 export const myRouter = createBrowserRouter([
@@ -66,6 +68,16 @@ export const myRouter = createBrowserRouter([
     element: <Servisecc/>
 }
          ]
+    },
+    {
+  path: 'doctor',
+  element: <DoctorsLayout/>,
+  children: [
+    {
+        path: 'calendar',
+        element: <Calendar/>
+    },
+  ]
     },
     {
          path: 'signupUser',

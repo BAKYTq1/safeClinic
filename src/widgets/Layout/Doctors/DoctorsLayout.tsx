@@ -3,25 +3,20 @@ import { Outlet } from 'react-router-dom'
 import List from '../../../pages/list/List'
 import Dashboard from '../../../pages/Admin/Doctors/Doctorss'
 import Top from '../../../components/Top/Top'
-import img2 from "../../../assets/svg/1.svg";
+import img2 from "../../../assets/svg/ph_calendar-duotone.svg";
 import img3 from "../../../assets/svg/2.svg";
-import img4 from "../../../assets/svg/3.svg";
 import img5 from "../../../assets/svg/4.svg";
-import img6 from "../../../assets/svg/5.svg";
 import img7 from "../../../assets/svg/6.svg";
 import img8 from "../../../assets/svg/7.svg";
 
 const menuItems = [
-  { title: "Аналитика", icon: img2, link: ''},
-  { title: "Услуги", icon: img3, link: 'services'},
-  { title: "Список врачей", icon: img4, link: 'doctors' },
-  { title: "Список пациентов", icon: img5, link: 'patientsList' },
-  { title: "Филиалы", icon: img6, link: 'branches' },
+  { title: "Календарь", icon: img2, link: 'calendar'},
+  { title: "Аналитика", icon: img3, link: ''},
+  { title: "Список пациентов", icon: img5, link: '' },
   { title: "Уведомление", icon: img7, link: '' },
   { title: "Настройка", icon: img8, link: '' },
 ];
-
-function LayoutAdmin() {
+function DoctorsLayout() {
 
   return (
     <div className='container-admin' style={{display: 'flex', gap:'30px' }}>
@@ -34,4 +29,4 @@ function LayoutAdmin() {
   )
 }
 
-export default LayoutAdmin
+export default DoctorsLayout

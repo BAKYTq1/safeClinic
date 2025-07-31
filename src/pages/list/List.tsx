@@ -1,13 +1,6 @@
 import React, { useState } from 'react';
 import "./List.scss";
 import img from "../../assets/svg/clinic.svg";
-import img2 from "../../assets/svg/1.svg";
-import img3 from "../../assets/svg/2.svg";
-import img4 from "../../assets/svg/3.svg";
-import img5 from "../../assets/svg/4.svg";
-import img6 from "../../assets/svg/5.svg";
-import img7 from "../../assets/svg/6.svg";
-import img8 from "../../assets/svg/7.svg";
 import img9 from "../../assets/svg/8.svg";
 import { Link } from 'react-router-dom';
 
@@ -17,17 +10,7 @@ interface MenuItem {
   link: string
 }
 
-const menuItems: MenuItem[] = [
-  { title: "Аналитика", icon: img2, link: ''},
-  { title: "Услуги", icon: img3, link: 'services'},
-  { title: "Список врачей", icon: img4, link: 'doctors' },
-  { title: "Список пациентов", icon: img5, link: 'patientsList' },
-  { title: "Филиалы", icon: img6, link: 'branches' },
-  { title: "Уведомление", icon: img7, link: '' },
-  { title: "Настройка", icon: img8, link: '' },
-];
-
-const List: React.FC = () => {
+const List: React.FC = ({title}: MenuItem) => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   return (
@@ -39,7 +22,7 @@ const List: React.FC = () => {
         </div>
 
         <div className='card-container'>
-          {menuItems.map((item, index) => (
+          {title.map((item, index) => (
            <Link to={`${item.link}`}  key={index}> <button
               key={index}
               className={activeIndex === index ? "active-btn" : ""}
