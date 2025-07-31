@@ -17,6 +17,7 @@ import Patient from "../pages/create/Patient.tsx";
 import { ServiceList }  from "../pages/serviceList/ServiceList.tsx";
 import DoctorAnalytics from "../pages/doctorAnalytics/DoctorAnalytics.tsx";
 import Calendar from "../pages/paneldoctors/Calendar.tsx";
+import Client from "../pages/profile/Client.tsx";
 import { ClientBookings } from "../pages/clientBookings/ClientBookings.tsx";
 import { ClientPayments } from "../pages/clientPayments/ClientPayments.tsx";
 import ClientProfile from "../pages/edit/ClientProfile.tsx"
@@ -36,6 +37,7 @@ export const myRouter = createBrowserRouter([
             { path: 'patient', element: <Patient /> },
             { path: 'serviceList', element: <ServiceList /> },
             { path: 'calendar', element: <Calendar /> },
+            { path: 'client', element: <Client /> },
             { path: 'clientprofile', element: <ClientProfile/> },
         ]
     },

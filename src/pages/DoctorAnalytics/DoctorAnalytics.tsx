@@ -1,7 +1,7 @@
 import React from 'react';
 // import { AiOutlineRise } from 'react-icons/ai';
 // import { MdOutlineStarRate } from 'react-icons/md'; 
-// import Analytics1 from '../../assets/svg/Analytics1.svg';
+import Analytics1 from '../../assets/svg/Analytics1.svg';
 import Analytics2 from '../../assets/svg/Analytics2.svg';
 import Analytics3 from '../../assets/svg/Analytics3.svg';
 import Analytics4 from '../../assets/svg/Analytics4.svg';
