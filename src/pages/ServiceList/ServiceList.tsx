@@ -57,10 +57,6 @@ const services: Service[] = [
 const ServiceList: React.FC = () => {
   return (
     <div className="service-list">
-      <div className="header">
-        <h2>Услуги</h2>
-        <button className="add-btn">+ Добавить</button>
-      </div>
       <table>
         <thead>
           <tr>

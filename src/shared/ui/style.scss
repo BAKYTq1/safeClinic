@@ -1,0 +1,28 @@
+  .item-head-btn {
+            cursor: pointer;
+            width: 134px;
+            height: 45px;
+            border-radius: 7.61px;
+            background: rgb(83, 168, 187);
+            border: none;
+            display: flex;
+            gap: 11px;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 11.42px;
+                height: 11.42px;
+            }
+
+            p {
+                color: rgb(255, 255, 255);
+                font-family: sans-serif;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 17px;
+                letter-spacing: 0px;
+                text-align: left;
+                text-transform: capitalize;
+            }
+        }

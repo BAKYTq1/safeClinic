@@ -11,7 +11,7 @@ type Patient = {
   date: string;
 };
 
-const patients: Patient[] = Array(10).fill({
+const patients: Patient[] = Array(9).fill({
   name: 'Кудуретов Асан',
   phone: '+996 501 393 178',
   address: 'Бишкек Кустанай 13',
@@ -22,10 +22,7 @@ const PatientsList: React.FC = () => {
   return (
     <div className="patients-list-wrapper">
       <div className="patients-list-container">
-        <h2>Список пациентов</h2>
-        <div className="button-wrapper">
-  <button className="add-button">+ Добавить</button>
-</div>
+
         <table>
           <thead>
             <tr>

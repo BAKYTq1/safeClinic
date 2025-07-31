@@ -9,20 +9,22 @@ import img6 from "../../assets/svg/5.svg";
 import img7 from "../../assets/svg/6.svg";
 import img8 from "../../assets/svg/7.svg";
 import img9 from "../../assets/svg/8.svg";
+import { Link } from 'react-router-dom';
 
 interface MenuItem {
   title: string;
   icon: string;
+  link: string
 }
 
 const menuItems: MenuItem[] = [
-  { title: "Аналитика", icon: img2 },
-  { title: "Услуги", icon: img3 },
-  { title: "Список врачей", icon: img4 },
-  { title: "Список пациентов", icon: img5 },
-  { title: "Филиалы", icon: img6 },
-  { title: "Уведомление", icon: img7 },
-  { title: "Настройка", icon: img8 },
+  { title: "Аналитика", icon: img2, link: ''},
+  { title: "Услуги", icon: img3, link: 'services'},
+  { title: "Список врачей", icon: img4, link: 'doctors' },
+  { title: "Список пациентов", icon: img5, link: 'patientsList' },
+  { title: "Филиалы", icon: img6, link: 'branches' },
+  { title: "Уведомление", icon: img7, link: '' },
+  { title: "Настройка", icon: img8, link: '' },
 ];
 
 const List: React.FC = () => {
@@ -38,16 +40,16 @@ const List: React.FC = () => {
 
         <div className='card-container'>
           {menuItems.map((item, index) => (
-            <button
+           <Link to={`${item.link}`}  key={index}> <button
               key={index}
               className={activeIndex === index ? "active-btn" : ""}
               onClick={() => setActiveIndex(index)}>
               <img src={item.icon} alt={item.title} />
               <p>{item.title}</p>
-            </button>
+            </button></Link>
           ))}
         </div>
-
+       
         <div className='btn'>
             <img src={img9} alt="" />
             <p>Выход</p>
