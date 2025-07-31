@@ -1,0 +1,74 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal {
+    background: white;
+    width: 616px;
+    height: 446px;
+    border-radius: 10px;
+    padding: 24px;
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);    
+}
+
+.title {
+    background-color: #d2f1f7;
+    padding: 20px 55px;
+    border-radius: 10px 10px 0 0;
+    margin-top: -24px;
+    width: 555px;
+    margin-left: -25px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+    margin-bottom: 34px;
+    margin-top: 50px;
+}
+
+.left,
+.right {
+    flex: 1;
+
+    p {
+        margin-bottom: 30px;
+    }
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 59px;
+}
+
+.edit {
+    background: #7a7a7a;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+.done {
+    background: #3eb4cc;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
