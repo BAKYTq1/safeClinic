@@ -1,9 +1,18 @@
-import React from 'react'
+import { AboutUs } from '../../components/aboutUs/AboutUs'
+import { OurDoctors } from '../../components/ourDoctors/OurDoctors'
+import { OurNews } from '../../components/ourNews/OurNews'
+import { OurServices } from '../../components/ourServices/OurServices'
+import OurClinic from "../../components/feedback/OurClinic.tsx"
 
 function Home() {
   return (
     <div>
-      Home
+      < AboutUs />  
+      <OurServices />
+      <OurClinic/>
+      <OurServices /> 
+      <OurDoctors /> 
+      <OurNews />
     </div>
   )
 }
