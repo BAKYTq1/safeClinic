@@ -14,17 +14,17 @@ const revenue: number[] = [85, 60, 70, 75, 65, 80, 25];
 
 const DoctorAnalytics: React.FC = () => {
   return (
-    <div className="doctor-analytics">
-      <div className="summary-section">
-        <div className="summary-card">
-          <div className="summary-top">
-            <div className="summary-title">$205,890</div>
+    <div className={styles["doctor-analytics"]}>
+      <div className={styles["summary-section"]}>
+        <div className={styles["summary-card"]}>
+          <div className={styles["summary-top"]}>
+            <div className={styles["summary-title"]}>$205,890</div>
             {/* <img src={Analytics1} alt="Analytics1" className="summary-img" /> */}
           </div>
-          <div className="summary-sub">Общий объем</div>
-          <div className="summary-bottom">
+          <div className={styles["summary-sub"]}>Общий объем</div>
+          <div className={styles["summary-bottom"]}>
             {/* <div className="icon"><AiOutlineRise /></div> */}
-            <div className="summary-change up">На 1.3% больше, чем на прошлой неделе</div>
+            <div className={styles["summary-change up"]}>На 1.3% больше, чем на прошлой неделе</div>
           </div>
         </div>
 

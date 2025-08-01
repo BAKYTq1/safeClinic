@@ -134,14 +134,6 @@ const Doctors: React.FC = () => {
 
     return (
         <div className='doctors'>
-            <div className='section'>
-                <h3>Список врачей</h3>
-                <button>
-                    <img src={img11} alt="" />
-                    <p>Добавить</p>
-                </button>
-            </div>
-
             <div className='table'>
                 <div>
                     <span>Имя</span>

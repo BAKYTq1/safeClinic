@@ -1,0 +1,589 @@
+@media (min-width:1380px) {
+    .ourclinic {
+        width: 100%;
+        background: #d2f1f6;
+        padding: 100px 0;
+
+        .our-container {
+            margin: 0 auto;
+            width: 1440px;
+            display: flex;
+            flex-direction: column;
+            gap: 100px;
+
+            .our {
+                display: flex;
+                flex-direction: column;
+
+                .our-img {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    position: relative;
+                    overflow: visible;
+
+                    .img {
+                        width: 30px;
+                        height: 30px;
+                        padding-top: 90px;
+                        position: relative;
+                        z-index: 1;
+                    }
+
+                    .our-img2 {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 50px;
+                        position: relative;
+                        z-index: 1;
+
+
+
+                        h3 {
+                            color: rgb(1, 23, 56);
+                            font-family: 'Arial', sans-serif;
+                            font-size: 30px;
+                            font-weight: 600;
+                            line-height: 37px;
+                            margin: 0;
+                        }
+
+                        div {
+                            display: flex;
+                            gap: 20px;
+                            position: relative;
+
+                            img {
+                                width: 350px;
+                                height: 210px;
+                                cursor: pointer;
+                                transition: transform 0.3s ease;
+                                transform-origin: center;
+                                position: relative;
+                                z-index: 1;
+                                display: block;
+
+                            }
+
+                            img:hover {
+                                transform: scale(1.1);
+                                z-index: 2;
+                            }
+                        }
+                    }
+                }
+
+                .image-container {
+                    padding-top: 53px;
+                    display: flex;
+                    justify-content: center;
+                    gap: 10px;
+                    position: relative;
+                    z-index: 2;
+
+                    button {
+                        width: 15px;
+                        height: 15px;
+                        border-radius: 100px;
+                        background: rgba(1, 23, 56, 0.5);
+                        border: none;
+                        cursor: pointer;
+                        transition: all 0.2s ease;
+                    }
+
+                    button:hover {
+                        background: rgb(1, 23, 56);
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width:1380px) and (min-width:1000px) {
+    .ourclinic {
+        width: 100%;
+        background: #d2f1f6;
+        padding: 100px 0;
+
+        .our-container {
+            margin: 0 auto;
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            gap: 100px;
+
+            .our {
+                display: flex;
+                flex-direction: column;
+
+                .our-img {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+                    overflow: visible;
+                    gap: 90px;
+
+                    .img {
+                        width: 30px;
+                        height: 30px;
+                        padding-top: 90px;
+                        position: relative;
+                        z-index: 1;
+                    }
+
+                    .our-img2 {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 50px;
+                        position: relative;
+                        z-index: 1;
+
+                        h3 {
+                            color: rgb(1, 23, 56);
+                            font-family: 'Arial', sans-serif;
+                            font-size: 30px;
+                            font-weight: 600;
+                            line-height: 37px;
+                            margin: 0;
+                        }
+
+                        .im3 {
+                            display: none;
+                        }
+
+                        div {
+                            display: flex;
+                            gap: 20px;
+
+                            img {
+                                width: 350px;
+                                height: 210px;
+                                cursor: pointer;
+                                transition: transform 0.3s ease;
+                                position: relative;
+                                z-index: 1;
+                            }
+
+                            img:hover {
+                                transform: scale(1.1);
+                                z-index: 1;
+
+
+                            }
+                        }
+                    }
+                }
+
+                .image-container {
+                    padding-top: 53px;
+                    display: flex;
+                    justify-content: center;
+                    gap: 10px;
+
+                    button {
+                        width: 15px;
+                        height: 15px;
+                        border-radius: 100px;
+                        background: rgba(1, 23, 56, 0.5);
+                        border: none;
+                        cursor: pointer;
+                    }
+
+                    button:hover {
+                        background: rgb(1, 23, 56);
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width:1000px) {
+    .ourclinic {
+        width: 100%;
+        background: #d2f1f6;
+        padding: 100px 0;
+
+        .our-container {
+            margin: 0 auto;
+            display: flex;
+            width: 320px;
+            flex-direction: column;
+            gap: 100px;
+
+            .our {
+                display: flex;
+                flex-direction: column;
+
+                .our-img {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 30px;
+
+
+                    .img {
+                        width: 30px;
+                        height: 30px;
+                        padding-top: 190px;
+                    }
+
+                    .our-img2 {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 50px;
+                        padding: 0;
+                        margin: 0;
+
+                        h3 {
+                            color: rgb(1, 23, 56);
+                            font-family: 'Arial' sans-serif;
+                            font-size: 30px;
+                            font-weight: 600;
+                            line-height: 37px;
+                            letter-spacing: 0%;
+                            text-align: center;
+                        }
+
+                        .im3 {
+                            display: none;
+                        }
+
+                        .im2 {
+                            display: none;
+                        }
+
+                        div {
+                            display: flex;
+                            gap: 0;
+
+                            img {
+                                width: 350px;
+                                height: 210px;
+
+
+                            }
+
+
+                        }
+                    }
+                }
+
+                .image-container {
+                    padding-top: 53px;
+                    display: flex;
+                    justify-content: center;
+                    gap: 10px;
+
+                    button {
+                        width: 15px;
+                        height: 15px;
+                        border-radius: 100px;
+                        background: rgba(1, 23, 56, 0.5);
+                        border: none;
+                        cursor: pointer;
+                    }
+
+                    button:hover {
+                        background: rgb(1, 23, 56);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:327px) {
+    .ourclinic {
+        width: 100%;
+        background: #d2f1f6;
+        padding: 10px 0;
+
+        .our-container {
+            margin: 0 auto;
+            display: flex;
+            width: 120px;
+            flex-direction: column;
+            gap: 0px;
+
+            .our {
+                display: flex;
+                flex-direction: column;
+
+                .our-img {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 0px;
+
+
+                    .img {
+                        width: 20px;
+                        height: 20px;
+                        padding-top: 100px;
+                    }
+
+                    .our-img2 {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 0px;
+                        padding: 0;
+                        margin: 0;
+
+                        h3 {
+                            color: rgb(1, 23, 56);
+                            font-family: 'Arial' sans-serif;
+                            font-size: 13px;
+                            font-weight: 600;
+                            line-height: 37px;
+                            letter-spacing: 0%;
+                            text-align: center;
+                        }
+
+                        .im3 {
+                            display: none;
+                        }
+
+                        .im2 {
+                            display: none;
+                        }
+
+                        div {
+                            display: flex;
+                            gap: 0;
+
+                            img {
+                                width: 200px;
+                                height: 180px;
+
+
+                            }
+
+
+                        }
+                    }
+                }
+
+                .image-container {
+                    padding-top: 13px;
+                    display: flex;
+                    justify-content: center;
+                    gap: 10px;
+
+                    button {
+                        width: 15px;
+                        height: 15px;
+                        border-radius: 100px;
+                        background: rgba(1, 23, 56, 0.5);
+                        border: none;
+                        cursor: pointer;
+                    }
+
+                    button:hover {
+                        background: rgb(1, 23, 56);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:464px) and (min-width:450px) {
+    .ourclinic {
+        width: 100%;
+        background: #d2f1f6;
+        padding: 10px 0;
+
+        .our-container {
+            margin: 0 auto;
+            display: flex;
+            width: 120px;
+            flex-direction: column;
+            gap: 0px;
+
+            .our {
+                display: flex;
+                flex-direction: column;
+
+                .our-img {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 0px;
+
+
+                    .img {
+                        width: 30px;
+                        height: 30px;
+                        padding-top: 120px;
+                    }
+
+                    .our-img2 {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 0px;
+                        padding: 0;
+                        margin: 0;
+
+                        h3 {
+                            color: rgb(1, 23, 56);
+                            font-family: 'Arial' sans-serif;
+                            font-size: 30px;
+                            font-weight: 600;
+                            line-height: 37px;
+                            letter-spacing: 0%;
+                            text-align: center;
+                        }
+
+                        .im3 {
+                            display: none;
+                        }
+
+                        .im2 {
+                            display: none;
+                        }
+
+                        div {
+                            display: flex;
+                            gap: 0;
+
+                            img {
+                                width: 350px;
+                                height: 210px;
+
+                            }
+
+
+                        }
+                    }
+                }
+
+                .image-container {
+                    padding-top: 33px;
+                    display: flex;
+                    justify-content: center;
+                    gap: 10px;
+
+                    button {
+                        width: 15px;
+                        height: 15px;
+                        border-radius: 100px;
+                        background: rgba(1, 23, 56, 0.5);
+                        border: none;
+                        cursor: pointer;
+                    }
+
+                    button:hover {
+                        background: rgb(1, 23, 56);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:449px) and (min-width:328px) {
+    .ourclinic {
+        width: 100%;
+        background: #d2f1f6;
+        padding: 10px 0;
+
+        .our-container {
+            margin: 0 auto;
+            display: flex;
+            width: 120px;
+            flex-direction: column;
+            gap: 30px;
+
+            .our {
+                display: flex;
+                flex-direction: column;
+
+                .our-img {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 0px;
+
+
+                    .img {
+                        width: 30px;
+                        height: 30px;
+                        padding-top: 120px;
+                    }
+
+                    .our-img2 {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 0px;
+                        padding: 0;
+                        margin: 0;
+
+                        h3 {
+                            color: rgb(1, 23, 56);
+                            font-family: 'Arial' sans-serif;
+                            font-size: 20px;
+                            font-weight: 600;
+                            line-height: 37px;
+                            letter-spacing: 0%;
+                            text-align: center;
+                        }
+
+                        .im3 {
+                            display: none;
+                        }
+
+                        .im2 {
+                            display: none;
+                        }
+
+                        div {
+                            display: flex;
+                            gap: 0;
+
+                            img {
+                                width: 250px;
+                                height: 210px;
+
+                            }
+
+
+                        }
+                    }
+                }
+
+                .image-container {
+                    padding-top: 33px;
+                    display: flex;
+                    justify-content: center;
+                    gap: 10px;
+
+                    button {
+                        width: 15px;
+                        height: 15px;
+                        border-radius: 100px;
+                        background: rgba(1, 23, 56, 0.5);
+                        border: none;
+                        cursor: pointer;
+                    }
+
+                    button:hover {
+                        background: rgb(1, 23, 56);
+                    }
+                }
+            }
+        }
+    }
+}

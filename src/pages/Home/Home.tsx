@@ -1,13 +1,19 @@
-import { AboutUs } from '../../components/aboutUs/AboutUs'
-import { OurDoctors } from '../../components/ourDoctors/OurDoctors'
-import { OurNews } from '../../components/ourNews/OurNews'
-import { OurServices } from '../../components/ourServices/OurServices'
-import OurClinic from "../../components/feedback/OurClinic.tsx"
+import React from 'react'
+import Branches from '../branches/Branches'
+import Newdoctor from '../creating/Newdoctor'
+import { AboutUs } from '../../widgets/AboutUs/AboutUs'
+import { OurServices } from '../../widgets/ourServices/OurServices'
+import OurClinic from '../../widgets/feedback/OurClinic'
+import { OurDoctors } from '../../widgets/ourDoctors/OurDoctors'
+import { OurNews } from '../../widgets/ourNews/OurNews'
+import Patient from '../create/Patient'
 
 function Home() {
   return (
     <div>
-      < AboutUs />  
+      {/* <Branches/>
+      <Newdoctor/> */}
+      < AboutUs/>  
       <OurServices />
       <OurClinic/>
       <OurServices /> 

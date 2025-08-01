@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './PatientsList.module.scss';
-// import { MdDelete } from "react-icons/md"; 
-// import { FiEdit3 } from "react-icons/fi"; 
+import { MdDelete } from "react-icons/md"; 
+import { FiEdit3 } from "react-icons/fi"; 
 
 type Patient = {
   name: string;
@@ -10,7 +10,7 @@ type Patient = {
   date: string;
 };
 
-const patients: Patient[] = Array(10).fill({
+const patients: Patient[] = Array(9).fill({
   name: 'Кудуретов Асан',
   phone: '+996 501 393 178',
   address: 'Бишкек Кустанай 13',
@@ -21,10 +21,6 @@ const PatientsList: React.FC = () => {
   return (
     <div className={styles['patients-list-wrapper']}>
       <div className={styles['patients-list-container']}>
-        <h2>Список пациентов</h2>
-        <div className={styles['button-wrapper']}>
-          <button className={styles['add-button']}>+ Добавить</button>
-        </div>
         <table>
           <thead>
             <tr>
@@ -44,14 +40,14 @@ const PatientsList: React.FC = () => {
                 </td>
                 <td className={styles['patient-address']}>{patient.address}</td>
                 <td className={styles['patient-date']}>{patient.date}</td>
-                {/* <td>
+                <td>
                   <button className={`${styles['icon-button']} ${styles['delete']}`} title="Удалить">
                     <MdDelete size={18} />
                   </button>
                   <button className={`${styles['icon-button']} ${styles['edit']}`} title="Редактировать">
                     <FiEdit3 size={18} />
                   </button>
-                </td> */}
+                </td>
               </tr>
             ))}
           </tbody>

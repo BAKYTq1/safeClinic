@@ -5,9 +5,9 @@ import ServiceList2 from '../../assets/svg/ServiceList2.svg';
 import ServiceList3 from '../../assets/svg/ServiceList3.svg';
 import ServiceList4 from '../../assets/svg/ServiceList4.svg';
 import ServiceList5 from '../../assets/svg/ServiceList5.svg';
+import { ServiceModal } from '../ServiceModal/ServiseModal';
 // import { MdDelete } from 'react-icons/md';
 // import { FiEdit3 } from 'react-icons/fi';
-import { ServiceModal } from '../serviceModal/ServiseModal';
 
 interface Service {
   id: number;
@@ -60,10 +60,6 @@ export const ServiceList: React.FC = () => {
 
   return (
     <div className={styles['service-list']}>
-      <div className={styles.header}>
-        <h2>Услуги</h2>
-        <button className={styles['add-btn']}>+ Добавить</button>
-      </div>
       <table>
         <thead>
           <tr>

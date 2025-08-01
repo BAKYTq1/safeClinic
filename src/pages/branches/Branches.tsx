@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './Branches.module.scss';
 import { BranchesDetail } from '../branchesDetail/BranchesDetail.tsx';
-// import { FaTrash, FaPen } from 'react-icons/fa'; 
+import { FaTrash, FaPen } from 'react-icons/fa'; 
 
 interface Branch {
   name: string;
@@ -48,8 +48,8 @@ const Branches: React.FC = () => {
                 <td>{branch.address}</td>
                 <td>{branch.director}</td>
                 <td className={styles.actions}>
-                  {/* <button className={styles.delete}><FaTrash /></button>
-                  <button className={styles.edit}><FaPen /></button> */}
+                  <button className={styles.delete}><FaTrash /></button>
+                  <button className={styles.edit}><FaPen /></button>
                 </td>
               </tr>
             ))}
