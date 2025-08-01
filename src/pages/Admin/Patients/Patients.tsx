@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import HeaDash from '../../../components/HeaDash/HeaDash'
-import PatientsList from '../../../components/PatientsList/PatientsList'
+import HeaDash from '../../../widgets/HeaDash/HeaDash'
+import PatientsList from '../../../widgets/PatientsList/PatientsList'
 
 function Patients() {
     const [title, setTitle] = useState('Список пациентов')

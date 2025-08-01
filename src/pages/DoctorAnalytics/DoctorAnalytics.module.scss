@@ -1,0 +1,226 @@
+.doctor-analytics {
+  width: 972px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', sans-serif;
+  color: #2d2d2d;  
+  margin-right: 100px;
+
+  .summary-section {
+    display: flex;
+    gap: 13px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    height: 136px;
+
+    .summary-card {
+      flex: 1;
+      padding: 22.37px 17.89px 17.89px 17.89px;
+      background: #ffffff;
+      border-radius: 8.95px;
+      display: flex;
+      flex-direction: column;
+      height: 136px;
+      overflow: hidden; 
+
+      .summary-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        .summary-top-left {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .card3-title {
+          font-size: 20px;
+          font-weight: 600;
+          color: #260944;
+          margin: 0 0 4px;
+        }
+
+        .card3-year {
+          font-size: 12px;
+          color: #888;
+          margin: 0 0 6px;
+        }
+
+        .summary-title {
+          font-size: 22px;
+          font-weight: 700;
+          color: #1b1b1b; 
+          margin-top: 20px;
+        }
+
+        .summary-img {
+          width: 86px;
+          height: 66px;
+          object-fit: contain;
+          background: #5570f11f;
+          border-radius: 7px;
+          margin-top: 10px;
+
+          &.summary-3 {
+            width: 102px;
+            height: 90px;
+            background: none;
+            margin-top: 0;
+          }
+        }
+      }
+
+      .summary-sub {
+        font-size: 16px;
+        font-weight: 400;
+        color: #666;
+        margin-top: -28px;
+      } 
+
+      .summary-sub3 { 
+        margin-left: 66px; 
+        margin-top: -19px; 
+        font-size: 12px;
+      }
+
+      .summary-bottom {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: auto;
+
+        .icon {
+          font-size: 20px; 
+          color: green;
+        } 
+
+        .icon-3 { 
+            color: #FA7E00; 
+            font-size: 20px; 
+            margin-top: 10px;
+        }
+
+        .summary-change {
+          font-size: 13px;
+
+          &.up {
+            color: #5B5B98;
+            font-weight: 500;
+            font-size: 12px;
+          }
+
+          &.down {
+            color: #5B5B98;  
+            font-weight: 500px; 
+            font-size: 12px; 
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .chart-card { 
+    height: 402px;
+    background-color: #ffffff;
+    border-radius: 21px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.06);
+
+    .chart-header {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+
+      .chart-icon {
+        width: 98px;
+        height: 5px;
+        border-radius: 17px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        margin-right: 16px;  
+        margin-left: 70px;
+
+        &.blue {
+          background: white;    
+        }
+
+        &.pink {
+          background: #FFFFFF;
+        }
+      }
+
+      .chart-info {
+        .chart-title {
+          font-size: 24px; 
+          font-weight: 400;
+          color: #5B5B98; 
+          margin-top: 200px; 
+          margin-left: -160px;
+        }
+        .chart-title1 {
+          font-size: 24px; 
+          font-weight: 400;
+          color: #5B5B98; 
+          margin-top: 200px; 
+          margin-left: -115px;
+        }
+
+        .chart-value {
+          font-size: 42px;
+          font-weight: 700;
+          color: #260944;
+          margin-top: 4px; 
+          margin-left: -130px;
+        }
+      }
+    }
+
+    .chart-bars {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-left: 290px; 
+      margin-top: -240px;
+      .chart-bar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .bar-bg {
+          width: 32px;
+          height: 294px;
+          background-color: #e0e0e0;
+          border-radius: 17px;
+          position: relative;
+          overflow: hidden;
+          margin-bottom: 0px;
+
+          .bar-fill {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            border-radius: 17px 17px 0 0;
+
+            &.blue {
+              background-color: #4dbaff;
+            }
+
+            &.pink {
+              background-color: #f372e7;
+            }
+          }
+        }
+
+        .bar-day {
+          font-size: 29px; 
+          font-weight: 400;
+          color: #666; 
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}

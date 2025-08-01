@@ -20,7 +20,7 @@ const List: React.FC = ({title}: MenuItem) => {
           <img src={img} alt="" />
           <p>Все условия для вашей безопасности</p>
         </div>
-
+      <div className='list-btn'>
         <div className='card-container'>
           {title.map((item, index) => (
            <Link to={`${item.link}`}  key={index}> <button
@@ -37,6 +37,7 @@ const List: React.FC = ({title}: MenuItem) => {
             <img src={img9} alt="" />
             <p>Выход</p>
         </div>
+      </div>
       </div>
     </div>
   );

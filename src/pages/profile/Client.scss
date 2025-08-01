@@ -1,0 +1,163 @@
+.client {
+    width: 972px;
+    height: 550px;
+    border-radius: 10px;
+    background: rgb(255, 255, 255);
+    margin: 0 auto;
+
+    .client-content {
+        display: flex;
+        flex-direction: column;
+        padding: 16px 40px;
+
+        h2 {
+            color: rgb(0, 0, 0);
+            font-family: sans-serif;
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 21px;
+            letter-spacing: 0.13px;
+            margin: 0;
+        }
+
+        .bishkek {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding-top: 21px;
+
+            img {
+                width: 164px;
+                height: 164px;
+            }
+
+            div {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                h3 {
+                    color: rgb(0, 0, 0);
+                    font-family: sans-serif;
+                    font-size: 20px;
+                    font-weight: 500;
+                    line-height: 24px;
+                    letter-spacing: 0%;
+                    margin: 0;
+                }
+
+                p {
+                    color: rgb(0, 0, 0);
+                    font-family: sans-serif;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 20px;
+                    letter-spacing: 0%;
+                    margin: 0;
+                }
+            }
+        }
+
+        button {
+            display: flex;
+            gap: 11px;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            border: 0.5px solid rgb(184, 183, 183);
+            border-radius: 7.61px;
+            background: rgb(194, 242, 252);
+            width: 164px;
+            height: 33px;
+            border: none;
+            margin-top: 10px;
+
+            img {
+                width: 13px;
+                height: 12px;
+            }
+
+            p {
+                color: rgb(0, 0, 0);
+                font-family: sans-serif;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 17px;
+                letter-spacing: 0px;
+                text-transform: capitalize;
+            }
+        }
+    }
+
+    .information {
+        width: 741px;
+        height: 176px;
+        display: flex;
+        flex-direction: column;
+        padding-left: 110px;
+
+        h4 {
+            color: rgb(0, 0, 0);
+            font-family: sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 24px;
+            letter-spacing: 0%;
+            padding-left: 250px;
+        }
+
+        .personal {
+            display: flex;
+            gap: 140px;
+
+            .information-card {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+
+                h3 {
+                    display: flex;
+                    align-items: center;
+                    color: rgb(0, 0, 0);
+                    font-family: sans-serif;
+                    font-size: 20px;
+                    font-weight: 600;
+                    line-height: 24px;
+                    letter-spacing: 0%;
+                    margin: 0;
+                    gap: 5px;
+
+                    p {
+                        margin: 0;
+                        font-weight: 400;
+
+                    }
+                }
+            }
+
+            .information-content {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+
+                h3 {
+                    display: flex;
+                    align-items: center;
+                    color: rgb(0, 0, 0);
+                    font-family: sans-serif;
+                    font-size: 20px;
+                    font-weight: 600;
+                    line-height: 24px;
+                    letter-spacing: 0%;
+                    margin: 0;
+                    gap: 5px;
+
+                    p {
+                        margin: 0;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+}

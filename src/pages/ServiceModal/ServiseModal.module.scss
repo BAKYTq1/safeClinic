@@ -1,0 +1,119 @@
+.service-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.service-modal {
+  width: 550px;
+  height: 402px;
+  position: fixed;
+  top: 50%;
+  left: 38%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+.modal-title {
+  background-color: #D4EFF3;
+  color: #000000;
+  padding: 24px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.modal-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex-grow: 1;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.modal-image {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.modal-name {
+  font-weight: 600;
+  font-size: 16px;
+  margin: 0;
+}
+
+.modal-body {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.modal-left, .modal-right {
+  width: 48%;
+}
+
+.modal-price {
+  display: flex;
+  margin-left: 60px;
+}
+
+.modal-category {
+  display: flex;
+  margin-left: 60px;
+}
+
+.modal-body strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding: 16px 24px;
+  gap: 12px;
+}
+
+.cancel-btn,
+.save-btn {
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background-color: #838383;
+  color: white;
+}
+
+.save-btn {
+  background-color: #53A8BB;
+  color: white;
+}

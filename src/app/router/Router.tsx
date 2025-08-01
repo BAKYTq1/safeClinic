@@ -1,23 +1,22 @@
 import { createBrowserRouter } from "react-router-dom"
-import LoginForm from "../../components/LoginForm/LoginForm.tsx";
+import LoginForm from "../../widgets/LoginForm/LoginForm.tsx";
 import List from "../../pages/list/List.tsx";
 import Newdoctor from "../../pages/creating/Newdoctor.tsx";
-import SignUpClient from "../../pages/SignUpClient/SignUpClient.tsx";
-import PatientsList from "../../components/PatientsList/PatientsList.tsx";
 import Doctors from "../../pages/section/Doctors.tsx";
-import Branches from "../../pages/branches/Branches.tsx";
 import PatientInfoPage from "../../pages/patientinformation/PatientInfoPage.tsx";
-import PatientCalendar from "../../pages/PatientCalendar/PatientCalendar.tsx";
-import ServiceList from "../../pages/ServiceList/ServiceList.tsx";
 import Home from "../../pages/Home/Home.tsx";
-import Layout from "../../widgets/Layout/Layout.tsx";
-import LayoutAdmin from "../../widgets/Layout/admin/Layout.tsx";
+import Layout from "../Layout/Layout.tsx";
+import LayoutAdmin from "../Layout/admin/Layout.tsx";
 import Doctorss from "../../pages/Admin/Doctors/Doctorss.tsx";
 import Patients from "../../pages/Admin/Patients/Patients.tsx";
 import Servisecc from "../../pages/Admin/Servisec/Servicess.tsx";
 import Fillials from "../../pages/Admin/Filials/Fillials.tsx";
-import DoctorsLayout from "../../widgets/Layout/Doctors/DoctorsLayout.tsx";
-import Calendar from "../../pages/Doctors/Calendar/Calendar.tsx";
+import DoctorsLayout from "../Layout/Doctors/DoctorsLayout.tsx";
+import { ServiceList } from "../../pages/ServiceList/ServiceList.tsx";
+import { SignUpClient } from "../../pages/SignUpClient/SignUpClient.tsx";
+import { PatientCalendar } from "../../pages/PatientCalendar/PatientCalendar.tsx";
+import Calendar from "../../pages/paneldoctors/Calendar.tsx";
+import DoctorAnalytics from "../../pages/DoctorAnalytics/DoctorAnalytics.tsx";
 
 
 export const myRouter = createBrowserRouter([
@@ -43,7 +42,7 @@ export const myRouter = createBrowserRouter([
             },
             {
                 path: 'serviceList',
-                element: <ServiceList />
+                element: <ServiceList/>
             },
         ]
     },
@@ -66,7 +65,11 @@ export const myRouter = createBrowserRouter([
 {
     path: 'services',
     element: <Servisecc/>
-}
+},
+{
+        path: 'analytics',
+        element: <DoctorAnalytics/>
+    }, 
          ]
     },
     {
@@ -77,6 +80,13 @@ export const myRouter = createBrowserRouter([
         path: 'calendar',
         element: <Calendar/>
     },
+    {
+        path: 'analytics',
+        element: <DoctorAnalytics/>
+    },      {
+         path: 'patientsList',
+         element: <Patients/> 
+         },  
   ]
     },
     {

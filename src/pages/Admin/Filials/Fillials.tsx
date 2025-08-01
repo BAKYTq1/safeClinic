@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import HeaDash from '../../../components/HeaDash/HeaDash'
+import HeaDash from '../../../widgets/HeaDash/HeaDash'
 import ServiceList from '../../ServiceList/ServiceList'
 import Branches from '../../branches/Branches'
 

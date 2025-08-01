@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import HeaDash from '../../../components/HeaDash/HeaDash'
+import HeaDash from '../../../widgets/HeaDash/HeaDash'
+import Month from '../../calendar/Month'
 
 function Calendar() {
     const [title, setTitle] = useState('Список пациентов')
@@ -8,6 +9,7 @@ function Calendar() {
     <div className='dashboard'>
       <div>
         <HeaDash children={title} onAddClick={() => setModalOpen(true)} />
+          <Month/>
         {modalOpen && (
          <div className='modal-backdrop' onClick={() => setModalOpen(false)}>
 {/* <Newdoctor/> */}

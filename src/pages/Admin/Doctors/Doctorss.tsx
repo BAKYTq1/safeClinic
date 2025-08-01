@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import HeaDash from '../../../components/HeaDash/HeaDash'
+import HeaDash from '../../../widgets/HeaDash/HeaDash'
 import { Outlet, useLocation } from 'react-router-dom'
 import './style.scss'
 import Newdoctor from '../../creating/Newdoctor';
