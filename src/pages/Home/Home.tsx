@@ -7,12 +7,14 @@ import OurClinic from '../../widgets/feedback/OurClinic'
 import { OurDoctors } from '../../widgets/ourDoctors/OurDoctors'
 import { OurNews } from '../../widgets/ourNews/OurNews'
 import Patient from '../create/Patient'
+import Banner from '../../widgets/Banner/Banner'
 
 function Home() {
   return (
     <div>
       {/* <Branches/>
       <Newdoctor/> */}
+      <Banner/>
       < AboutUs/>  
       <OurServices />
       <OurClinic/>
