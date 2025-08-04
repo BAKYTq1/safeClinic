@@ -22,21 +22,18 @@ type Doctor = {
   position: string;
   experience: string;
   description: string;
-  education: string;
-  image: string;
+   image: string;
   reviews: Review[];
 };
 
 const doctors: Doctor[] = [
   {
     id: 0,
-    name: 'Самакаева Алина Викторовна',
-    position: 'Врач стоматолог-терапевт',
+    name: 'Самакаева Алина ',
+    position: ' Cтоматолог',
     experience: 'Опыт работы 10 лет',
     description:
-      'Постоянно повышаю свои знания. Использую в работе новейшие технологии и материалы. Главное качественное лечение и довольные клиенты.',
-    education:
-      'Чувашский государственный университет им. И.Н. Ульянова (стоматология) (2001 г.)',
+      'Постоянно повышаю свои знания. Использую в работе новейшие технологии и материалы. Главное качественное лечение и довольные клиенты.', 
     image: Doctor3,
     reviews: [
       {
@@ -64,8 +61,7 @@ const doctors: Doctor[] = [
     name: 'Дмитрий Иванов',
     position: 'Ортодонт',
     experience: 'Опыт: 8 лет',
-    description: 'Занимается выравниванием зубов с использованием брекет-систем и капп. Индивидуальный подход к каждому пациенту.',
-    education: 'МГМСУ им. А.И. Евдокимова',
+     description: 'Занимается выравниванием зубов с использованием брекет-систем и капп. Индивидуальный подход к каждому пациенту.',
     image: Doctor4,
     reviews: [
       { user: 'Анна', gender: 'female', text: 'Дмитрий профессионал своего дела. Брекеты установил безболезненно, и теперь результат радует меня каждый день!' },
@@ -79,8 +75,7 @@ const doctors: Doctor[] = [
     position: 'Терапевт',
     experience: 'Опыт: 5 лет',
     description: 'Специализируется на терапевтическом лечении зубов, включая кариес, пульпит и эстетическую реставрацию.',
-    education: 'Первый МГМУ им. И.М. Сеченова',
-    image: Doctor2,
+     image: Doctor2,
     reviews: [
       { user: 'Мария', gender: 'female', text: 'Екатерина – замечательный специалист. Лечение прошло абсолютно безболезненно. Очень боялась, но врач развеяла все страхи.' },
       { user: 'Игорь', gender: 'male', text: 'Очень вежливая и заботливая. Починила мне сложный зуб, с которым другие врачи не справлялись. Спасибо!' },
@@ -93,8 +88,7 @@ const doctors: Doctor[] = [
     position: 'Хирург',
     experience: 'Опыт: 10 лет',
     description: 'Проводит удаление зубов любой сложности, а также установку имплантов. Использует современные методы обезболивания.',
-    education: 'СПбГМУ им. акад. И.П. Павлова',
-    image: Doctor3,
+     image: Doctor3,
     reviews: [
       { user: 'Ольга', gender: 'female', text: 'Удаление прошло легко и безболезненно. Алексей очень уверенный и спокойный врач. Чувствовала себя в надёжных руках.' },
       { user: 'Роман', gender: 'male', text: 'Профессионал с большой буквы. Всё объяснил перед процедурой, удаление прошло быстро. Теперь не боюсь хирургов!' },
@@ -106,8 +100,7 @@ const doctors: Doctor[] = [
     name: 'Марина Алексеева',
     position: 'Ортопед',
     experience: 'Опыт: 7 лет',
-    description: 'Специализируется на восстановлении зубов, установке коронок и протезировании. Индивидуальный подход к каждому пациенту.',
-    education: 'УралГМУ',
+     description: 'Специализируется на восстановлении зубов, установке коронок и протезировании. Индивидуальный подход к каждому пациенту.',
     image: Doctor4,
     reviews: [
       { user: 'Владимир', gender: 'male', text: 'Марина помогла мне вернуть красивую улыбку. Очень чуткий врач. Протезы идеально подошли. Рекомендую всем.' },
@@ -119,10 +112,10 @@ const doctors: Doctor[] = [
 
 export function OurDoctors() {
   const [selectedDoctor, setSelectedDoctor] = useState<Doctor>(doctors[0]);
-  const prevRef = useRef(null);
-  const nextRef = useRef(null);
-  const reviewPrevRef = useRef(null);
-  const reviewNextRef = useRef(null);
+  const prevRef = useRef<HTMLButtonElement>(null);
+  const nextRef = useRef<HTMLButtonElement>(null);
+  const reviewPrevRef = useRef<HTMLButtonElement>(null);
+  const reviewNextRef = useRef<HTMLButtonElement>(null);
 
   return (
     <div className={styles.wrapper}>
@@ -134,13 +127,23 @@ export function OurDoctors() {
         </div>
 
         <div className={styles.doctorCarouselBlock}>
-          <button ref={prevRef} className={styles.arrow}>
+          <button ref={prevRef} className={styles.arrow} aria-label="Previous doctor">
             <FaChevronLeft />
           </button>
 
           <Swiper
             spaceBetween={16}
             slidesPerView={4}
+            breakpoints={{
+              0: {
+                slidesPerView: 2,
+                spaceBetween: 8,
+              },
+              321: {
+                slidesPerView: 4,
+                spaceBetween: 16,
+              },
+            }}
             navigation={{
               prevEl: prevRef.current,
               nextEl: nextRef.current,
@@ -159,10 +162,13 @@ export function OurDoctors() {
             {doctors.map((doc) => (
               <SwiperSlide key={doc.id}>
                 <div
-                  className={`${styles.card} ${
-                    doc.id === selectedDoctor.id ? styles.selected : ''
-                  }`}
+                  className={`${styles.card} ${doc.id === selectedDoctor.id ? styles.selected : ''}`}
                   onClick={() => setSelectedDoctor(doc)}
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') setSelectedDoctor(doc);
+                  }}
                 >
                   <img src={doc.image} alt={doc.name} />
                   <p className={styles.role}>{doc.position}</p>
@@ -172,7 +178,7 @@ export function OurDoctors() {
             ))}
           </Swiper>
 
-          <button ref={nextRef} className={styles.arrow}>
+          <button ref={nextRef} className={styles.arrow} aria-label="Next doctor">
             <FaChevronRight />
           </button>
         </div>
@@ -184,8 +190,7 @@ export function OurDoctors() {
             <p className={styles.position}>{selectedDoctor.position}</p>
             <p className={styles.experience}>{selectedDoctor.experience}</p>
             <button>Записаться к врачу</button>
-            <p className={styles.description}>{selectedDoctor.description}</p>
-            <p className={styles.education}>{selectedDoctor.education}</p>
+             <p className={styles.description}>{selectedDoctor.description}</p>
           </div>
         </div>
 
@@ -193,7 +198,9 @@ export function OurDoctors() {
           <h5>Отзывы</h5>
 
           <div className={styles.reviewNav}>
-            <button ref={reviewPrevRef} className={styles.arrow}><FaChevronLeft /></button>
+            <button ref={reviewPrevRef} className={styles.arrow} aria-label="Previous review">
+              <FaChevronLeft />
+            </button>
 
             <Swiper
               navigation={{
@@ -210,12 +217,17 @@ export function OurDoctors() {
               }}
               modules={[Navigation]}
               slidesPerView={1}
+              className={styles.reviewSwiper}
             >
               {selectedDoctor.reviews.map((review, idx) => (
                 <SwiperSlide key={idx}>
                   <div className={styles.reviewCard}>
                     <div className={styles.reviewHeader}>
-                      {review.gender === 'female' ? <FaFemale className={styles.reviewIcon} /> : <FaMale className={styles.reviewIcon} />}
+                      {review.gender === 'female' ? (
+                        <FaFemale className={styles.reviewIcon} />
+                      ) : (
+                        <FaMale className={styles.reviewIcon} />
+                      )}
                       <p className={styles.reviewer}>{review.user}</p>
                     </div>
                     <p>{review.text}</p>
@@ -224,7 +236,9 @@ export function OurDoctors() {
               ))}
             </Swiper>
 
-            <button ref={reviewNextRef} className={styles.arrow}><FaChevronRight /></button>
+            <button ref={reviewNextRef} className={styles.arrow} aria-label="Next review">
+              <FaChevronRight />
+            </button>
           </div>
         </div>
       </div>
