@@ -1,0 +1,407 @@
+.wrapper {
+    width: 100%;
+    background: #d2f1f6;
+    height: auto;
+    padding: 100px 0;
+    position: relative;
+
+    .container {
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 2;
+        overflow: hidden;
+
+        .addresscontacts {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            position: relative;
+            z-index: 2;
+
+            .contactSection {
+                display: flex;
+                flex-direction: column;
+
+                h1 {
+                    /* Заголовок H2 */
+                    color: rgb(1, 23, 56);
+                    font-family: Arial, sans-serif;
+                    font-size: 30px;
+                    font-weight: 600;
+                    line-height: 37px;
+                    letter-spacing: 0%;
+                }
+
+                .i {
+                    width: 285px;
+                    display: flex;
+                    justify-content: end;
+
+                    img {
+                        max-width: 100%;
+                        width: 196px;
+                        height: auto;
+                        opacity: 0.5;
+                    }
+                }
+
+                .contacts {
+                    width: 352px;
+                    height: auto;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 40px;
+                    position: relative;
+                    bottom: 56px;
+
+                    h3 {
+                        color: rgb(0, 0, 0);
+                        font-family: Arial, sans-serif;
+                        font-size: 20px;
+                        font-weight: 600;
+                        line-height: 24px;
+                        letter-spacing: 0%;
+                    }
+
+                    p {
+                        /* Текст в шапке */
+                        color: rgb(1, 23, 56);
+                        font-family: Arial, sans-serif;
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: 135%;
+                        letter-spacing: 0%;
+                    }
+
+                    .address {
+                        display: flex;
+                        align-items: flex-start;
+                        gap: 11px;
+
+                        img {
+                            width: 32px;
+                            height: 36.92px;
+                        }
+
+                        div {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 10px;
+
+                            h3 {
+                                width: 170px;
+                            }
+                        }
+                    }
+
+                    .tel {
+                        display: flex;
+                        align-items: center;
+                        gap: 25px;
+                    }
+
+                    .worktimes {
+                        display: flex;
+                        align-items: flex-start;
+                        gap: 23px;
+
+                        div {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 10px;
+
+                            p {
+                                width: 100px;
+                            }
+                        }
+                    }
+
+                    button {
+                        cursor: pointer;
+                        width: 255px;
+                        height: 50px;
+                        border-radius: 10px;
+                        background: rgb(83, 168, 187);
+                        /* Текст СТА */
+                        color: rgb(255, 255, 255);
+                        font-family: Arial, sans-serif;
+                        font-size: 17px;
+                        font-weight: 700;
+                        line-height: 21px;
+                        letter-spacing: 0%;
+                        margin-top: 10px;
+                    }
+                }
+            }
+
+            .addressSection {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                margin-top: 90px;
+
+                .input {
+                    select {
+                        cursor: pointer;
+                        width: 350px;
+                        height: 50px;
+                        box-sizing: border-box;
+                        /* Текст */
+                        border: 2px solid rgb(1, 23, 56);
+                        border-radius: 10px;
+                        background: none;
+                        padding: 0 15px;
+
+                        option {
+                            /* Текст СТА */
+                            color: rgba(0, 0, 0, 0.5);
+                            font-family: Arial, sans-serif;
+                            font-size: 17px;
+                            font-weight: 700;
+                            line-height: 21px;
+                            letter-spacing: 0%;
+                            text-align: left;
+                        }
+                    }
+                }
+
+                .map {
+                    width: 819px;
+                    height: 418px;
+                    border-radius: 30px;
+                    box-shadow: 10px 4px 20px 5px rgba(72, 164, 203, 0.25);
+                    background: rgb(255, 255, 255);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    iframe {
+                        width: 699px;
+                        height: 368px;
+                        border: 0;
+                    }
+                }
+            }
+        }
+
+        .image {
+            position: absolute;
+            bottom: 0;
+            left: -38%;
+            top: 10px;
+            width: 100%;
+            height: 700px;
+            display: flex;
+            justify-content: center;
+
+            img {
+                width: 500px;
+
+            }
+        }
+    }
+}
+
+@media (max-width: 1380px) and (min-width: 1000px) {
+    .wrapper {
+        padding: 80px 0;
+
+        .container {
+            max-width: 1100px;
+            padding: 0 20px;
+
+            .addresscontacts {
+                gap: 20px;
+
+                .contactSection {
+                    .contacts {
+                        button {
+                            width: 235px;
+                            height: 40px;
+                        }
+                    }
+                }
+
+                .addressSection {
+                    .map {
+                        width: 660px;
+                        height: 418px;
+
+                        iframe {
+                            width: 599px;
+                            height: 368px;
+                            border: 0;
+                        }
+                    }
+                }
+            }
+
+            .image {
+                left: -42%;
+
+                img {
+                    width: 490px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:1000px) {
+    .wrapper {
+        padding: 50px 0;
+
+        .container {
+            .addresscontacts {
+                .contactSection {
+                    .contacts {
+                        button {
+                            width: 235px;
+                            height: 40px;
+
+                        }
+                    }
+                }
+
+                .addressSection {
+
+                    .map {
+                        width: 500px;
+                        height: 418px;
+
+                        iframe {
+                            width: 470px;
+                            height: 368px;
+                            border: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:860px) {
+    .wrapper {
+        padding: 20px 0;
+
+        .container {
+            max-width: 300px;
+
+            .addresscontacts {
+                display: flex;
+                flex-direction: column;
+                gap: 0;
+
+                .contactSection {
+
+                    h1{
+                        text-align: center;
+                    }
+                    .contacts {
+                        button {
+                            width: 235px;
+                            height: 40px;
+
+                        }
+                    }
+                }
+
+                .addressSection {
+
+                    .input {
+                        select {
+                            cursor: pointer;
+                            width: 200px;
+                            height: 50px;
+                        }
+                    }
+
+                    .map {
+                        width: 300px;
+                        height: 418px;
+                        box-shadow: none;
+
+                        iframe {
+                            width: 280px;
+                            height: 368px;
+                            border: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:327px) {
+    .wrapper {
+        padding: 5px 0;
+
+        .container {
+            .addresscontacts {
+                gap: 0;
+                .contactSection {
+                    h1 {
+                        font-size: 26px;
+                        text-align: center;
+                    }
+
+                    .i {
+                        width: 230px;
+                        display: flex;
+                        justify-content: end;
+
+                        img {
+                            max-width: 100%;
+                            width: 106px;
+                            height: auto;
+                            opacity: 0.5;
+                        }
+                    }
+
+                    .contacts {
+                        bottom: 50px;
+
+                        button {
+                            width: 200px;
+                            height: 30px;
+                        }
+                    }
+                }
+
+                .addressSection {
+                    .input {
+                        select {
+                            width: 260px;
+                            height: 50px;
+                        
+                        }
+                    }
+
+                    .map {
+                        width: 260px;
+                        height: 218px;
+
+                        iframe {
+                            width: 230px;
+                            height: 200px;
+                            border: 0;
+                        }
+                    }
+                }
+            }
+
+            .image {
+                left: -42%;
+                top: -150px;
+
+                img {
+                    width: 350px;
+                }
+            }
+        }
+    }
+}
