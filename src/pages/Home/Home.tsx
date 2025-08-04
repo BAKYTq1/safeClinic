@@ -16,10 +16,9 @@ function Home() {
       <Newdoctor/> */}
       <Banner/>
       < AboutUs/>  
-      <OurServices />
-      <OurClinic/>
       <OurServices /> 
-      <OurDoctors /> 
+       <OurDoctors /> 
+      <OurClinic/>
       <OurNews />
     </div>
   )
