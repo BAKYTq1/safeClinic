@@ -15,7 +15,7 @@ import DoctorInfoPage from "../pages/aboutdoctor/DoctorInfoPage.tsx";
 import Top from "../pages/top/Top.tsx";
 import Patient from "../pages/create/Patient.tsx"; 
 import { ServiceList }  from "../pages/serviceList/ServiceList.tsx";
-import DoctorAnalytics from "../pages/doctorAnalytics/DoctorAnalytics.tsx";
+import DoctorAnalytics from "../widgets/DoctorAnalytics/DoctorAnalytics.tsx";
 import Calendar from "../pages/paneldoctors/Calendar.tsx";
 import Sign from "../pages/clients/Sign.tsx"
 import Client from "../pages/profile/Client.tsx";

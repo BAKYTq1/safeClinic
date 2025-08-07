@@ -4,7 +4,7 @@ import ServiceList from '../../ServiceList/ServiceList'
 import Branches from '../../branches/Branches'
 
 function Fillials() {
-    const [title, setTitle] = useState('Список пациентов')
+    const [title, setTitle] = useState('Филиалы')
       const [modalOpen, setModalOpen] = useState(false)
   return (
     <div className='dashboard'>

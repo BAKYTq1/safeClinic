@@ -3,7 +3,6 @@ import LoginForm from "../../widgets/LoginForm/LoginForm.tsx";
 import List from "../../pages/list/List.tsx";
 import Newdoctor from "../../pages/creating/Newdoctor.tsx";
 import Doctors from "../../pages/section/Doctors.tsx";
-import PatientInfoPage from "../../pages/patientinformation/PatientInfoPage.tsx";
 import Home from "../../pages/Home/Home.tsx";
 import Layout from "../Layout/Layout.tsx";
 import LayoutAdmin from "../Layout/admin/Layout.tsx";
@@ -16,7 +15,7 @@ import { ServiceList } from "../../pages/ServiceList/ServiceList.tsx";
 import { SignUpClient } from "../../pages/SignUpClient/SignUpClient.tsx";
 import { PatientCalendar } from "../../pages/PatientCalendar/PatientCalendar.tsx";
 import Calendar from "../../pages/paneldoctors/Calendar.tsx";
-import DoctorAnalytics from "../../pages/DoctorAnalytics/DoctorAnalytics.tsx";
+import DoctorAnalytics from "../../widgets/DoctorAnalytics/DoctorAnalytics.tsx";
 
 
 export const myRouter = createBrowserRouter([
@@ -50,6 +49,10 @@ export const myRouter = createBrowserRouter([
          path: 'admin',
          element: <LayoutAdmin/>,
          children: [
+            {
+        path: 'admin',
+        element: <DoctorAnalytics/>
+    }, 
                  {
                 path: 'doctors',
                 element: <Doctorss />
@@ -66,10 +69,6 @@ export const myRouter = createBrowserRouter([
     path: 'services',
     element: <Servisecc/>
 },
-{
-        path: 'analytics',
-        element: <DoctorAnalytics/>
-    }, 
          ]
     },
     {
@@ -97,11 +96,6 @@ export const myRouter = createBrowserRouter([
          path: 'loginForm',
          element: <LoginForm/>
     },
-    {
-        path: 'PatientInfoPage',
-        element: <PatientInfoPage/>
-    
-    }, 
       {    
         path: 'patientCalendar',
         element: <PatientCalendar/>

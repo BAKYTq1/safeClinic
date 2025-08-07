@@ -20,7 +20,7 @@ export const ServiceModal: React.FC<Props> = ({ service, onClose }) => {
         className={styles['service-modal']}
         onClick={(e) => e.stopPropagation()}
       >
-        <h3 className={styles['modal-title']}>ИНФАРМАТЦИЯ ОБ УСЛУГЕ</h3>
+        <h3 className={styles['modal-title']}>ИНФОРМАЦИЯ ОБ УСЛУГЕ</h3>
         <div className={styles['modal-content']}>
           <div className={styles['modal-header']}>
             <img
