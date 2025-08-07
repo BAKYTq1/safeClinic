@@ -11,6 +11,9 @@ import Patients from '../Admin/Patients/Patients'
 import PatientsList from '../../widgets/PatientsList/PatientsList'
 import { PatientCalendar } from '../PatientCalendar/PatientCalendar'
 import { EditDoctorProfile } from '../editDoctorProfile/EditDoctorProfile'
+import Banner from '../../widgets/Banner/Banner'
+import Consultation from '../../widgets/consultation/Consultation'
+import AddressСontacts from "../../widgets/address-contacts/AddressСontacts"
 
 function Home() {
   return (
@@ -23,9 +26,14 @@ function Home() {
       {/* <EditDoctorProfile/> */}
       <OurServices />
       <OurClinic/>
+      <Banner/>
+      < AboutUs/>  
       <OurServices /> 
-      <OurDoctors /> 
+       <OurDoctors /> 
+      <OurClinic/>
       <OurNews />
+      <Consultation />
+      <AddressСontacts/>
     </div>
   )
 }

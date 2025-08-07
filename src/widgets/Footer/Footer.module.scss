@@ -228,10 +228,10 @@
     gap: 12px;
     font-size: 18px; 
     margin-left: -105px; 
-    margin-top: -18px;
+    margin-top: 4px;
 
     svg {
-      cursor: pointer;
+      cursor: pointer; 
       transition: transform 0.2s ease, color 0.2s ease;
 
       &:hover {

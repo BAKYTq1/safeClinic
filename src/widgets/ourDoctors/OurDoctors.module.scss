@@ -17,22 +17,22 @@
 
   h2 {
     color: #011738;
-    font-size: 48px; 
+    font-size: 48px;
     font-weight: 600;
   }
 
   h3 {
     font-size: 30px;
-    font-weight: 600; 
-    color: #011738; 
-    margin-top: -20px;
+    font-weight: 600;
+    color: #011738;
+    margin-top: 20px;
   }
 
   p {
     font-size: 20px;
-    color: #011738; 
-    font-weight: 500; 
-    margin-top: -20px;
+    color: #011738;
+    font-weight: 500;
+    margin-top: 4px;
   }
 }
 
@@ -42,12 +42,16 @@
   justify-content: center;
   gap: 16px;
   margin-bottom: 32px;
+
+  .swiper {
+    width: auto; 
+  }
 }
 
 .arrow {
   background-color: white;
   color: black;
-  border: none; 
+  border: none;
   margin-top: -40px;
   padding: 10px 14px;
   border-radius: 50%;
@@ -69,7 +73,7 @@
 
   img {
     width: 100%;
-    cursor: pointer; 
+    cursor: pointer;
     border-radius: 12px;
     border: 2px solid transparent;
     transition: border 0.3s;
@@ -83,112 +87,112 @@
 
 .role {
   color: #011738;
-  font-size: 20px; 
-  font-weight: 600; 
-  margin-top: -10px;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .name {
   font-weight: 700;
-  font-size: 17px; 
-  margin-top: -9px;
+  font-size: 17px;
 }
 
 .details {
   display: flex;
   align-items: flex-start;
   gap: 32px;
-  margin-bottom: 32px; 
+  margin-bottom: 32px;
   margin-left: 20px;
-}
 
-.largeImg {
-  width: 300px; 
-  margin-left: 60px;
-  height: auto;
-  border-radius: 12px;
-}
-
-.info {
-  flex: 1; 
-
-  h4 { 
-    width: 400px;
-    font-size: 24px;
-    margin-bottom: 8px; 
-  }
-
-  .position { 
+  .largeImg {
     width: 300px;
-    font-size: 20px;
-    color: #011738;
-    margin-bottom: 8px; 
-    font-weight:600 ;
+    margin-left: 60px;
+    height: auto;
+    border-radius: 12px;
   }
 
-  .experience { 
-    width: 200px;
-    font-size: 20px;
-    margin-bottom: 16px; 
-    font-weight: 600; 
-    color: #011738; 
-  }
+  .info {
+    flex: 1;
 
-  button {  
-    width: 255px;  
-    height: 50px;
-    background-color: #53A8BB;
-    color: #fff;  
-    font-size: 17px; 
-    font-weight: 700;
-    margin-left: 640px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    margin-top: -50px;
-    &:hover {
-      background-color: #005f73;
+    h4 {
+      width: 400px;
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+
+    .position {
+      width: 300px;
+      font-size: 20px;
+      color: #011738;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    .experience {
+      width: 200px;
+      font-size: 20px;
+      margin-bottom: 16px;
+      font-weight: 600;
+      color: #011738;
+    }
+
+    button {
+      width: 255px;
+      height: 50px;
+      background-color: #53a8bb;
+      color: #fff;
+      font-size: 17px;
+      font-weight: 700;
+      margin-left: 640px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: -50px;
+
+      &:hover {
+        background-color: #005f73;
+      }
+    }
+
+    .description,
+    .education {
+      width: 590px;
+      font-size: 17px;
+      font-weight: 500;
+      color: #011738;
+      margin-bottom: 8px;
     }
   }
+}
 
-  .description,
-  .education { 
-    width: 590px;
-    font-size: 17px; 
-    font-weight: 500; 
-    color:#011738 ;
-    margin-bottom: 8px;
-  }
-} 
-.reviews { 
-    margin-left: 260px; 
+.reviews {
+  margin-left: auto;
+  margin-right: 80px;
+  max-width: 940px;
 
-  .reviewCard { 
+  .reviewCard {
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid #d2d2d2;
     max-width: 950px;
     width: 100%;
-    margin: 0 auto;  
-    background: #FFFFFF;
-    padding: 20px;
-    border-radius: 8px;
+    margin: 0 auto;
+    background: #ffffff;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    gap: 8px; 
-    margin-top: -20px;
+    gap: 8px;
   }
- 
+
   .reviewHeader {
     display: flex;
     align-items: center;
     gap: 12px;
     font-weight: bold;
     margin-bottom: 4px;
-  } 
-   h5 {
+  }
+
+  h5 {
     font-size: 20px;
     margin-bottom: 16px;
     text-align: center;
@@ -196,7 +200,7 @@
 
   .reviewIcon {
     width: 24px;
-    height: 24px; 
+    height: 24px;
     border-radius: 50%;
     background-color: #007b8f;
     color: #fff;
@@ -207,9 +211,8 @@
   }
 
   .reviewText {
-    font-size: 17px; 
-
-    line-height: 1.4; 
+    font-size: 17px;
+    line-height: 1.4;
   }
 
   .reviewNav {
@@ -218,19 +221,259 @@
     max-width: 999px;
     width: 100%;
     margin: 16px auto 0;
-    align-items: center; 
-    margin-left: 110px;
-  }
-
-  .arrowButton {
-    background: none;
-    border: none; 
-    color: #007b8f;
-    font-size: 20px;
-    cursor: pointer;
-    display: flex;
     align-items: center;
-    justify-content: center;
+    margin-left: 110px;
+ 
+    .arrow {
+      margin-top: 2px;
+      background: none;
+      border: none;
+      color: #011738;
+      font-size: 24px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
 }
+
+
+@media (max-width: 320px) { 
+  .wrapper {
+  background: #d2f1f6;
+  padding: 40px 0;
+}
+  .container {
+    width: 310px; 
+    border-radius: 6px; 
+    padding: 20px 16px;
+    box-shadow: none;
+  }
+
+  .header {
+    h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #011738; 
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      font-size: 14px;
+      font-weight: 600;
+      color: #011738;
+      margin-top: 8px;
+    }
+
+    p {
+      font-size: 12px;
+      font-weight: 500;
+      color: #011738;
+      margin-top: 6px;
+      line-height: 1.2;
+      max-width: 270px;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+  }
+
+  .doctorCarouselBlock {
+    gap: 8px;
+    margin-bottom: 16px;
+    justify-content: center;
+
+    .arrow {
+      display: block;
+      background: none;
+      color: #011738;
+      font-size: 14px;
+      margin-top: -60px;
+      padding: 0 4px;
+      width: 20px;
+      height: 20px;
+      border-radius: 0;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .swiper {
+      width: 232px; 
+    }
+
+    .card {
+      width: 100px;
+      padding: 0;
+      background: none;
+      text-align: center;
+
+      img {
+        width: 100px;
+        height: 120px;
+        border-radius: 6px;
+        border: 1px solid transparent;
+      }
+    }
+
+    .selected img {
+      border-color: gray;  
+    }
+
+    .role { 
+      display: block; 
+      margin-top: -15px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #011738;  
+      margin-bottom: 4px;
+    }
+
+    .name {  
+      display: block;
+      font-size: 12px;
+      font-weight: 500;
+      color: #011738;
+      max-width: 100px;
+      margin: 0 auto;
+      line-height: 1.1;
+    }
+  } 
+  .details { 
+  display: block;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 12px;
+  margin-left: 0;
+  margin-bottom: 16px;
+
+  .largeImg {
+    width: 100px;
+    height: 120px;
+    margin-left: 0;
+    border-radius: 6px;
+  }
+
+  .info {
+    display: block;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 170px;
+    margin-left: -10px;
+
+    h4 { 
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      margin: 0 0 4px 0;
+    }
+
+    .position { 
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 4px;
+      color: #011738;
+    }
+
+    .experience { 
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      color: #011738;      
+    }
+
+    .description,
+    .education {  
+      display: block;
+      font-size: 12px;
+      font-weight: 500;
+      color: #011738;
+      width: 200px;  
+      margin-top: -130px; 
+
+    }
+
+    button {
+      width: 100%;
+      height: 32px;
+      font-size: 12px;
+      font-weight: 700;
+      border-radius: 10px;
+      background-color: #53A8BB;
+      margin-top: 90px; 
+      margin-left: 0; 
+      &:hover {
+        background-color: #005f73;
+      }
+    }
+  }
+}
+  .reviews {
+    margin: 0 auto;
+    max-width: 270px;
+    padding: 0;
+    text-align: left; 
+    margin-top: 60px;
+
+    h5 { 
+      margin-left: 25px;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      text-align: left; 
+      display: block;
+    }
+
+    .reviewNav {
+      margin-left: 0;
+      justify-content: flex-start;
+      gap: 8px;
+
+      .arrow {
+        font-size: 14px;
+        color: #011738;
+        margin-top: 0;
+        padding: 0;
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+    }
+
+    .reviewCard {
+      padding: 12px;
+      max-width: 270px;
+      border-radius: 6px;
+      border: 1px solid #d2d2d2;
+      background: #fff;
+
+      .reviewHeader {
+        gap: 6px;
+        font-weight: 700;
+        margin-bottom: 4px;
+
+        .reviewIcon {
+          width: 20px;
+          height: 20px;
+          font-size: 12px;
+        }
+
+        .reviewer {
+          font-size: 12px;
+          font-weight: 700;
+          color: #011738;
+        }
+      }
+
+      p { 
+        display: block;
+        font-size: 12px;
+        line-height: 1.3;
+      }
+    }
+  }
+}  
+
 
