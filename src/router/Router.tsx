@@ -1,21 +1,21 @@
 import { createBrowserRouter } from "react-router-dom";
 import Home from "../pages/Home/Home.tsx";
-import Layout from "../Layout/Layout.tsx";
-import Layoutadmin from "../Layout/admin/Layout.tsx";
+import Layout from "../app/Layout/Layout.tsx"
+import Layoutadmin from "../app/Layout/admin/Layout.tsx";
 import LoginForm from "../widgets/LoginForm/LoginForm.tsx";
 import List from "../pages/list/List.tsx";
 import Newdoctor from "../pages/creating/Newdoctor.tsx";
-import { SignUpClient } from "../pages/signUpClient/SignUpClient.tsx";
+import { SignUpClient } from "../pages/SignUpClient/SignUpClient.tsx"
 import PatientsList from "../widgets/PatientsList/PatientsList.tsx";
 import Doctors from "../pages/section/Doctors.tsx";
 import Branches from "../pages/branches/Branches.tsx";
 import PatientInfoPage from "../pages/patientinformation/PatientInfoPage.tsx";
-import { PatientCalendar } from "../pages/patientCalendar/PatientCalendar.tsx";
+import { PatientCalendar } from "../pages/PatientCalendar/PatientCalendar.tsx"
 import DoctorInfoPage from "../pages/aboutdoctor/DoctorInfoPage.tsx";
 import Top from "../pages/top/Top.tsx";
 import Patient from "../pages/create/Patient.tsx"; 
-import { ServiceList }  from "../pages/serviceList/ServiceList.tsx";
-import DoctorAnalytics from "../pages/doctorAnalytics/DoctorAnalytics.tsx";
+import { ServiceList }  from "../pages/ServiceList/ServiceList.tsx";
+import DoctorAnalytics from "../pages/DoctorAnalytics/DoctorAnalytics.tsx";
 import Calendar from "../pages/paneldoctors/Calendar.tsx";
 import Sign from "../pages/clients/Sign.tsx"
 import Client from "../pages/profile/Client.tsx";

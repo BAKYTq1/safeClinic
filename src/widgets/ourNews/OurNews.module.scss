@@ -70,28 +70,63 @@
 .date {
   font-weight: 600;
   font-size: 18px;
-  margin-left: 80px;
-  margin-top: -10px;
+  margin-left: 80px; 
+  margin-top: 4px;
 }
 
 .desc {
   width: 200px;
-  margin-left: 40px;
+  margin-left: 40px; 
+  margin-top: 10px;
   font-weight: 500;
   font-size: 17px;
   color: #011738;
   line-height: 1.4;
 }
 
-.hideOnMobile {
-  display: block;
-
-  @media (max-width: 320px) {
-    display: none;
+@media (max-width: 1380px) {
+  .container {
+    width: 100%;
+    padding: 0 30px;
   }
+
+  .newsItemMain img {
+    width: 450px;
+    height: auto;
+    margin: 0;
+  }
+
+  .newsItemSmall img {
+    width: 320px;
+  } 
 }
 
-@media (max-width: 320px) {
+@media (max-width: 1000px) {
+  .newsRow {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 10px 0;
+  }
+
+  .newsItemMain img {
+    width: 360px;
+  }
+
+  .newsItemSmall img {
+    width: 300px;
+  }
+
+  .title {
+    justify-content: center;
+    margin-left: 0;
+    text-align: center;
+  } 
+  .hideOnMobile {
+  display: none;
+}
+}
+@media (max-width: 480px) {
   .container {
     width: 100%;
     padding: 0 10px;
@@ -112,13 +147,15 @@
   }
 
   .newsItemMain img {
-    width: 300px;
+    width: 280px;
     height: auto;
-    margin: 0;
+    margin-top: -30px; 
+    margin-right: 50px; 
   }
 
   .newsItemSmall img {
-    width: 280px;
+    width: 300px; 
+    height: auto;
     padding: 0;
   }
 
@@ -131,18 +168,32 @@
   }
 
   .heading {
-    font-size: 16px;
-    margin: 0;
+    font-size: 16px; 
+    margin: 10px 20px 10px 50px;
+    text-align: left; 
+    display: block; 
   }
 
   .date {
-    font-size: 14px;
-    margin: 4px 0;
+     font-size: 14px;
+    width: auto;
+    margin: 5px 20px 0 80px;
+    line-height: 1.4;
+    color: #011738;
+    font-weight: 500;
+    display: block; 
+    text-align: left;
   }
 
   .desc {
-    font-size: 14px;
-    width: 100%;
-    margin: 5px 0 0 0;
+    font-size: 12px;
+    width: 154px; 
+    margin-left: 50px; 
+    margin-top: 10px;
+    line-height: 1.4;
+    color: #011738;
+    font-weight: 500;
+    display: block;
+    text-align: left;
   }
 }

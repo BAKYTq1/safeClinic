@@ -9,6 +9,7 @@ import { OurNews } from '../../widgets/ourNews/OurNews'
 import Patient from '../create/Patient'
 import Banner from '../../widgets/Banner/Banner'
 import Consultation from '../../widgets/consultation/Consultation'
+import AddressСontacts from "../../widgets/address-contacts/AddressСontacts"
 
 function Home() {
   return (
@@ -17,12 +18,12 @@ function Home() {
       <Newdoctor/> */}
       <Banner/>
       < AboutUs/>  
-      <OurServices />
-      <OurClinic/>
       <OurServices /> 
-      <OurDoctors /> 
+       <OurDoctors /> 
+      <OurClinic/>
       <OurNews />
       <Consultation />
+      <AddressСontacts/>
     </div>
   )
 }
