@@ -4,6 +4,7 @@ import imageb from '../../assets/svg/imageb.png';
 
 const Banner: React.FC = () => {
   return (
+    // <div className='container-admin'>
     <div className={styles.banner}>
       <img src={imageb} alt="banner" className={styles.imageb} />
       <div className={styles.content}>
@@ -15,6 +16,7 @@ const Banner: React.FC = () => {
         <button className={styles.button}>Записаться</button>
       </div>
     </div>
+    // </div>
   );
 };
 

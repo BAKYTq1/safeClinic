@@ -12,7 +12,12 @@ body{
 .container-admin{
     width: 1440px;
     height: auto;
-    // margin: 0 auto;
+    // margin: 0 auto !important;
+}
+.container{
+    width: 1200px;
+    height: auto;
+    margin: 0 auto !important;
 }
 button{
     border: none;
