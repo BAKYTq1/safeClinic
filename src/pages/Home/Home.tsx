@@ -8,6 +8,7 @@ import { OurDoctors } from '../../widgets/ourDoctors/OurDoctors'
 import { OurNews } from '../../widgets/ourNews/OurNews'
 import Patient from '../create/Patient'
 import Banner from '../../widgets/Banner/Banner'
+import AddressСontacts from "../../widgets/address-contacts/AddressСontacts"
 
 function Home() {
   return (
@@ -20,6 +21,7 @@ function Home() {
        <OurDoctors /> 
       <OurClinic/>
       <OurNews />
+      <AddressСontacts/>
     </div>
   )
 }
