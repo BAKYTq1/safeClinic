@@ -17,12 +17,8 @@ const routeTitles: { [key: string]: string } = {
 
 function Doctorss() {
   const location = useLocation();
-  const [title, setTitle] = useState('Аналитика');
+  const [title, setTitle] = useState('Список врачей');
   const [modalOpen, setModalOpen] = useState(false)
-  useEffect(() => {
-    const path = location.pathname.replace('/dashboard', '');
-    setTitle(routeTitles[path] || 'Аналитика');
-  }, [location]);
   return (
     <div className='dashboard'>
       <div>

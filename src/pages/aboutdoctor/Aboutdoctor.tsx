@@ -8,8 +8,8 @@ interface AboutDoctorProps {
 
 const AboutDoctor: React.FC<AboutDoctorProps> = ({ onClose }) => {
     return (
-        <div className={styles.modalOverlay}>
-            <div className={styles.modalContent}>
+        <div className={styles.modalOverlay} onClick={onClose}>
+            <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
                 <div className={styles.modalHeader}>Информация о враче</div>
 
                     <div className={styles.modalInfo}>
