@@ -24,7 +24,6 @@ import Fillials from "../../pages/Admin/Filials/Fillials.tsx";
 // Pages - Doctor Panel
 import Calendar from "../../pages/paneldoctors/Calendar.tsx";
 import CreatePage from "../../widgets/Createabranch/CreatePage.tsx";
-import DoctorAnalytics from "../../widgets/DoctorAnalytics/DoctorAnalytics.tsx";
 
 // Widgets
 import DoctorAnalytics from "../../widgets/DoctorAnalytics/DoctorAnalytics.tsx";
@@ -92,91 +91,4 @@ export const myRouter = createBrowserRouter([
   { path: "loginForm", element: <LoginForm /> },
   { path: "patientCalendar", element: <PatientCalendar /> },
 ]);
-    {
-        path: '/',
-        element: <Layout />,
-        children: [
-            {
-                path: '/',
-                element: <Home/>
-            },
-            {
-                path: 'list',
-                element: <List />
-            },
-            {
-                path: 'newdoctor',
-                element: <Newdoctor />
-            },
-            {
-                path: 'doctors',
-                element: <Doctors />
-            },
-            {
-                path: 'serviceList',
-                element: <ServiceList/>
-            },
-        ]
-    },
-    {
-         path: 'admin',
-         element: <LayoutAdmin/>,
-         children: [
-            {
-        path: 'admin',
-        element: <DoctorAnalytics/>
-    }, 
-                 {
-                path: 'doctors',
-                element: <Doctorss />
-            },
-               {
-         path: 'patientsList',
-         element: <Patients/> 
-         },  
-         {    
-        path: 'branches',
-        element: <Fillials/>
-    },
-{
-    path: 'services',
-    element: <Servisecc/>
-},
-         ]
-    },
-    {
-  path: 'doctor',
-  element: <DoctorsLayout/>,
-  children: [
-    {
-        path: 'calendar',
-        element: <Calendar/>
-    },
-    {
-        path: 'analytics',
-        element: <DoctorAnalytics/>
-    },      {
-         path: 'patientsList',
-         element: <Patients/> 
-         },  
-  ]
-    },
-    {
-         path: 'signupUser',
-         element: <SignUpClient/>
-    },
-    { 
-         path: 'loginForm',
-         element: <LoginForm/>
-    },
-      {    
-        path: 'patientCalendar',
-        element: <PatientCalendar/>
-    },
-    {
-        path: 'createPage',
-        element: <CreatePage/>
-    }
-
- ])
-
+    
