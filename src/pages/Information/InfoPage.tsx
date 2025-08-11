@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import InformationModal from '../Information/Information'; // туура жол
+import CreateABranch from '../../widgets/Createabranch/Createabranch';
 
 const InfoPage: React.FC = () => {
   const [showModal, setShowModal] = useState(false);
@@ -16,6 +17,7 @@ const InfoPage: React.FC = () => {
       </button>
 
       {showModal && <InformationModal onClose={() => setShowModal(false)} />}
+        {showModal && <CreateABranch onClose={() => setShowModal(false)} />}
     </div>
   );
 };

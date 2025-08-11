@@ -22,11 +22,11 @@ function Home() {
       <Newdoctor/> */}
       {/* <Patient/>
       <Patients/> */}
+      <Banner/>
       < AboutUs/>  
       {/* <EditDoctorProfile/> */}
       <OurServices />
       <OurClinic/>
-      <Banner/>
       < AboutUs/>  
       <OurServices /> 
        <OurDoctors /> 
