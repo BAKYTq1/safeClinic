@@ -59,7 +59,7 @@ export function OurServices() {
   }, []);
 
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} id='services'>
       <div className={styles.container}>
         <div className={styles.lineTitle}>
           <div className={styles.dot}></div>

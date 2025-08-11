@@ -9,7 +9,7 @@ import adresscontacts5 from "../../assets/svg/addresscontacts5.svg";
 
 function AddressContacts() {
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} id='contacts'>
       <div className={styles.container}>
         <div className={styles.addresscontacts}>
           <div className={styles.contactSection}>
