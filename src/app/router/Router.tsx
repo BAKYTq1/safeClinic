@@ -17,6 +17,7 @@ import { SignUpClient } from "../../pages/SignUpClient/SignUpClient.tsx";
 import { PatientCalendar } from "../../pages/PatientCalendar/PatientCalendar.tsx";
 import Calendar from "../../pages/paneldoctors/Calendar.tsx";
 import DoctorAnalytics from "../../pages/DoctorAnalytics/DoctorAnalytics.tsx";
+import CreatePage from "../../widgets/Createabranch/CreatePage.tsx";
 
 
 export const myRouter = createBrowserRouter([
@@ -105,7 +106,11 @@ export const myRouter = createBrowserRouter([
       {    
         path: 'patientCalendar',
         element: <PatientCalendar/>
-    } 
+    },
+    {
+        path: 'createPage',
+        element: <CreatePage/>
+    }
 
  ])
 
