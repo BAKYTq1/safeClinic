@@ -13,7 +13,7 @@
 
 .modal {
   width: 566px;
-  height: 252px;
+  height: auto;
   background-color: #fff;
   border-radius: 10px;
   padding: 29px 20px;
@@ -24,8 +24,8 @@
 }
 
 .header {  
-  width: 606px; 
-  height: 60px;   
+  width: 566px; 
+  padding: 15px 0px;
   color: black;
   margin-left: -20px;
   margin-top: -29px; 

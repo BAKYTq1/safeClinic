@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './Doctors.scss';
-import img11 from '../../assets/svg/11.svg';
 import img12 from '../../assets/svg/12.svg';
 import img13 from '../../assets/svg/13.svg';
 import img14 from '../../assets/svg/14.svg';
@@ -14,6 +13,8 @@ import img21 from '../../assets/svg/21.svg';
 import img22 from '../../assets/svg/22.svg';
 import img23 from '../../assets/svg/23.svg';
 import DoctorEditing from '../realize/DoctorEditing';
+import DeleteModal from '../../shared/ui/DeleteModal';
+import AboutDoctor from '../aboutdoctor/Aboutdoctor';
 
 type Doctor = {
     id: number;
@@ -121,7 +122,8 @@ const doctorsData: Doctor[] = [
 const Doctors: React.FC = () => {
     const [isEditing, setIsEditing] = useState(false);
     const [selectedDoctor, setSelectedDoctor] = useState<Doctor | null>(null);
-
+    const [deletemodal, setdeletemodal] = useState(false)
+    const [openinfo, setopeninfo] = useState(false)
     const openEditModal = (doctor: Doctor) => {
         setSelectedDoctor(doctor);
         setIsEditing(true);
@@ -151,7 +153,7 @@ const Doctors: React.FC = () => {
                         <div className='circle'>
                             <img src={doctor.avatar} alt={doctor.name} />
                             <div className='text'>
-                                <h6>{doctor.name}</h6>
+                                <h6 onClick={() => setopeninfo(true)}>{doctor.name}</h6>
                                 <p>{doctor.username}</p>
                             </div>
                         </div>
@@ -161,7 +163,7 @@ const Doctors: React.FC = () => {
                         <h4>{doctor.clients}</h4>
 
                         <div className='imgs'>
-                            <img src={img13} alt="delete" />
+                            <img src={img13} alt="delete" onClick={() => setdeletemodal(true)}/>
                             <img
                                 src={img14}
                                 alt="edit"
@@ -176,6 +178,22 @@ const Doctors: React.FC = () => {
             {isEditing && selectedDoctor && (
                 <DoctorEditing doctor={selectedDoctor} onClose={closeEditModal} />
             )}
+            { deletemodal && (
+                <div className='modal-backdrop' onClick={() => setdeletemodal(false)}>
+                <div onClick={(e) => e.stopPropagation()}>
+            <DeleteModal/>
+                </div>
+                </div>
+            )
+
+            }
+            { openinfo && (
+                <div>
+            <AboutDoctor onClose={() => setopeninfo(false)}/>
+                </div>
+            )
+
+            }
         </div>
     );
 };

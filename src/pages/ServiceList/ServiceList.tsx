@@ -6,8 +6,9 @@ import ServiceList3 from '../../assets/svg/ServiceList3.svg';
 import ServiceList4 from '../../assets/svg/ServiceList4.svg';
 import ServiceList5 from '../../assets/svg/ServiceList5.svg';
 import { ServiceModal } from '../ServiceModal/ServiseModal';
-// import { MdDelete } from 'react-icons/md';
-// import { FiEdit3 } from 'react-icons/fi';
+import { MdDelete } from 'react-icons/md';
+import { FiEdit3 } from 'react-icons/fi';
+import DeleteModal from '../../shared/ui/DeleteModal';
 
 interface Service {
   id: number;
@@ -57,7 +58,7 @@ const services: Service[] = [
 
 export const ServiceList: React.FC = () => {
   const [selectedService, setSelectedService] = useState<Service | null>(null);
-
+  const [open, setopen] = useState(false)
   return (
     <div className={styles['service-list']}>
       <table>
@@ -91,13 +92,21 @@ export const ServiceList: React.FC = () => {
               </td>
               <td className={styles['service-price']}>{service.price}</td>
               <td className={styles['service-actions']}>
-                {/* <MdDelete className={`${styles.icon} ${styles.delete}`} />
-                <FiEdit3 className={`${styles.icon} ${styles.edit}`} /> */}
+                <MdDelete className={`${styles.icon} ${styles.delete}`} onClick={() => setopen(true)} />
+                <FiEdit3 className={`${styles.icon} ${styles.edit}`} />
               </td>
             </tr>
           ))}
         </tbody>
       </table>
+      { open && (
+        <div className='modal-backdrop' onClick={() => setopen(false)}>
+          <div onClick={(e) => e.stopPropagation()}>
+          <DeleteModal/>
+          </div>
+        </div>
+      )
+      }
       {selectedService && (
         <ServiceModal
           service={selectedService}

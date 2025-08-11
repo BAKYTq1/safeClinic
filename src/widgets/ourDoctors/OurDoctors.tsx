@@ -5,10 +5,10 @@ import Doctor3 from '../../assets/svg/Doctor3.svg';
 import Doctor4 from '../../assets/svg/Doctor4.svg';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { FaMale, FaFemale } from 'react-icons/fa';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
+// import { Swiper, SwiperSlide } from 'swiper/react';
+// import { Navigation } from 'swiper/modules';
+// import 'swiper/css';
+// import 'swiper/css/navigation';
 
 type Review = {
   user: string;
@@ -131,7 +131,7 @@ export function OurDoctors() {
             <FaChevronLeft />
           </button>
 
-          <Swiper
+          {/* <Swiper
             spaceBetween={16}
             slidesPerView={4}
             breakpoints={{
@@ -176,7 +176,7 @@ export function OurDoctors() {
                 </div>
               </SwiperSlide>
             ))}
-          </Swiper>
+          </Swiper> */}
 
           <button ref={nextRef} className={styles.arrow} aria-label="Next doctor">
             <FaChevronRight />
@@ -202,7 +202,7 @@ export function OurDoctors() {
               <FaChevronLeft />
             </button>
 
-            <Swiper
+            {/* <Swiper
               navigation={{
                 prevEl: reviewPrevRef.current,
                 nextEl: reviewNextRef.current,
@@ -234,7 +234,7 @@ export function OurDoctors() {
                   </div>
                 </SwiperSlide>
               ))}
-            </Swiper>
+            </Swiper> */}
 
             <button ref={reviewNextRef} className={styles.arrow} aria-label="Next review">
               <FaChevronRight />

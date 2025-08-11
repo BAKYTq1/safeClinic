@@ -7,12 +7,12 @@ function Header() {
   return (
     <div className='header'>
       <div className='header-container'>
-        <div className='header-logo'>
+        <div className='header-logos'>
           <img src={svg31} alt="" />
           <h3>safe.clinic</h3>
         </div>
 
-        <div className='header-nav'>
+        <div className='header-navs'>
           <ul>
             <li>О нас</li>
             <li>Услуги</li>

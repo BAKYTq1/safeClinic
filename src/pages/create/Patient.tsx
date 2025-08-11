@@ -3,7 +3,11 @@ import "./Patient.scss";
 import img10 from "../../assets/svg/10.svg";
 import img11 from "../../assets/svg/11.svg";
 
-const Patient: React.FC = () => {
+
+interface Click {
+  onClick?: () => void;
+}
+const Patient: React.FC = ({onClick}: Click) => {
     const [appointmentTime, setAppointmentTime] = useState("");
     const [phone, setPhone] = useState("+996");
     const times: string[] = [
@@ -143,7 +147,7 @@ const Patient: React.FC = () => {
                 </div>
 
                 <div className="form-actions">
-                    <button type="button" className="btn_cancel">
+                    <button type="button" className="btn_cancel" onClick={onClick}>
                         <img src={img10} alt="отмена" />
                         <p>Отмена</p>
                     </button>

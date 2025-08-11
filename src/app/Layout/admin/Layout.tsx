@@ -12,7 +12,7 @@ import img7 from "../../../assets/svg/6.svg";
 import img8 from "../../../assets/svg/7.svg";
 
 const menuItems = [
-  { title: "Аналитика", icon: img2, link: 'analytics'},
+  { title: "Аналитика", icon: img2, link: 'admin'},
   { title: "Услуги", icon: img3, link: 'services'},
   { title: "Список врачей", icon: img4, link: 'doctors' },
   { title: "Список пациентов", icon: img5, link: 'patientsList' },

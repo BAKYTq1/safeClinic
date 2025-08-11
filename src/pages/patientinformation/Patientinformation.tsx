@@ -1,19 +1,12 @@
 import React from 'react';
 import './PatientInformation.scss';
-
 interface PatientInfoProps {
   onClose: () => void;
 }
-
 const PatientInformation: React.FC<PatientInfoProps> = ({ onClose }) => {
   return (
-
-
-    
-
-
-    <div className="modal-overlay">
-      <div className="modal-window">
+    <div className="modal-overlay" onClick={onClose}>
+      <div className="modal-window" onClick={(e) => e.stopPropagation()}>
         <div className="modal-header">
           <h2>Информация о пациенте</h2>
         </div>

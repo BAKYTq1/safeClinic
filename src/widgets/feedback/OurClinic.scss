@@ -78,8 +78,7 @@
                     display: flex;
                     justify-content: center;
                     gap: 10px;
-                    position: relative;
-                    z-index: 2;
+                    
 
                     button {
                         width: 15px;
@@ -88,13 +87,11 @@
                         background: rgba(1, 23, 56, 0.5);
                         border: none;
                         cursor: pointer;
-                        transition: all 0.2s ease;
                     }
 
                     button:hover {
                         background: rgb(1, 23, 56);
-                        width: 20px;
-                        height: 20px;
+                       
                     }
                 }
             }
@@ -299,103 +296,6 @@
     }
 }
 
-@media (max-width:327px) {
-    .ourclinic {
-        width: 100%;
-        background: #d2f1f6;
-        padding: 10px 0;
-
-        .our-container {
-            margin: 0 auto;
-            display: flex;
-            width: 120px;
-            flex-direction: column;
-            gap: 0px;
-
-            .our {
-                display: flex;
-                flex-direction: column;
-
-                .our-img {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    gap: 0px;
-
-
-                    .img {
-                        width: 20px;
-                        height: 20px;
-                        padding-top: 100px;
-                    }
-
-                    .our-img2 {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                        gap: 0px;
-                        padding: 0;
-                        margin: 0;
-
-                        h3 {
-                            color: rgb(1, 23, 56);
-                            font-family: 'Arial' sans-serif;
-                            font-size: 13px;
-                            font-weight: 600;
-                            line-height: 37px;
-                            letter-spacing: 0%;
-                            text-align: center;
-                        }
-
-                        .im3 {
-                            display: none;
-                        }
-
-                        .im2 {
-                            display: none;
-                        }
-
-                        div {
-                            display: flex;
-                            gap: 0;
-
-                            img {
-                                width: 200px;
-                                height: 180px;
-
-
-                            }
-
-
-                        }
-                    }
-                }
-
-                .image-container {
-                    padding-top: 13px;
-                    display: flex;
-                    justify-content: center;
-                    gap: 10px;
-
-                    button {
-                        width: 15px;
-                        height: 15px;
-                        border-radius: 100px;
-                        background: rgba(1, 23, 56, 0.5);
-                        border: none;
-                        cursor: pointer;
-                    }
-
-                    button:hover {
-                        background: rgb(1, 23, 56);
-                    }
-                }
-            }
-        }
-    }
-}
-
 @media (max-width:464px) and (min-width:450px) {
     .ourclinic {
         width: 100%;
@@ -566,6 +466,103 @@
 
                 .image-container {
                     padding-top: 33px;
+                    display: flex;
+                    justify-content: center;
+                    gap: 10px;
+
+                    button {
+                        width: 15px;
+                        height: 15px;
+                        border-radius: 100px;
+                        background: rgba(1, 23, 56, 0.5);
+                        border: none;
+                        cursor: pointer;
+                    }
+
+                    button:hover {
+                        background: rgb(1, 23, 56);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:327px) {
+    .ourclinic {
+        width: 100%;
+        background: #d2f1f6;
+        padding: 10px 0;
+
+        .our-container {
+            margin: 0 auto;
+            display: flex;
+            width: 120px;
+            flex-direction: column;
+            gap: 0px;
+
+            .our {
+                display: flex;
+                flex-direction: column;
+
+                .our-img {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 0px;
+
+
+                    .img {
+                        width: 20px;
+                        height: 20px;
+                        padding-top: 100px;
+                    }
+
+                    .our-img2 {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 0px;
+                        padding: 0;
+                        margin: 0;
+
+                        h3 {
+                            color: rgb(1, 23, 56);
+                            font-family: 'Arial' sans-serif;
+                            font-size: 13px;
+                            font-weight: 600;
+                            line-height: 37px;
+                            letter-spacing: 0%;
+                            text-align: center;
+                        }
+
+                        .im3 {
+                            display: none;
+                        }
+
+                        .im2 {
+                            display: none;
+                        }
+
+                        div {
+                            display: flex;
+                            gap: 0;
+
+                            img {
+                                width: 200px;
+                                height: 180px;
+
+
+                            }
+
+
+                        }
+                    }
+                }
+
+                .image-container {
+                    padding-top: 13px;
                     display: flex;
                     justify-content: center;
                     gap: 10px;

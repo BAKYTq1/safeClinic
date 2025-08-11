@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './PatientsList.module.scss';
 import { MdDelete } from "react-icons/md"; 
 import { FiEdit3 } from "react-icons/fi"; 
+import PatientInformation from '../../pages/patientinformation/Patientinformation';
 
 type Patient = {
   name: string;
@@ -18,6 +19,7 @@ const patients: Patient[] = Array(9).fill({
 });
 
 const PatientsList: React.FC = () => {
+      const [info, setinfo] = useState(false)
   return (
     <div className={styles['patients-list-wrapper']}>
       <div className={styles['patients-list-container']}>
@@ -34,9 +36,9 @@ const PatientsList: React.FC = () => {
           <tbody>
             {patients.map((patient, index) => (
               <tr key={index}>
-                <td>{patient.name}</td>
+                <td onClick={() => setinfo(true)}>{patient.name}</td>
                 <td>
-                  <a href={`tel:${patient.phone}`}>{patient.phone}</a>
+                  <a href="">{patient.phone}</a>
                 </td>
                 <td className={styles['patient-address']}>{patient.address}</td>
                 <td className={styles['patient-date']}>{patient.date}</td>
@@ -50,6 +52,13 @@ const PatientsList: React.FC = () => {
                 </td>
               </tr>
             ))}
+                 {info && (
+  <div className='modal-backdrop' onClick={() => setinfo(false)}>
+    <div onClick={(e) => e.stopPropagation()}>
+      <PatientInformation  onClose={() => setinfo(false)}/>
+    </div>
+  </div>
+)}
           </tbody>
         </table>
       </div>
