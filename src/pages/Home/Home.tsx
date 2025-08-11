@@ -15,6 +15,18 @@ function Home() {
       <AboutUs/>  
       <OurServices />
       <OurDoctors /> 
+      {/* <Branches/>
+      <Newdoctor/> */}
+      {/* <Patient/>
+      <Patients/> */}
+      <Banner/>
+      < AboutUs/>  
+      {/* <EditDoctorProfile/> */}
+      <OurServices />
+      <OurClinic/>
+      < AboutUs/>  
+      <OurServices /> 
+       <OurDoctors /> 
       <OurClinic/>
       <OurNews />
       <Consultation />
