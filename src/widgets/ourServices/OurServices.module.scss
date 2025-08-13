@@ -7,9 +7,9 @@
 }
 
 .container {
-  max-width: 1440px;
+  max-width: 1290px;
   margin: 0 auto;
-  padding: 0 20px;
+  // padding: 0 20px;
 }
 
 .lineTitle {
@@ -54,7 +54,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 30px 20px;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .card {

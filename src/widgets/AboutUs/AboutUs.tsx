@@ -56,6 +56,7 @@ export const AboutUs: React.FC = () => {
     <div
       className={styles.aboutUsSection}
       style={{ backgroundImage: `url(${bgImage})` }}
+      id='about'
     >
       <div className={styles.lineTitle}>
         <div className={styles.dot}></div>

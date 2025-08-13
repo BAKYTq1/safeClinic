@@ -33,14 +33,31 @@ const bookings: Booking[] = [
     comment:
       'Повреждения зуба, воспаление десен, заболевания корневых каналов, а также проблемы с визгом или стиснанием зубов.',
   },
+  {
+    date: '08.02.2024',
+    time: '16:00',
+    service: 'Чистка зубов',
+    doctor: 'Азамат Замиров',
+    comment:
+      'Повреждения зуба, воспаление десен, заболевания корневых каналов, а также проблемы с визгом или стиснанием зубов.',
+  },
+  {
+    date: '08.02.2024',
+    time: '16:00',
+    service: 'Чистка зубов',
+    doctor: 'Азамат Замиров',
+    comment:
+      'Повреждения зуба, воспаление десен, заболевания корневых каналов, а также проблемы с визгом или стиснанием зубов.',
+  },
 ];
 
 export function ClientBookings() {
   return (
     <div className="client-bookings">
       <h2 className="title">Мои записи</h2>
+      <div className='client-item-booking'>
       {bookings.map((booking, index) => (
-        <div key={index}>
+        <div key={index} >
           <div className="date">{booking.date}</div>
           <div className="booking-card">
             <p><strong>Услуга:</strong> {booking.service}</p>
@@ -50,6 +67,7 @@ export function ClientBookings() {
           </div>
         </div>
       ))}
+      </div>
     </div>
   );
 }

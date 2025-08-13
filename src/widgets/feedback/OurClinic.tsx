@@ -22,7 +22,7 @@ function OurClinic() {
     ];
 
     return (
-        <div className='ourclinic'>
+        <div className='ourclinic' id='clinics'>
             <div className='our-container'>
                 {clinicBlocks.map((block, index) => (
                     <div key={index} className='our'>
