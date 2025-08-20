@@ -1,11 +1,18 @@
-import React from 'react'
+// import React from 'react'
+import React, { useState } from "react";
 import "./Header.scss"
 import svg31 from "../../assets/svg/31.svg"
 import svg32 from "../../assets/svg/32.svg"
-import { useNavigate } from 'react-router-dom'
+import headerImg from "../../assets/svg/header.svg"
+import ProfileModal from "../../widgets/ProfileModal/ProfileModal"
 
-function Header() {
-  // const navigate = useNavigate()
+
+  
+  // import { useNavigate } from 'react-router-dom'
+  
+  function Header() {
+    // const navigate = useNavigate()
+    const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <div className='header'>
       <div className='header-container'>
@@ -22,7 +29,6 @@ function Header() {
             <a href='#clinics'>Наша клиника</a>
             <a href='#contacts'>Контакт</a>
           </ul>
-
           <button>Запись онлайн</button>
         </div>
 
@@ -30,9 +36,13 @@ function Header() {
           <img src={svg32} alt="" />
         </div>
 
+        <div className="header-i" onClick={() => setIsModalOpen(true)}>
+          <img src={headerImg} alt="Профиль" />
+        </div>
+        {isModalOpen && <ProfileModal onClose={() => setIsModalOpen(false)} />}
+
       </div>
     </div>
-  )
-}
-
+  );
+};
 export default Header

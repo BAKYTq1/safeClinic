@@ -15,7 +15,7 @@ function Home() {
       <AboutUs/>  
       <OurDoctors /> 
       <OurClinic/>
-      < AboutUs/>  
+      {/* < AboutUs/>   */}
       <OurServices /> 
       <OurNews />
       <Consultation />
