@@ -31,6 +31,7 @@ import Director from "../Layout/Director/Director.tsx";
 import Klient from "../Layout/Klient/Klient.tsx";
 import { ClientPayments } from "../../pages/clientPayments/ClientPayments.tsx";
 import { ClientBookings } from "../../pages/clientBookings/ClientBookings.tsx";
+import AdminRegistration from "../../pages/registration/AdminRegistration.tsx";
 
 export const myRouter = createBrowserRouter([
   {
@@ -90,5 +91,6 @@ export const myRouter = createBrowserRouter([
   { path: "signupUser", element: <SignUpClient /> },
   { path: "loginForm", element: <LoginForm /> },
   { path: "patientCalendar", element: <PatientCalendar /> },
+  { path: "registration", element: <AdminRegistration /> },
 ]);
     
