@@ -14,7 +14,7 @@ export default function AdminLogin() {
       await adminAuth(email, password);
       // alert("Админ логини ийгиликтүү ");
 
-      navigate("/Doctor/Analytics");
+      navigate("/admin");
     } catch (err: any) {
       alert(err.message || "Ката кетти ❌");
     }
