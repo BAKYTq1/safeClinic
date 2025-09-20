@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useApiStore } from "../apiStore/apiStore";
+import { useApiStore } from "../apiStore/ApiStore"
 
 export const API_URL = "https://safeclinic-production.up.railway.app";
 
