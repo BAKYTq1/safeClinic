@@ -1,5 +1,5 @@
-import { axiosInstance } from "../axiosInstance/axiosInstance";
-import { useApiStore } from "../apiStore/apiStore";
+import { axiosInstance } from "../axiosInstance/AxiosInstance";
+import { useApiStore } from "../apiStore/ApiStore";
 
 interface LoginResponse {
   access: string;
