@@ -3,6 +3,7 @@ import HeaDash from '../../../widgets/HeaDash/HeaDash'
 import PatientsList from '../../../widgets/PatientsList/PatientsList'
 import { ServiceList } from '../../ServiceList/ServiceList'
 import Patient from '../../create/Patient'
+import AddServices from '../../addServices/AddServices'
 
 function Servisecc() {
     const [title, setTitle] = useState('Услуги')
@@ -15,7 +16,7 @@ function Servisecc() {
        {modalOpen && (
   <div className='modal-backdrop' onClick={() => setModalOpen(false)}>
     <div onClick={(e) => e.stopPropagation()}>
-      <Patient onClick={() => setModalOpen(false)}/>
+      <AddServices onClick={() => setModalOpen(false)}/>
     </div>
   </div>
 )}

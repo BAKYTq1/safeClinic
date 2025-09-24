@@ -1,17 +1,23 @@
-import React from 'react'
-import './style.scss'
-function DeleteModal() {
-  return (
-    <div className='delete-modal'>
-        <div className='item-delete-modal'>
-            <p>Вы действительно хотите удалить? </p>
-            <div>
-                <button>Нет</button>
-                <button>Да</button>
-            </div>
-        </div>
-    </div>
-  )
+import React from 'react';
+import './style.scss';
+
+interface DeleteModalProps {
+  onConfirm: () => void;
+  onCancel: () => void;
 }
 
-export default DeleteModal
+function DeleteModal({ onConfirm, onCancel }: DeleteModalProps) {
+  return (
+    <div className='delete-modal'>
+      <div className='item-delete-modal'>
+        <p>Вы действительно хотите удалить?</p>
+        <div className='buttons'>
+          <button className='cancel' onClick={onCancel}>Нет</button>
+          <button className='confirm' onClick={onConfirm}>Да</button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default DeleteModal;
