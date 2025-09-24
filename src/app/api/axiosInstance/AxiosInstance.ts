@@ -1,6 +1,5 @@
 import axios from "axios";
-import { useApiStore } from "../apiStore/ApiStore"
-
+import { useApiStore } from "../apiStore/ApiStore";
 export const API_URL = "https://safeclinic-production.up.railway.app";
 
 export const axiosInstance = axios.create({
@@ -8,7 +7,6 @@ export const axiosInstance = axios.create({
   headers: { "Content-Type": "application/json" },
 });
 
-// Request interceptor → access кошобуз
 axiosInstance.interceptors.request.use((config) => {
   const { accessToken } = useApiStore.getState();
   if (accessToken) {
@@ -19,6 +17,7 @@ axiosInstance.interceptors.request.use((config) => {
   }
   return config;
 });
+
 
 // Response interceptor → refresh иштетебиз
 let isRefreshing = false;
@@ -34,7 +33,7 @@ axiosInstance.interceptors.response.use(
         const { refreshToken, setTokens, clearTokens } = useApiStore.getState();
 
         if (refreshToken) {
-          const res = await axios.post(`${API_URL}/api/token/refresh/`, {
+          const res = await axios.post(`${API_URL}/api/token/admin/`, {
             refresh: refreshToken,
           });
 

@@ -1,9 +1,26 @@
-import React from 'react';
-import './PatientInformation.scss';
-interface PatientInfoProps {
-  onClose: () => void;
+import React from "react";
+import "./PatientInformation.scss";
+
+
+interface Patient {
+  id: number;
+  full_name: string;
+  gender: string;
+  phone: string;
+  birth_date: string;
+  address: string;
+  complaints: string;
 }
-const PatientInformation: React.FC<PatientInfoProps> = ({ onClose }) => {
+
+interface Props {
+  patient: Patient;
+  onClose: () => void;
+
+}
+
+
+const PatientInformation: React.FC<Props> = ({patient,  onClose}) => {
+
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-window" onClick={(e) => e.stopPropagation()}>
@@ -12,21 +29,21 @@ const PatientInformation: React.FC<PatientInfoProps> = ({ onClose }) => {
         </div>
         <div className="modal-content">
           <div className="modal-column">
-            <p><strong>ФИО:</strong> Кудуретов Асан</p>
-            <p><strong>Телефон:</strong> +996 501 393 173</p>
-            <p><strong>Запись к врачу:</strong> Кубат Камчыбеков</p>
-            <p><strong>Дата записи:</strong> 20.09.2024</p>
-            <p><strong>Время:</strong> 10:00–11:00</p>
+            <p><strong>ФИО:</strong> {patient.full_name}</p>
+            <p><strong>Телефон:</strong> {patient.phone}</p>
+            <p><strong>Запись к врачу:</strong> —</p>
+            <p><strong>Дата записи:</strong> -</p>
+            <p><strong>Время:</strong> —</p>
           </div>
           <div className="modal-column">
-            <p><strong>Адрес:</strong> Бишкек Кустанай 13</p>
-            <p><strong>Пол:</strong> Мужской</p>
-            <p><strong>Дата рождения:</strong> 20.09.1996</p>
-            <p><strong>Жалобы:</strong> Боль в правом боку со спины под ребра</p>
+            <p><strong>Адрес:</strong> {patient.address}</p>
+            <p><strong>Пол:</strong> {patient.gender === "male" ? "Мужской" : "Женский"}</p>
+            <p><strong>Дата рождения:</strong> {patient.birth_date}</p>
+            <p><strong>Жалобы:</strong> {patient.complaints}</p>
           </div>
         </div>
         <div className="modal-footer">
-          <button onClick={onClose}>✖ Отмена</button>
+          <button onClick={onClose}>✖ Закрыть</button>
         </div>
       </div>
     </div>

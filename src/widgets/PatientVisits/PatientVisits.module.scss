@@ -1,0 +1,100 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: #fff;
+  padding: 20px;
+  width: 320px;
+  height: 450px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.header {
+    width: 320px;
+    height: 65px;
+    margin: -20px -20px;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+    background-color: #53A8BB;
+
+   > span {
+    margin: 0px 20px;
+   }
+   > h3 {
+    margin: 5px 20px;  
+ }
+
+}
+
+.nav {
+  display: flex;
+  height: 24px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+
+  button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+  }
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+.dayName {
+  font-weight: bold;
+  text-align: center;
+}
+
+.day {
+  text-align: center;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.day:hover {
+  background: #e0f7fa;
+}
+
+.selected {
+  background: #00acc1;
+  color: #fff;
+}
+
+.actions {
+  width: 150px;
+  height: 36px;
+  margin: 50px 145px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.cancel {
+  color: #00acc1;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.ok {
+  color: #00acc1;
+  background: none;
+  border: none;
+  padding: 6px 14px;
+  cursor: pointer;
+}
