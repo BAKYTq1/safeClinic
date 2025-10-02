@@ -5,9 +5,10 @@ interface DeleteModalProps {
   onClose: () => void;
   onConfirm: () => void;
   loading?: boolean;
+  onCancel: () => void;
 }
 
-const DeleteModal: React.FC<DeleteModalProps> = ({ onClose, onConfirm, loading = false }) => {
+const DeleteModal: React.FC<DeleteModalProps> = ({ onClose, onConfirm, loading = false, onCancel }) => {
   return (
     <div className="delete-modal-backdrop" onClick={onClose}>
       <div className="delete-modal" onClick={(e) => e.stopPropagation()}>
@@ -19,27 +20,13 @@ const DeleteModal: React.FC<DeleteModalProps> = ({ onClose, onConfirm, loading =
               {loading ? "Удаление..." : "Да"}
             </button>
           </div>
-import React from 'react';
-import './style.scss';
 
-interface DeleteModalProps {
-  onConfirm: () => void;
-  onCancel: () => void;
-}
 
-function DeleteModal({ onConfirm, onCancel }: DeleteModalProps) {
-  return (
-    <div className='delete-modal'>
-      <div className='item-delete-modal'>
-        <p>Вы действительно хотите удалить?</p>
-        <div className='buttons'>
-          <button className='cancel' onClick={onCancel}>Нет</button>
-          <button className='confirm' onClick={onConfirm}>Да</button>
         </div>
       </div>
     </div>
   );
 };
-}
+
 
 export default DeleteModal;
