@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import "./Header.scss"
 import svg31 from "../../assets/svg/31.svg"
 import svg32 from "../../assets/svg/32.svg"
-import headerImg from "../../assets/svg/header.svg"
+// import headerImg from "../../assets/svg/header.svg"
 import ProfileModal from "../../widgets/ProfileModal/ProfileModal"
 import header1 from "../../assets/svg/header1.svg"
 import header2 from "../../assets/svg/header2.svg"
@@ -35,12 +35,14 @@ function Header() {
             <a href='#clinics'>Наша клиника</a>
             <a href='#contacts'>Контакт</a>
           </ul>
-          <button>Запись онлайн</button>
+          <div  className="header-i" onClick={() => setIsModalOpen(true)}>
+          <button>Запись онлайн</button>            
+          </div>
         </div>
 
-        <div className="header-i" onClick={() => setIsModalOpen(true)}>
+        {/* <div className="header-i" onClick={() => setIsModalOpen(true)}>
           <img src={headerImg} alt="Профиль" />
-        </div>
+        </div> */}
         {isModalOpen && <ProfileModal onClose={() => setIsModalOpen(false)} />}
         <div className="header-img" onClick={() => setMenuOpen(!menuOpen)}>
           <img src={svg32} alt="burger" />

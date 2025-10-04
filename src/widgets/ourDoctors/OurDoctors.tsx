@@ -22,7 +22,7 @@ type Doctor = {
   position: string;
   experience: string;
   description: string;
-   image: string;
+  image: string;
   reviews: Review[];
 };
 
@@ -33,7 +33,7 @@ const doctors: Doctor[] = [
     position: ' Cтоматолог',
     experience: 'Опыт работы 10 лет',
     description:
-      'Постоянно повышаю свои знания. Использую в работе новейшие технологии и материалы. Главное качественное лечение и довольные клиенты.', 
+      'Постоянно повышаю свои знания. Использую в работе новейшие технологии и материалы. Главное качественное лечение и довольные клиенты.',
     image: Doctor3,
     reviews: [
       {
@@ -61,21 +61,21 @@ const doctors: Doctor[] = [
     name: 'Дмитрий Иванов',
     position: 'Ортодонт',
     experience: 'Опыт: 8 лет',
-     description: 'Занимается выравниванием зубов с использованием брекет-систем и капп. Индивидуальный подход к каждому пациенту.',
+    description: 'Занимается выравниванием зубов с использованием брекет-систем и капп. Индивидуальный подход к каждому пациенту.',
     image: Doctor4,
     reviews: [
       { user: 'Анна', gender: 'female', text: 'Дмитрий профессионал своего дела. Брекеты установил безболезненно, и теперь результат радует меня каждый день!' },
       { user: 'Сергей', gender: 'male', text: 'Очень внимательный врач. Подобрал наиболее удобную схему лечения. Удивительно, как быстро пошел прогресс.' },
       { user: 'Алина', gender: 'female', text: 'Не ожидала такого уровня сервиса! Всё объяснил, показал. Поддерживал на каждом этапе лечения. Результат впечатляет.' },
     ],
-  }, 
+  },
   {
     id: 2,
     name: 'Екатерина Смирнова',
     position: 'Терапевт',
     experience: 'Опыт: 5 лет',
     description: 'Специализируется на терапевтическом лечении зубов, включая кариес, пульпит и эстетическую реставрацию.',
-     image: Doctor2,
+    image: Doctor2,
     reviews: [
       { user: 'Мария', gender: 'female', text: 'Екатерина – замечательный специалист. Лечение прошло абсолютно безболезненно. Очень боялась, но врач развеяла все страхи.' },
       { user: 'Игорь', gender: 'male', text: 'Очень вежливая и заботливая. Починила мне сложный зуб, с которым другие врачи не справлялись. Спасибо!' },
@@ -88,7 +88,7 @@ const doctors: Doctor[] = [
     position: 'Хирург',
     experience: 'Опыт: 10 лет',
     description: 'Проводит удаление зубов любой сложности, а также установку имплантов. Использует современные методы обезболивания.',
-     image: Doctor3,
+    image: Doctor3,
     reviews: [
       { user: 'Ольга', gender: 'female', text: 'Удаление прошло легко и безболезненно. Алексей очень уверенный и спокойный врач. Чувствовала себя в надёжных руках.' },
       { user: 'Роман', gender: 'male', text: 'Профессионал с большой буквы. Всё объяснил перед процедурой, удаление прошло быстро. Теперь не боюсь хирургов!' },
@@ -100,7 +100,7 @@ const doctors: Doctor[] = [
     name: 'Марина Алексеева',
     position: 'Ортопед',
     experience: 'Опыт: 7 лет',
-     description: 'Специализируется на восстановлении зубов, установке коронок и протезировании. Индивидуальный подход к каждому пациенту.',
+    description: 'Специализируется на восстановлении зубов, установке коронок и протезировании. Индивидуальный подход к каждому пациенту.',
     image: Doctor4,
     reviews: [
       { user: 'Владимир', gender: 'male', text: 'Марина помогла мне вернуть красивую улыбку. Очень чуткий врач. Протезы идеально подошли. Рекомендую всем.' },
@@ -136,13 +136,22 @@ export function OurDoctors() {
             slidesPerView={4}
             breakpoints={{
               0: {
-                slidesPerView: 2,
+                slidesPerView: 1,
                 spaceBetween: 8,
               },
-              321: {
-                slidesPerView: 4,
-                spaceBetween: 16,
+              1024: { 
+                slidesPerView: 4
               },
+              768: { 
+                slidesPerView: 3
+
+              },
+              480: { 
+                slidesPerView: 1
+              },
+              560: {
+                slidesPerView: 2
+              }
             }}
             navigation={{
               prevEl: prevRef.current,
@@ -185,12 +194,13 @@ export function OurDoctors() {
 
         <div className={styles.details}>
           <img src={selectedDoctor.image} alt={selectedDoctor.name} className={styles.largeImg} />
+          
           <div className={styles.info}>
             <h4>{selectedDoctor.name}</h4>
             <p className={styles.position}>{selectedDoctor.position}</p>
             <p className={styles.experience}>{selectedDoctor.experience}</p>
+            <p className={styles.description}>{selectedDoctor.description}</p>
             <button>Записаться к врачу</button>
-             <p className={styles.description}>{selectedDoctor.description}</p>
           </div>
         </div>
 

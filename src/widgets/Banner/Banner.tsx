@@ -10,8 +10,7 @@ const Banner: React.FC = () => {
       <div className={styles.content}>
         <h1 className={styles.title}>safe.clinic</h1>
         <div className={styles.text}>
-          Мы делаем вашу улыбку здоровой и красивой
-           с удовольствием.
+          Мы делаем вашу улыбку здоровой и красивой с удовольствием.
         </div>
         <button className={styles.button}>Записаться</button>
       </div>
